@@ -1,6 +1,8 @@
 # One-command workflow. Run `make help`.
 PY := backend/.venv/bin/python
 PIP := backend/.venv/bin/pip
+# Override if your default python3 is too old:  make setup PYTHON=python3.12
+PYTHON ?= python3
 
 .PHONY: help setup models check ingest reset eval eval-fast api web dev test lint cost docker
 
@@ -8,9 +10,13 @@ help:
 	@grep -E '^[a-z-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
 
 setup: ## Install backend (venv) + frontend deps, create .env
+	@$(PYTHON) -c 'import sys; v=sys.version_info; sys.exit(0 if v >= (3, 11) else "Python 3.11+ required, found %d.%d. Install: brew install python@3.12  then: make setup PYTHON=python3.12" % v[:2])'
 	test -f .env || cp .env.example .env
-	python3 -m venv backend/.venv
-	$(PIP) install -U pip -q && $(PIP) install -r backend/requirements-dev.txt
+	rm -rf backend/.venv
+	$(PYTHON) -m venv backend/.venv
+	$(PIP) install -U pip -q
+	$(PIP) install -r backend/requirements-dev.txt
+	$(PY) -c "import yaml, chromadb, fastembed, fastapi; print('backend deps OK')"
 	cd frontend && npm install
 
 models: ## Pre-download embedding + reranker models (~3GB, do it at home!)
