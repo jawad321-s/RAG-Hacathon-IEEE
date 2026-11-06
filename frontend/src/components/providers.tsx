@@ -92,11 +92,11 @@ export function Providers({ children }: { children: React.ReactNode }) {
   );
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+    <ThemeProvider attribute="class" forcedTheme="light" disableTransitionOnChange>
       <AppContext.Provider value={value}>
         <TooltipProvider>
           {children}
-          <Toaster position={lang === "ar" ? "bottom-left" : "bottom-right"} richColors />
+          <Toaster position={lang === "ar" ? "bottom-left" : "bottom-right"} />
         </TooltipProvider>
       </AppContext.Provider>
     </ThemeProvider>

@@ -7,6 +7,7 @@ import {
   BookMarked,
   Check,
   Copy,
+  Loader2,
   MessageSquarePlus,
   PanelLeft,
   ShieldAlert,
@@ -20,7 +21,6 @@ import { AnswerMarkdown } from "@/components/chat/answer-markdown";
 import { SourcesPanel } from "@/components/chat/sources-panel";
 import { useApp } from "@/components/providers";
 import { SiteHeader } from "@/components/site-header";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
@@ -53,6 +53,7 @@ export function ChatView() {
   const [mobileSources, setMobileSources] = React.useState(false);
   const [history, setHistory] = React.useState<ConvSummary[]>([]);
   const [historyOpen, setHistoryOpen] = React.useState(false);
+  const [library, setLibrary] = React.useState<{ source: string; chunks: number; pages: number }[]>([]);
   const [facets, setFacets] = React.useState<string[]>([]);
   const [category, setCategory] = React.useState("");
   const abortRef = React.useRef<AbortController | null>(null);
@@ -68,6 +69,9 @@ export function ChatView() {
   React.useEffect(() => {
     api<Record<string, string[]>>("/api/documents/facets")
       .then((f) => setFacets(f.category ?? []))
+      .catch(() => {});
+    api<{ documents: { source: string; chunks: number; pages: number }[] }>("/api/documents")
+      .then((r) => setLibrary(r.documents))
       .catch(() => {});
   }, []);
 
@@ -171,23 +175,44 @@ export function ChatView() {
   );
 
   const historyList = (
-    <div className="flex flex-col gap-1 p-2">
-      <Button variant="outline" className="mb-2 justify-start" onClick={newChat}>
-        <MessageSquarePlus />
+    <div className="flex flex-col">
+      <button
+        onClick={newChat}
+        className="flex items-center gap-2 border-b px-4 py-3 text-start text-sm font-semibold text-primary hover:bg-background"
+      >
+        <MessageSquarePlus className="size-4" />
         {t("newChat")}
-      </Button>
+      </button>
       {history.map((c) => (
         <button
           key={c.id}
           onClick={() => openConversation(c.id)}
           className={cn(
-            "truncate rounded-md px-3 py-2 text-start text-sm hover:bg-accent",
-            c.id === conversationId && "bg-accent font-medium"
+            "truncate border-b px-4 py-3 text-start text-sm hover:bg-background",
+            c.id === conversationId && "border-s-2 border-s-primary bg-background font-semibold"
           )}
           dir="auto"
         >
           {c.title}
         </button>
+      ))}
+    </div>
+  );
+
+  // For visitors without an account the left rail lists what the assistant actually knows.
+  const libraryList = (
+    <div className="flex flex-col">
+      <div className="border-b px-4 py-3 text-xs font-semibold">{t("library")}</div>
+      {library.map((d) => (
+        <div key={d.source} className="border-b px-4 py-3">
+          <div className="truncate text-sm" dir="auto">
+            {d.source}
+          </div>
+          <div className="text-xs text-muted-foreground">
+            {d.pages ? `${d.pages} ${t("pages")} · ` : ""}
+            {d.chunks} {t("chunks")}
+          </div>
+        </div>
       ))}
     </div>
   );
@@ -202,73 +227,58 @@ export function ChatView() {
         ) : null}
       </SiteHeader>
 
-      <div className="mx-auto grid min-h-0 w-full max-w-[1400px] flex-1 grid-cols-1 lg:grid-cols-[minmax(0,1fr)_380px] xl:grid-cols-[240px_minmax(0,1fr)_400px]">
-        {/* conversation history (logged-in users) */}
-        <aside className="hidden min-h-0 border-e xl:block">
-          {user ? <ScrollArea className="h-full">{historyList}</ScrollArea> : (
-            <div className="p-4 text-xs leading-6 text-muted-foreground">{t("poweredBy")}</div>
-          )}
+      <div className="mx-auto grid min-h-0 w-full max-w-[1440px] flex-1 grid-cols-1 lg:grid-cols-[minmax(0,1fr)_400px] xl:grid-cols-[260px_minmax(0,1fr)_420px]">
+        <aside className="hidden min-h-0 border-e bg-muted xl:block">
+          <ScrollArea className="h-full">{user ? historyList : libraryList}</ScrollArea>
         </aside>
 
-        {/* chat column */}
-        <section className="paper flex min-h-0 flex-col">
-          <ScrollArea className="min-h-0 flex-1">
-            <div className="mx-auto flex max-w-3xl flex-col gap-6 px-4 py-8">
-              {messages.length === 0 ? (
-                <EmptyState onPick={ask} />
-              ) : (
-                messages.map((m, i) =>
+        <section className="flex min-h-0 flex-col">
+          <ScrollArea className={cn("min-h-0 flex-1", messages.length === 0 && "swiss-grid")}>
+            {messages.length === 0 ? (
+              <EmptyState onPick={ask} />
+            ) : (
+              <div className="mx-auto flex max-w-3xl flex-col px-5 py-6 sm:px-8">
+                {messages.map((m, i) =>
                   m.role === "user" ? (
-                    <div key={i} className="flex justify-end">
-                      <div dir="auto" className="max-w-[85%] rounded-2xl rounded-se-sm bg-primary px-4 py-2.5 text-primary-foreground shadow-sm">
-                        {m.content}
-                      </div>
-                    </div>
+                    <h2 key={i} dir="auto" className="mt-8 border-t-2 border-rule pt-4 text-xl font-bold leading-snug first:mt-0">
+                      {m.content}
+                    </h2>
                   ) : (
-                    <article
-                      key={i}
-                      className={cn(
-                        "group rounded-2xl border bg-card p-5 shadow-sm transition-shadow",
-                        selected === i && "ring-2 ring-primary/30"
-                      )}
-                      onClick={() => setSelected(i)}
-                    >
-                      <div className="mb-3 flex flex-wrap items-center gap-2 text-xs">
+                    <article key={i} className="group mt-3 pb-2" onClick={() => setSelected(i)}>
+                      <div className="mb-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
                         {m.streaming ? (
-                          <Badge variant="secondary" className="gap-1.5">
-                            <span className="size-1.5 animate-pulse rounded-full bg-primary" />
-                            {m.sources ? `${m.sources.length} ${t("sources")}` : "…"}
-                          </Badge>
+                          <span className="flex items-center gap-1.5 text-primary">
+                            <Loader2 className="size-3.5 animate-spin" />
+                            {m.sources ? `${m.sources.length} ${t("sources")}` : t("searching")}
+                          </span>
                         ) : m.refused ? (
-                          <Badge variant="outline" className="border-destructive/40 text-destructive">
-                            <ShieldAlert />
+                          <span className="flex items-center gap-1.5 font-semibold text-foreground">
+                            <ShieldAlert className="size-3.5" />
                             {t("refused")}
-                          </Badge>
+                          </span>
                         ) : (
-                          <Badge variant="outline" className="border-primary/30 text-primary">
-                            <ShieldCheck />
-                            {t("grounded")} · {m.cited?.length ?? 0}/{m.sources?.length ?? 0}
-                          </Badge>
+                          <span className="flex items-center gap-1.5 font-semibold text-primary">
+                            <ShieldCheck className="size-3.5" />
+                            {t("grounded")} · {m.cited?.length ?? 0} / {m.sources?.length ?? 0}
+                          </span>
                         )}
                         {m.rewritten && m.rewritten !== messages[i - 1]?.content ? (
-                          <span className="truncate text-muted-foreground" dir="auto" title={m.rewritten}>
+                          <span className="truncate" dir="auto" title={m.rewritten}>
                             {t("searchedAs")}: «{m.rewritten}»
                           </span>
                         ) : null}
-                        {m.latency ? (
-                          <span className="ms-auto font-mono text-muted-foreground">{(m.latency / 1000).toFixed(1)}s</span>
-                        ) : null}
+                        {m.latency ? <span className="ms-auto">{(m.latency / 1000).toFixed(1)} s</span> : null}
                       </div>
                       <div dir="auto">
                         <AnswerMarkdown
                           text={m.content}
                           streaming={m.streaming}
-                          activeCite={selected === i ? activeCite : null}
+                          activeCite={selected === i || (selected === null && m === shown) ? activeCite : null}
                           onCite={(n) => cite(i, n)}
                         />
                       </div>
                       {!m.streaming && m.content ? (
-                        <div className="mt-4 flex items-center gap-1 border-t pt-3 opacity-70 transition-opacity group-hover:opacity-100">
+                        <div className="mt-3 flex items-center gap-1 text-muted-foreground">
                           <CopyButton text={m.content} />
                           <Button variant="ghost" size="icon-sm" aria-label={t("helpful")} onClick={() => sendFeedback(m, 1)}>
                             <ThumbsUp />
@@ -286,16 +296,15 @@ export function ChatView() {
                       ) : null}
                     </article>
                   )
-                )
-              )}
-              <div ref={bottomRef} />
-            </div>
+                )}
+                <div ref={bottomRef} />
+              </div>
+            )}
           </ScrollArea>
 
-          {/* composer */}
-          <div className="border-t bg-background/80 p-3 backdrop-blur">
+          <div className="border-t-2 border-rule px-4 py-3 sm:px-8">
             <form
-              className="mx-auto flex max-w-3xl items-end gap-2 rounded-2xl border bg-card p-2 shadow-sm focus-within:ring-2 focus-within:ring-ring/40"
+              className="mx-auto flex max-w-3xl items-end gap-2 border border-input bg-background p-1.5 focus-within:border-primary"
               onSubmit={(e) => {
                 e.preventDefault();
                 ask(input);
@@ -313,14 +322,14 @@ export function ChatView() {
                 placeholder={t("askPlaceholder")}
                 dir="auto"
                 rows={1}
-                className="max-h-40 min-h-10 resize-none border-0 bg-transparent shadow-none focus-visible:ring-0 dark:bg-transparent"
+                className="max-h-40 min-h-10 resize-none border-0 bg-transparent focus-visible:ring-0"
               />
               {facets.length > 1 ? (
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
                   aria-label={t("category")}
-                  className="h-9 max-w-36 shrink-0 rounded-md border bg-background px-2 text-xs text-muted-foreground"
+                  className="h-9 max-w-36 shrink-0 border bg-background px-2 text-xs"
                 >
                   <option value="">{t("allCategories")}</option>
                   {facets.map((f) => (
@@ -331,7 +340,7 @@ export function ChatView() {
                 </select>
               ) : null}
               {busy ? (
-                <Button type="button" size="icon" variant="secondary" onClick={() => abortRef.current?.abort()} aria-label={t("stop")}>
+                <Button type="button" size="icon" variant="outline" onClick={() => abortRef.current?.abort()} aria-label={t("stop")}>
                   <Square className="size-3.5 fill-current" />
                 </Button>
               ) : (
@@ -341,26 +350,22 @@ export function ChatView() {
               )}
             </form>
             {config?.disclaimer ? (
-              <p className="mx-auto mt-2 max-w-3xl text-center text-[11px] text-muted-foreground">{config.disclaimer}</p>
+              <p className="mx-auto mt-2 max-w-3xl text-[11px] text-muted-foreground">{config.disclaimer}</p>
             ) : null}
           </div>
         </section>
 
-        {/* sources column */}
-        <aside className="hidden min-h-0 flex-col border-s bg-muted/30 lg:flex">
-          <div className="flex h-11 items-center gap-2 border-b px-4 text-sm font-medium">
-            <BookMarked className="size-4 text-evidence-foreground dark:text-evidence" />
+        <aside className="hidden min-h-0 flex-col border-s bg-muted lg:flex">
+          <div className="flex h-12 items-center border-b px-5 text-sm font-bold">
             {t("sources")}
-            {shown?.sources?.length ? (
-              <span className="ms-auto font-mono text-xs text-muted-foreground">{shown.sources.length}</span>
-            ) : null}
+            {shown?.sources?.length ? <span className="ms-auto text-xs font-normal text-muted-foreground">{shown.sources.length}</span> : null}
           </div>
           <div className="min-h-0 flex-1">{sourcesPanel}</div>
         </aside>
       </div>
 
       <Sheet open={mobileSources} onOpenChange={setMobileSources}>
-        <SheetContent side={lang === "ar" ? "left" : "right"} className="w-[90vw] p-0 sm:max-w-md">
+        <SheetContent side={lang === "ar" ? "left" : "right"} className="w-[92vw] bg-muted p-0 sm:max-w-md">
           <SheetHeader className="border-b">
             <SheetTitle>{t("sources")}</SheetTitle>
           </SheetHeader>
@@ -369,7 +374,7 @@ export function ChatView() {
       </Sheet>
 
       <Sheet open={historyOpen} onOpenChange={setHistoryOpen}>
-        <SheetContent side={lang === "ar" ? "right" : "left"} className="w-72 p-0">
+        <SheetContent side={lang === "ar" ? "right" : "left"} className="w-72 bg-muted p-0">
           <SheetHeader className="border-b">
             <SheetTitle>{t("history")}</SheetTitle>
           </SheetHeader>
@@ -380,32 +385,34 @@ export function ChatView() {
   );
 }
 
+/** Start-aligned masthead on a visible 12-column grid; sample questions set as numbered folios. */
 function EmptyState({ onPick }: { onPick: (q: string) => void }) {
   const { t, config } = useApp();
   return (
-    <div className="flex flex-col items-center pt-[8vh] text-center">
-      <div className="mb-6 grid size-14 place-items-center rounded-2xl bg-primary text-primary-foreground shadow-md">
-        <BookMarked className="size-6" />
-      </div>
-      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{config?.product_name}</h1>
-      {config?.tagline ? <p className="mt-3 max-w-md text-muted-foreground">{config.tagline}</p> : null}
-      {config?.sample_questions?.length ? (
-        <div className="mt-10 w-full max-w-xl">
-          <div className="mb-3 text-xs font-medium tracking-wide text-muted-foreground">{t("tryAsking")}</div>
-          <div className="grid gap-2 sm:grid-cols-2">
-            {config.sample_questions.map((q) => (
-              <button
-                key={q}
-                onClick={() => onPick(q)}
-                dir="auto"
-                className="rounded-xl border bg-card px-4 py-3 text-start text-sm shadow-xs transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-sm"
-              >
-                {q}
-              </button>
-            ))}
+    <div>
+      <div className="mx-auto max-w-3xl px-5 pb-16 pt-[10vh] sm:px-8">
+        <h1 className="text-5xl font-bold leading-none tracking-tight sm:text-7xl">{config?.product_name}</h1>
+        {config?.tagline ? <p className="mt-5 max-w-lg text-lg text-muted-foreground">{config.tagline}</p> : null}
+        {config?.sample_questions?.length ? (
+          <div className="mt-14">
+            <div className="border-b-2 border-rule pb-2 text-xs font-bold">{t("tryAsking")}</div>
+            <ol>
+              {config.sample_questions.map((q, i) => (
+                <li key={q} className="border-b">
+                  <button
+                    onClick={() => onPick(q)}
+                    dir="auto"
+                    className="grid w-full grid-cols-[3rem_1fr] items-baseline gap-3 bg-background py-4 text-start transition-colors hover:text-primary"
+                  >
+                    <span className="folio text-3xl">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="text-base">{q}</span>
+                  </button>
+                </li>
+              ))}
+            </ol>
           </div>
-        </div>
-      ) : null}
+        ) : null}
+      </div>
     </div>
   );
 }
@@ -420,7 +427,7 @@ function CopyButton({ text }: { text: string }) {
       aria-label={t("copy")}
       onClick={async (e) => {
         e.stopPropagation();
-        await navigator.clipboard.writeText(text.replace(/\[(\d+)\]/g, "[$1]"));
+        await navigator.clipboard.writeText(text);
         setDone(true);
         setTimeout(() => setDone(false), 1500);
       }}

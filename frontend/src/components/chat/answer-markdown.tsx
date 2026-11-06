@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 
 import { cn } from "@/lib/utils";
 
-/** Renders the answer and turns [1], [2] citations into clickable evidence chips. */
+/** Renders the answer; [1], [2] become folio citations that open the matching source. */
 export function AnswerMarkdown({
   text,
   onCite,
@@ -31,10 +31,10 @@ export function AnswerMarkdown({
                   type="button"
                   onClick={() => onCite?.(n)}
                   className={cn(
-                    "mx-0.5 inline-flex h-5 min-w-5 -translate-y-0.5 items-center justify-center rounded-full px-1.5 align-middle font-mono text-[11px] font-semibold transition-colors",
+                    "mx-0.5 inline-grid h-[1.15em] min-w-[1.15em] -translate-y-[0.35em] place-items-center px-0.5 align-baseline text-[11px] font-bold leading-none transition-colors",
                     activeCite === n
-                      ? "bg-evidence text-evidence-foreground"
-                      : "bg-evidence-soft text-evidence-foreground hover:bg-evidence"
+                      ? "bg-primary text-primary-foreground"
+                      : "text-primary underline decoration-1 underline-offset-2 hover:bg-primary hover:text-primary-foreground"
                   )}
                   aria-label={`source ${n}`}
                 >

@@ -30,7 +30,7 @@ type Analytics = {
 };
 
 // Chart palette mirrors the CSS tokens (G2 needs concrete colors).
-export const PALETTE = { primary: "#2f6f7a", evidence: "#d9a441", danger: "#c4553f", muted: "#9aa5ab" };
+export const PALETTE = { primary: "#002FA7", ink: "#111111", muted: "#B4B4BA" };
 
 export function AnalyticsTab() {
   const { t } = useApp();
@@ -44,19 +44,19 @@ export function AnalyticsTab() {
   const dayOptions = React.useMemo(() => {
     if (!data) return null;
     const rows = data.by_day.flatMap((d) => [
-      { date: d.date, kind: "answered", value: d.questions - d.refused },
-      { date: d.date, kind: "refused", value: d.refused },
+      { date: d.date, kind: t("answered"), value: d.questions - d.refused },
+      { date: d.date, kind: t("refusedSeries"), value: d.refused },
     ]);
     return {
       type: "interval",
       data: rows,
       encode: { x: "date", y: "value", color: "kind" },
       transform: [{ type: "stackY" }],
-      scale: { color: { range: [PALETTE.primary, PALETTE.evidence] } },
+      scale: { color: { range: [PALETTE.primary, PALETTE.muted] } },
       axis: { x: { title: false }, y: { title: false } },
-      style: { radiusTopLeft: 3, radiusTopRight: 3, maxWidth: 48 },
+      style: { maxWidth: 48 },
     };
-  }, [data]);
+  }, [data, t]);
 
   const sourceOptions = React.useMemo(() => {
     if (!data) return null;
@@ -66,7 +66,7 @@ export function AnalyticsTab() {
       encode: { x: "source", y: "count" },
       coordinate: { transform: [{ type: "transpose" }] },
       scale: { color: { range: [PALETTE.primary] } },
-      style: { fill: PALETTE.primary, radius: 3, maxWidth: 28 },
+      style: { fill: PALETTE.primary, maxWidth: 28 },
       axis: { x: { title: false }, y: { title: false } },
       labels: [{ text: "count", position: "right", dx: 4 }],
     };
@@ -89,7 +89,7 @@ export function AnalyticsTab() {
     { icon: Clock, label: t("avgLatency"), value: `${(k.avg_latency_ms / 1000).toFixed(2)}s`, sub: `p95 ${(k.p95_latency_ms / 1000).toFixed(2)}s` },
     { icon: Coins, label: t("costPerAnswer"), value: `$${k.cost_per_answer_usd.toFixed(4)}`, sub: `total $${k.total_cost_usd.toFixed(2)}` },
     { icon: Smile, label: t("satisfaction"), value: k.satisfaction === null ? "—" : `${(k.satisfaction * 100).toFixed(0)}%` },
-    { icon: Activity, label: "Users / Conversations", value: `${k.users} / ${k.conversations}` },
+    { icon: Activity, label: t("usersConversations"), value: `${k.users} / ${k.conversations}` },
     { icon: Database, label: t("chunks"), value: k.chunks_indexed.toLocaleString() },
   ];
 
@@ -105,8 +105,8 @@ export function AnalyticsTab() {
               </CardDescription>
             </CardHeader>
             <CardContent className="px-4">
-              <div className="font-mono text-2xl font-semibold tracking-tight">{value}</div>
-              {sub ? <div className="font-mono text-[11px] text-muted-foreground">{sub}</div> : null}
+              <div className="folio text-4xl">{value}</div>
+              {sub ? <div className="mt-2 text-[11px] text-muted-foreground">{sub}</div> : null}
             </CardContent>
           </Card>
         ))}
@@ -139,7 +139,7 @@ export function AnalyticsTab() {
           <CardContent className="flex flex-col gap-2">
             {data.unanswered.length ? (
               data.unanswered.map((q, i) => (
-                <div key={i} dir="auto" className="rounded-md border border-dashed px-3 py-2 text-sm">
+                <div key={i} dir="auto" className="border-b py-2 text-sm">
                   {q}
                 </div>
               ))
@@ -150,7 +150,7 @@ export function AnalyticsTab() {
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">Recent</CardTitle>
+            <CardTitle className="text-base">{t("recent")}</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-col divide-y">
             {data.recent_questions.map((q, i) => (
@@ -158,8 +158,8 @@ export function AnalyticsTab() {
                 <span dir="auto" className="min-w-0 flex-1 truncate">
                   {q.question}
                 </span>
-                {q.refused ? <Badge variant="outline">refused</Badge> : null}
-                <span className="font-mono text-xs text-muted-foreground">{q.score.toFixed(2)}</span>
+                {q.refused ? <Badge variant="outline">{t("refusedSeries")}</Badge> : null}
+                <span className="text-xs text-muted-foreground">{q.score.toFixed(2)}</span>
               </div>
             ))}
             {!data.recent_questions.length && <Empty />}
@@ -171,5 +171,6 @@ export function AnalyticsTab() {
 }
 
 function Empty() {
-  return <div className="py-10 text-center text-sm text-muted-foreground">—</div>;
+  const { t } = useApp();
+  return <div className="py-10 text-sm text-muted-foreground">{t("noData")}</div>;
 }

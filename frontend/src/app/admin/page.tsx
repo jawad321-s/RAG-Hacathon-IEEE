@@ -21,17 +21,17 @@ export default function AdminPage() {
       <SiteHeader />
       <main className="mx-auto w-full max-w-[1400px] flex-1 p-4 sm:p-6">
         {user?.role !== "admin" ? (
-          <div className="grid place-items-center gap-4 py-24 text-center text-muted-foreground">
-            <p>Admin only · للمسؤول فقط</p>
+          <div className="flex flex-col items-start gap-4 py-24 text-muted-foreground">
+            <p>{t("adminOnly")}</p>
             <Button asChild>
               <Link href="/login">{t("login")}</Link>
             </Button>
           </div>
         ) : (
           <Tabs defaultValue="analytics" className="gap-6">
-            <div className="flex flex-wrap items-end justify-between gap-4">
+            <div className="flex flex-wrap items-end justify-between gap-4 border-b-2 border-rule pb-4">
               <div>
-                <h1 className="text-2xl font-bold tracking-tight">{t("admin")}</h1>
+                <h1 className="text-4xl font-bold tracking-tight">{t("admin")}</h1>
                 <p className="text-sm text-muted-foreground">{user.email}</p>
               </div>
               <TabsList className="h-10 max-w-full overflow-x-auto">

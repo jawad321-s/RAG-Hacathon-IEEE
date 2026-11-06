@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { toast } from "sonner";
-import { FlaskConical, Loader2 } from "lucide-react";
+import { Check, FlaskConical, Loader2, X } from "lucide-react";
 
 import { G2Chart } from "@/components/admin/g2-chart";
 import { PALETTE } from "@/components/admin/analytics-tab";
@@ -70,7 +70,7 @@ export function EvalTab() {
       data,
       encode: { x: "metric", y: "value" },
       scale: { y: { domain: [0, 1] } },
-      style: { fill: PALETTE.primary, radiusTopLeft: 4, radiusTopRight: 4, maxWidth: 56 },
+      style: { fill: PALETTE.primary, maxWidth: 56 },
       axis: { x: { title: false }, y: { title: false } },
       labels: [{ text: (d: { value: number }) => d.value.toFixed(2), position: "top", dy: -4 }],
     };
@@ -83,12 +83,12 @@ export function EvalTab() {
           <div>
             <CardTitle className="text-base">{t("evaluation")}</CardTitle>
             <CardDescription>
-              data/eval/eval_set.json · {report ? `${report.summary.n_questions} Q · k=${report.summary.k} · ${report.created_at}` : "no run yet"}
+              data/eval/eval_set.json · {report ? `${report.summary.n_questions} Q · k=${report.summary.k} · ${report.created_at}` : t("noRun")}
             </CardDescription>
           </div>
           <div className="flex gap-2">
             <Button variant="outline" disabled={running} onClick={() => run(false)}>
-              Retrieval only
+              {t("retrievalOnly")}
             </Button>
             <Button disabled={running} onClick={() => run(true)}>
               {running ? <Loader2 className="animate-spin" /> : <FlaskConical />}
@@ -106,13 +106,13 @@ export function EvalTab() {
                   <div key={k} className="grid gap-1">
                     <div className="flex justify-between text-sm">
                       <span>{label}</span>
-                      <span className="font-mono">{v === null || v === undefined ? "—" : v.toFixed(3)}</span>
+                      <span className="font-semibold">{v === null || v === undefined ? "—" : v.toFixed(3)}</span>
                     </div>
                     <Progress value={(v ?? 0) * 100} />
                   </div>
                 );
               })}
-              <pre dir="ltr" className="mt-2 overflow-x-auto rounded-md bg-muted p-3 font-mono text-[11px] leading-5">
+              <pre dir="ltr" className="mt-2 overflow-x-auto border bg-muted p-3 text-[11px] leading-5">
                 {JSON.stringify(report.summary.config, null, 2)}
               </pre>
             </div>
@@ -140,19 +140,19 @@ export function EvalTab() {
               <TableBody>
                 {report.rows.map((r) => (
                   <TableRow key={r.id} title={r.answer}>
-                    <TableCell className="font-mono text-xs">{r.id}</TableCell>
+                    <TableCell className="text-xs">{r.id}</TableCell>
                     <TableCell>
                       <Badge variant="secondary">{r.type}</Badge>
                     </TableCell>
                     <TableCell dir="auto" className="max-w-[360px] truncate">
                       {r.question}
                     </TableCell>
-                    <TableCell className="text-end font-mono">{fmt(r.hit)}</TableCell>
-                    <TableCell className="text-end font-mono">{fmt(r.mrr)}</TableCell>
-                    <TableCell className="text-end font-mono">{fmt(r.faithfulness)}</TableCell>
-                    <TableCell className="text-end font-mono">{fmt(r.correctness)}</TableCell>
-                    <TableCell className="text-end">{r.refusal_correct ? "✓" : "✗"}</TableCell>
-                    <TableCell className="text-end font-mono text-xs">{r.latency_ms}</TableCell>
+                    <TableCell className="text-end">{fmt(r.hit)}</TableCell>
+                    <TableCell className="text-end">{fmt(r.mrr)}</TableCell>
+                    <TableCell className="text-end">{fmt(r.faithfulness)}</TableCell>
+                    <TableCell className="text-end">{fmt(r.correctness)}</TableCell>
+                    <TableCell className="text-end">{r.refusal_correct ? <Check className="ms-auto size-4 text-primary" aria-label="ok" /> : <X className="ms-auto size-4" aria-label="wrong" />}</TableCell>
+                    <TableCell className="text-end text-xs">{r.latency_ms}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>

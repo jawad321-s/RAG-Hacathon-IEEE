@@ -57,9 +57,13 @@ class LLM:
         for block in body.split("\n\n---\n\n")[:2]:
             head, _, text = block.strip().partition("\n")
             idx = head[1 : head.find("]")]
+            if "[جدول / Table]" in text:  # keep tables as real markdown tables
+                rows = [ln for ln in text.splitlines() if ln.startswith("|")]
+                parts.append("\n".join(rows) + f"\n\n[{idx}]")
+                continue
             sentence = re.split(r"(?<=[.!؟?])\s", text.strip(), maxsplit=1)[0][:400]
             parts.append(f"- {sentence} [{idx}]")
-        return "وضع عدم الاتصال (مقتطفات من المصادر):\n\n" + "\n".join(parts)
+        return "وضع عدم الاتصال (مقتطفات من المصادر):\n\n" + "\n\n".join(parts)
 
     def _models(self, model: str | None) -> list[str]:
         primary = model or self.settings.llm_model

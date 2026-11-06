@@ -88,12 +88,12 @@ export function DocumentsTab() {
               upload(e.dataTransfer.files);
             }}
             onClick={() => fileRef.current?.click()}
-            className={`grid cursor-pointer place-items-center gap-2 rounded-xl border-2 border-dashed p-8 text-center text-sm transition-colors ${
+            className={`grid cursor-pointer place-items-center gap-2 border-2 border-dashed p-8 text-center text-sm transition-colors ${
               dragging ? "border-primary bg-accent" : "hover:border-primary/50"
             }`}
           >
             {busy && busy !== "reindex" ? <Loader2 className="size-6 animate-spin text-primary" /> : <FileUp className="size-6 text-primary" />}
-            <span className="text-muted-foreground">{busy && busy !== "reindex" ? busy : "Drop files / اسحب الملفات هنا"}</span>
+            <span className="text-muted-foreground">{busy && busy !== "reindex" ? busy : t("dropFiles")}</span>
             <input ref={fileRef} type="file" multiple hidden onChange={(e) => upload(e.target.files)} />
           </div>
           <div className="grid gap-2">
@@ -110,14 +110,14 @@ export function DocumentsTab() {
       <Card>
         <CardHeader>
           <CardTitle className="text-base">
-            {t("documents")} <span className="font-mono text-sm text-muted-foreground">({docs.length} · {total} {t("chunks")})</span>
+            {t("documents")} <span className="text-sm text-muted-foreground">({docs.length} · {total} {t("chunks")})</span>
           </CardTitle>
         </CardHeader>
         <CardContent>
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>File</TableHead>
+                <TableHead>{t("file")}</TableHead>
                 <TableHead>{t("category")}</TableHead>
                 <TableHead className="text-end">{t("pages")}</TableHead>
                 <TableHead className="text-end">{t("chunks")}</TableHead>
@@ -131,8 +131,8 @@ export function DocumentsTab() {
                     {d.source}
                   </TableCell>
                   <TableCell>{d.category ? <Badge variant="secondary">{d.category}</Badge> : null}</TableCell>
-                  <TableCell className="text-end font-mono">{d.pages || "—"}</TableCell>
-                  <TableCell className="text-end font-mono">{d.chunks}</TableCell>
+                  <TableCell className="text-end">{d.pages || "—"}</TableCell>
+                  <TableCell className="text-end">{d.chunks}</TableCell>
                   <TableCell className="text-end">
                     <Button variant="ghost" size="icon-sm" onClick={() => remove(d.source)} aria-label={t("delete")}>
                       <Trash2 />

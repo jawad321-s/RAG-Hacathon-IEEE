@@ -13,6 +13,10 @@ code quality 15, business 15, marketing 10, pitch 10, innovation 5, +10 bonus fo
     -> generation/{llm,prompts,generator} -> api/routes_*.
 - `frontend/` Next.js 16 (App Router, client components) + Tailwind v4 + shadcn/ui (hand-written in
   `src/components/ui`) + AntV G2 charts. RTL Arabic by default. Read `frontend/AGENTS.md` before touching Next APIs.
+- UI design follows the project skill `.claude/skills/frontend-design` with the **Swiss** anchor:
+  white surface, one family (IBM Plex Sans Arabic), one accent Yves Klein Blue #002FA7, hairline rules,
+  square corners, no shadows, light mode only. Differentiator: "folio citations" (`.folio` class).
+  Keep new UI inside those tokens; all on-screen strings go through `src/lib/i18n.ts`.
 - `docs/` hackathon-day playbook, per-problem playbooks, judge Q&A, business/marketing/pitch templates.
 
 ## Commands

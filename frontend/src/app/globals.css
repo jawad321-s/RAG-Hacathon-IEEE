@@ -5,83 +5,51 @@
 @import "@fontsource/ibm-plex-sans-arabic/arabic-600.css";
 @import "@fontsource/ibm-plex-sans-arabic/arabic-700.css";
 @import "@fontsource/ibm-plex-sans-arabic/400.css";
+@import "@fontsource/ibm-plex-sans-arabic/500.css";
 @import "@fontsource/ibm-plex-sans-arabic/600.css";
-@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-sans-arabic/700.css";
 
+/* Light only: the Swiss anchor is defined on a white surface. `dark:` utilities never fire. */
 @custom-variant dark (&:is(.dark *));
 
 /*
-  Design language: "ink & paper" — an archival reading room.
-  Warm paper surfaces, deep ink-teal primary, a saffron accent reserved for
-  citations/evidence (the core promise of a RAG product: every claim has a source).
-  Re-skin for tomorrow's domain by changing --primary / --evidence only.
+  Design anchor: SWISS (see .claude/skills/frontend-design/SKILL.md)
+  - Surface: pure white #FFFFFF, neutral rails #F7F7F8
+  - One family: IBM Plex Sans Arabic (a neo-grotesque; Helvetica/Söhne have no Arabic glyphs)
+  - One accent: Yves Klein Blue #002FA7, used only for evidence (citations, sources) and primary actions
+  - Structure: 1px hairline rules, square corners, no shadows, start-aligned type
+  - Differentiator: "folio citations" — sources are set like a book's margin, oversized blue
+    numerals with the page as a folio marker; answer citations are the same numerals.
 */
 :root {
-  --radius: 0.7rem;
-  --background: oklch(0.975 0.008 85);
-  --foreground: oklch(0.22 0.02 230);
-  --card: oklch(0.99 0.005 85);
-  --card-foreground: var(--foreground);
-  --popover: oklch(0.99 0.005 85);
-  --popover-foreground: var(--foreground);
-  --primary: oklch(0.42 0.075 205);
-  --primary-foreground: oklch(0.98 0.01 85);
-  --secondary: oklch(0.94 0.014 85);
-  --secondary-foreground: var(--foreground);
-  --muted: oklch(0.945 0.012 85);
-  --muted-foreground: oklch(0.5 0.02 230);
-  --accent: oklch(0.93 0.02 200);
-  --accent-foreground: oklch(0.3 0.05 205);
-  --destructive: oklch(0.58 0.2 27);
-  --border: oklch(0.89 0.015 85);
-  --input: oklch(0.88 0.015 85);
-  --ring: oklch(0.55 0.08 205);
-  --evidence: oklch(0.78 0.14 75);
-  --evidence-foreground: oklch(0.3 0.06 60);
-  --evidence-soft: oklch(0.95 0.045 85);
-  --chart-1: oklch(0.42 0.075 205);
-  --chart-2: oklch(0.72 0.14 70);
-  --chart-3: oklch(0.6 0.12 155);
-  --chart-4: oklch(0.58 0.16 25);
-  --chart-5: oklch(0.55 0.1 290);
-}
-
-.dark {
-  --background: oklch(0.17 0.015 230);
-  --foreground: oklch(0.93 0.01 85);
-  --card: oklch(0.21 0.017 230);
-  --card-foreground: var(--foreground);
-  --popover: oklch(0.21 0.017 230);
-  --popover-foreground: var(--foreground);
-  --primary: oklch(0.74 0.09 195);
-  --primary-foreground: oklch(0.18 0.02 230);
-  --secondary: oklch(0.26 0.018 230);
-  --secondary-foreground: var(--foreground);
-  --muted: oklch(0.25 0.015 230);
-  --muted-foreground: oklch(0.7 0.02 230);
-  --accent: oklch(0.3 0.03 205);
-  --accent-foreground: oklch(0.92 0.02 195);
-  --destructive: oklch(0.65 0.19 25);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.6 0.08 195);
-  --evidence: oklch(0.8 0.14 78);
-  --evidence-foreground: oklch(0.2 0.03 60);
-  --evidence-soft: oklch(0.3 0.04 75);
-  --chart-1: oklch(0.74 0.09 195);
-  --chart-2: oklch(0.8 0.14 78);
-  --chart-3: oklch(0.72 0.13 155);
-  --chart-4: oklch(0.68 0.17 25);
-  --chart-5: oklch(0.7 0.11 290);
+  --radius: 0px;
+  --background: #ffffff;
+  --foreground: #111111;
+  --card: #ffffff;
+  --card-foreground: #111111;
+  --popover: #ffffff;
+  --popover-foreground: #111111;
+  --primary: #002fa7;
+  --primary-foreground: #ffffff;
+  --secondary: #f7f7f8;
+  --secondary-foreground: #111111;
+  --muted: #f7f7f8;
+  --muted-foreground: #5c5c63;
+  --accent: #f7f7f8;
+  --accent-foreground: #111111;
+  --destructive: #111111;
+  --border: #e3e3e6;
+  --rule: #111111;
+  --input: #d4d4d8;
+  --ring: #002fa7;
 }
 
 @theme inline {
-  --font-sans: "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: "IBM Plex Sans Arabic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -98,16 +66,9 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-border: var(--border);
+  --color-rule: var(--rule);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-evidence: var(--evidence);
-  --color-evidence-foreground: var(--evidence-foreground);
-  --color-evidence-soft: var(--evidence-soft);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
 }
 
 @layer base {
@@ -120,36 +81,55 @@
   body {
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "kern", "liga", "calt";
+    font-variant-numeric: tabular-nums;
   }
-  /* Arabic needs more line-height than Latin to breathe */
   :lang(ar) body {
     line-height: 1.75;
   }
 }
 
-/* Subtle paper grain on the canvas */
-.paper {
-  background-image:
-    radial-gradient(circle at 1px 1px, color-mix(in oklch, var(--foreground) 5%, transparent) 1px, transparent 0);
-  background-size: 22px 22px;
+/* Folio numeral — the differentiator. Used for citations and source markers. */
+.folio {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums lining-nums;
+  letter-spacing: -0.04em;
+  line-height: 0.85;
+  color: var(--primary);
+}
+
+/* Visible 12-column hairline grid behind the empty state */
+.swiss-grid {
+  background-image: linear-gradient(to right, var(--border) 1px, transparent 1px);
+  background-size: calc(100% / 12) 100%;
 }
 
 /* Markdown answers */
 .prose-answer {
-  @apply text-[15px] leading-8;
+  @apply text-[16px] leading-8;
 }
 .prose-answer p { @apply my-2; }
 .prose-answer ul { @apply my-2 list-disc ps-6; }
 .prose-answer ol { @apply my-2 list-decimal ps-6; }
 .prose-answer li { @apply my-1; }
 .prose-answer strong { @apply font-semibold; }
-.prose-answer h1, .prose-answer h2, .prose-answer h3 { @apply mt-4 mb-2 font-semibold; }
+.prose-answer h1, .prose-answer h2, .prose-answer h3 { @apply mt-4 mb-2 font-bold; }
 .prose-answer table { @apply my-3 w-full border-collapse text-sm; }
-.prose-answer th, .prose-answer td { @apply border px-2 py-1 text-start; }
-.prose-answer blockquote { @apply border-s-2 border-evidence ps-3 text-muted-foreground text-sm; }
-.prose-answer code { @apply font-mono text-[13px] bg-muted rounded px-1; }
+.prose-answer th { @apply border-b border-rule px-2 py-1 text-start font-semibold; }
+.prose-answer td { @apply border-b px-2 py-1 text-start; }
+.prose-answer blockquote { @apply border-s-2 border-rule ps-3 text-muted-foreground text-sm; }
+.prose-answer code { @apply bg-muted px-1 text-[14px]; }
 
+/* Streaming cursor: a solid block, not a glyph */
 .caret::after {
-  content: "▍";
-  @apply text-primary animate-pulse ms-0.5;
+  content: "";
+  display: inline-block;
+  width: 0.45em;
+  height: 1.1em;
+  margin-inline-start: 2px;
+  vertical-align: -0.2em;
+  background: var(--primary);
+  animation: caret-blink 1s steps(1) infinite;
+}
+@keyframes caret-blink {
+  50% { opacity: 0; }
 }

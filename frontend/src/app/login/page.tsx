@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { BookOpenText, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 
 import { useApp } from "@/components/providers";
 import { SiteHeader } from "@/components/site-header";
@@ -40,20 +40,17 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-dvh flex-col">
       <SiteHeader />
-      <main className="paper grid flex-1 place-items-center p-4">
+      <main className="swiss-grid grid flex-1 place-items-center p-4">
         <Card className="w-full max-w-sm">
-          <CardHeader className="text-center">
-            <div className="mx-auto mb-2 grid size-11 place-items-center rounded-xl bg-primary text-primary-foreground">
-              <BookOpenText className="size-5" />
-            </div>
-            <CardTitle className="text-xl">{config?.product_name}</CardTitle>
-            <CardDescription>{mode === "login" ? t("login") : "Create account / إنشاء حساب"}</CardDescription>
+          <CardHeader className="border-b-2 border-rule pb-4">
+            <CardTitle className="text-2xl font-bold">{config?.product_name}</CardTitle>
+            <CardDescription>{mode === "login" ? t("login") : t("createAccount")}</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={submit} className="flex flex-col gap-4">
               {mode === "register" && (
                 <div className="grid gap-2">
-                  <Label htmlFor="name">Name / الاسم</Label>
+                  <Label htmlFor="name">{t("name")}</Label>
                   <Input id="name" name="name" />
                 </div>
               )}
@@ -67,14 +64,14 @@ export default function LoginPage() {
               </div>
               <Button type="submit" disabled={loading}>
                 {loading && <Loader2 className="animate-spin" />}
-                {mode === "login" ? t("login") : "Register / تسجيل"}
+                {mode === "login" ? t("login") : t("register")}
               </Button>
               <button
                 type="button"
-                className="text-xs text-muted-foreground underline-offset-4 hover:underline"
+                className="text-start text-xs text-primary underline-offset-4 hover:underline"
                 onClick={() => setMode(mode === "login" ? "register" : "login")}
               >
-                {mode === "login" ? "No account? Register / ليس لديك حساب؟" : "Have an account? Log in / لديك حساب؟"}
+                {mode === "login" ? t("noAccount") : t("haveAccount")}
               </button>
             </form>
           </CardContent>

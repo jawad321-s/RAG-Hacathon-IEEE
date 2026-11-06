@@ -45,7 +45,7 @@ export function PlaygroundTab() {
             <Input value={q} onChange={(e) => setQ(e.target.value)} dir="auto" className="min-w-64 flex-1" placeholder={t("askPlaceholder")} />
             <Label className="text-sm">
               <input type="checkbox" checked={rewrite} onChange={(e) => setRewrite(e.target.checked)} className="accent-primary" />
-              query rewrite
+              {t("queryRewrite")}
             </Label>
             <Button type="submit" disabled={loading}>
               {loading ? <Loader2 className="animate-spin" /> : <Search />}
@@ -54,14 +54,14 @@ export function PlaygroundTab() {
           </form>
           {res ? (
             <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
-              <Badge variant={res.confident ? "default" : "destructive"}>{res.confident ? "confident" : "low confidence → refuse"}</Badge>
+              <Badge variant={res.confident ? "default" : "outline"}>{res.confident ? t("confident") : t("lowConfidence")}</Badge>
               <span dir="auto">«{res.rewritten}»</span>
               {res.keywords.map((k) => (
                 <Badge key={k} variant="outline">
                   {k}
                 </Badge>
               ))}
-              <span className="ms-auto font-mono text-muted-foreground">
+              <span className="ms-auto text-muted-foreground">
                 {Object.entries(res.timings_ms)
                   .map(([k, v]) => `${k} ${v}ms`)
                   .join(" · ")}
@@ -76,7 +76,7 @@ export function PlaygroundTab() {
           <Card key={h.id} className="gap-3 py-4">
             <CardContent className="px-4">
               <div className="mb-2 flex flex-wrap items-center gap-2 text-xs">
-                <span className="grid size-6 place-items-center rounded-full bg-evidence-soft font-mono font-semibold text-evidence-foreground">{i + 1}</span>
+                <span className="folio w-8 text-3xl">{i + 1}</span>
                 <span className="font-medium" dir="auto">
                   {String(h.metadata.source)}
                 </span>
@@ -86,9 +86,9 @@ export function PlaygroundTab() {
                     · {String(h.metadata.section)}
                   </span>
                 ) : null}
-                <span className="ms-auto flex gap-1.5 font-mono">
+                <span className="ms-auto flex gap-1.5">
                   {Object.entries(h.scores).map(([k, v]) => (
-                    <Badge key={k} variant="secondary" className="font-mono">
+                    <Badge key={k} variant="secondary">
                       {k} {v.toFixed(3)}
                     </Badge>
                   ))}
