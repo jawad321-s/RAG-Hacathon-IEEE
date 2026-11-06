@@ -48,7 +48,7 @@ def run_eval(eval_path: Path | None = None, with_generation: bool = True, out_di
         row: dict = {"id": item.get("id"), "type": item.get("type", "factual"), "question": item["question"]}
         if with_generation:
             a = answer(item["question"])
-            hits_meta = [(src.text, {"source": src.source, "page": src.page}) for src in a.sources]
+            hits_meta = [(src.text, {"source": src.source, "page": src.page, "original_text": src.original_text}) for src in a.sources]
             row.update(answer=a.answer, refused=a.refused, cited=a.cited, rewritten=a.rewritten_query)
         else:
             r = retrieve(item["question"])
@@ -91,6 +91,7 @@ def run_eval(eval_path: Path | None = None, with_generation: bool = True, out_di
             "chunk_overlap": s.chunk_overlap,
             "hybrid_alpha": s.hybrid_alpha,
             "query_rewrite": s.use_query_rewrite,
+            "translate_docs_to": s.translate_docs_to or None,
         },
     }
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")

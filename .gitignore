@@ -15,6 +15,7 @@ backend/data/chroma/
 backend/data/uploads/
 backend/data/app.db
 backend/data/models/
+backend/data/translations/
 backend/data/eval/results/
 
 # node

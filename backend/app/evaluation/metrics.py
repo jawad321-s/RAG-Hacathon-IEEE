@@ -33,7 +33,8 @@ def is_relevant(chunk_text: str, chunk_meta: dict, item: dict) -> bool:
     src_ok = any(s.lower() in str(chunk_meta.get("source", "")).lower() for s in srcs)
     if src_ok and pages:
         src_ok = chunk_meta.get("page") in pages
-    norm = normalize_for_search(chunk_text)
+    # Keywords may be written in the original (e.g. English) language of a translated document.
+    norm = normalize_for_search(chunk_text + "\n" + str(chunk_meta.get("original_text", "")))
     kw_ok = any(normalize_for_search(k) in norm for k in kws)
     if item.get("strict") and srcs and kws:  # both must match
         return src_ok and kw_ok

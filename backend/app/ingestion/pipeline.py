@@ -11,6 +11,7 @@ from app.retrieval.vectorstore import get_store
 
 from .chunker import chunk_pages
 from .loaders import SUPPORTED_EXTENSIONS, load_document
+from .translate import translate_pages
 
 log = logging.getLogger(__name__)
 
@@ -20,6 +21,8 @@ def ingest_file(path: Path, extra_metadata: dict | None = None, replace: bool = 
     store = get_store()
     t0 = time.perf_counter()
     pages = load_document(path)
+    if s.translate_docs_to:
+        pages = translate_pages(pages, s.translate_docs_to)
     chunks = chunk_pages(pages, s.chunk_size, s.chunk_overlap, extra_metadata)
     if replace:
         store.delete_source(path.name)
@@ -29,6 +32,7 @@ def ingest_file(path: Path, extra_metadata: dict | None = None, replace: bool = 
         "pages": len(pages),
         "chunks": n,
         "tables": sum(1 for c in chunks if c.metadata.get("is_table")),
+        "translated_pages": sum(1 for p in pages if p.metadata.get("translated")),
         "seconds": round(time.perf_counter() - t0, 2),
     }
     log.info("Ingested %s", stats)

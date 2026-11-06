@@ -31,6 +31,8 @@ class Source:
     text: str
     score: float
     scores: dict
+    translated: bool = False
+    original_text: str = ""
 
 
 @dataclass
@@ -63,6 +65,8 @@ def _to_sources(hits: list[Hit]) -> list[Source]:
                 text=h.text,
                 score=round(float(h.score), 4),
                 scores={k: round(float(v), 4) for k, v in h.scores.items()},
+                translated=bool(h.metadata.get("translated")),
+                original_text=str(h.metadata.get("original_text", "")),
             )
         )
     return out

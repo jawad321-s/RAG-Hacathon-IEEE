@@ -21,6 +21,8 @@ export type Source = {
   text: string;
   score: number;
   scores: Record<string, number>;
+  translated?: boolean;
+  original_text?: string;
 };
 
 export type ChatDone = {

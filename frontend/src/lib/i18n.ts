@@ -68,6 +68,8 @@ export const dict = {
     haveAccount: "لديك حساب؟ سجّل الدخول",
     adminOnly: "هذه الصفحة للمسؤول فقط",
     file: "الملف",
+    machineTranslated: "مترجم آلياً",
+    showOriginal: "عرض النص الأصلي",
   },
   en: {
     newChat: "New chat",
@@ -135,6 +137,8 @@ export const dict = {
     haveAccount: "Have an account? Log in",
     adminOnly: "This page is for admins only",
     file: "File",
+    machineTranslated: "Machine-translated",
+    showOriginal: "Show original text",
   },
 } as const;
 

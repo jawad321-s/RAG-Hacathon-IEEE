@@ -64,3 +64,18 @@ def test_pii_redaction():
 
     out = redact_pii("رقمي 0599123456 وايميلي a.b@gmail.com")
     assert "0599123456" not in out and "gmail" not in out
+
+
+def test_answer_language_rule():
+    from app.config import get_domain
+    from app.generation.prompts import system_prompt
+
+    d = get_domain()
+    old = d.answer_language
+    try:
+        d.answer_language = "ar"
+        assert "أجب دائماً باللغة العربية" in system_prompt()
+        d.answer_language = "auto"
+        assert "أجب بلغة السؤال" in system_prompt()
+    finally:
+        d.answer_language = old

@@ -66,6 +66,7 @@ export function SourcesPanel({
                         {t("page")} <bdi>{s.page}</bdi>
                       </span>
                     ) : null}
+                    {s.translated ? <span className="font-semibold text-primary">{t("machineTranslated")}</span> : null}
                     <span>
                       {t("relevance")} <bdi dir="ltr">{(rel * 100).toFixed(0)}%</bdi>
                     </span>
@@ -85,6 +86,14 @@ export function SourcesPanel({
                 >
                   {s.text}
                 </p>
+                {s.translated && s.original_text ? (
+                  <details className="col-span-2 mt-2 text-xs" onClick={(e) => e.stopPropagation()}>
+                    <summary className="cursor-pointer text-primary">{t("showOriginal")}</summary>
+                    <p dir="ltr" className="mt-2 whitespace-pre-wrap border-s-2 border-border ps-3 text-start leading-5 text-muted-foreground">
+                      {s.original_text}
+                    </p>
+                  </details>
+                ) : null}
               </div>
             </li>
           );

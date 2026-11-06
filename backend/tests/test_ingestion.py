@@ -36,3 +36,34 @@ def test_tables_are_kept_whole():
     chunks = chunk_pages([PageContent(text="مقدمة قصيرة\n\n" + table, source="t.pdf", page=1)], size=900)
     tables = [c for c in chunks if c.metadata["is_table"]]
     assert len(tables) == 1 and "| 3 | 4 |" in tables[0].text
+
+
+def test_translate_pages_to_arabic_with_cache(monkeypatch, tmp_path):
+    """English pages are translated (once, then served from cache); Arabic pages pass through."""
+    from app.generation import llm as llm_mod
+    from app.ingestion import translate as tr
+
+    calls = []
+
+    class Fake:
+        configured = True
+
+        def complete(self, messages, **kw):
+            calls.append(messages[-1]["content"])
+            return llm_mod.LLMResult(text="الري بالتنقيط (drip irrigation) يوفر 40% من الماء.", model="fake")
+
+    monkeypatch.setattr(tr, "get_llm", lambda: Fake())
+    monkeypatch.setattr(tr, "_cache_path", lambda d: tmp_path / f"{d}.json")
+    pages = [
+        PageContent(text="Drip irrigation saves 40% of water.", source="fao.pdf", page=3),
+        PageContent(text="الزيتون يحتاج إلى ري منتظم.", source="ar.pdf", page=1),
+    ]
+    out = tr.translate_pages(pages, "ar")
+    assert out[0].text.startswith("الري بالتنقيط") and out[0].metadata["translated"] is True
+    assert out[0].metadata["original_text"] == "Drip irrigation saves 40% of water."
+    assert out[1] is pages[1]
+    tr.translate_pages(pages, "ar")
+    assert len(calls) == 1  # second run hit the cache
+
+    chunks = chunk_pages(out, size=900)
+    assert chunks[0].metadata["translated"] is True and "Drip" in chunks[0].metadata["original_text"]

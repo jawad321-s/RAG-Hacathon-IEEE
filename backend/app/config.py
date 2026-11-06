@@ -60,6 +60,12 @@ class Settings(BaseSettings):
     app_public_url: str = "http://localhost:3000"
     app_title: str = "RAG Hackathon"
 
+    # --- Arabic-first knowledge base ---
+    # "ar" = translate non-Arabic pages to Arabic at ingestion (cached). "" = keep original language.
+    translate_docs_to: str = ""
+    translation_model: str = ""  # empty = LLM_UTILITY_MODEL
+    translation_workers: int = 6
+
     # --- Embeddings --------------------------------------------------------
     # fastembed  = local ONNX model (free, private, offline after first download)
     # openrouter = remote embeddings through OpenRouter's OpenAI-compatible API
@@ -113,6 +119,9 @@ class DomainConfig(BaseModel):
     product_name: str = "Assistant"
     tagline: str = ""
     language: str = "ar"
+    # Language of every answer: "ar" = always Arabic (even for English sources/questions),
+    # "auto" = same language as the question.
+    answer_language: str = "auto"
     audience: str = ""
     persona: str = ""
     system_prompt_extra: str = ""
