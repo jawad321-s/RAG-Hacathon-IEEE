@@ -1,5 +1,6 @@
 // Thin API client for the FastAPI backend.
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+// Empty = same origin; Next.js rewrites /api/* to the FastAPI server (see next.config.ts).
+export const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
 export type Source = {
   index: number;
