@@ -1,0 +1,54 @@
+# One-command workflow. Run `make help`.
+PY := backend/.venv/bin/python
+PIP := backend/.venv/bin/pip
+
+.PHONY: help setup models check ingest reset eval eval-fast api web dev test lint cost docker
+
+help:
+	@grep -E '^[a-z-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
+
+setup: ## Install backend (venv) + frontend deps, create .env
+	test -f .env || cp .env.example .env
+	python3 -m venv backend/.venv
+	$(PIP) install -U pip -q && $(PIP) install -r backend/requirements-dev.txt
+	cd frontend && npm install
+
+models: ## Pre-download embedding + reranker models (~3GB, do it at home!)
+	cd backend && ../$(PY) -m scripts.download_models
+
+check: ## Verify OpenRouter key + model ids
+	cd backend && ../$(PY) -m scripts.check_setup
+
+ingest: ## Ingest backend/data/raw into ChromaDB
+	cd backend && ../$(PY) -m scripts.ingest
+
+reset: ## Wipe the vector DB and re-ingest from scratch
+	cd backend && ../$(PY) -m scripts.ingest --reset
+
+eval: ## Full evaluation (retrieval + LLM judge) -> backend/data/eval/results
+	cd backend && ../$(PY) -m scripts.evaluate --tag $(or $(TAG),run)
+
+eval-fast: ## Retrieval-only evaluation (free, seconds)
+	cd backend && ../$(PY) -m scripts.evaluate --retrieval-only --tag $(or $(TAG),retrieval)
+
+api: ## Run FastAPI on :8000
+	cd backend && ../backend/.venv/bin/uvicorn app.main:app --reload --port 8000
+
+web: ## Run Next.js on :3000
+	cd frontend && npm run dev
+
+dev: ## Run API + web together
+	$(MAKE) -j2 api web
+
+test: ## Backend tests
+	cd backend && ../$(PY) -m pytest -q
+
+lint: ## Lint backend + frontend
+	cd backend && .venv/bin/ruff check . --exclude .venv
+	cd frontend && npm run lint
+
+cost: ## Unit economics for the business plan
+	cd backend && ../$(PY) -m scripts.cost_calculator
+
+docker: ## Run everything with Docker
+	docker compose up --build

@@ -1,0 +1,15 @@
+[
+  {"id": "q01", "type": "factual", "question": "ما هو الحد الأعلى للساعات المعتمدة في الفصل العادي؟", "reference_answer": "18 ساعة معتمدة، ويمكن 21 ساعة للطالب الذي معدله أعلى من 3.5 بموافقة العميد.", "relevant_sources": ["student_guide.md"], "relevant_keywords": ["18 ساعة"]},
+  {"id": "q02", "type": "dialect", "question": "اذا غبت كتير عن المحاضرات شو بصير معي؟", "reference_answer": "إذا تجاوز الغياب 15% دون عذر يُحرم الطالب من الامتحان النهائي وتُرصد له علامة صفر.", "relevant_sources": ["student_guide.md"], "relevant_keywords": ["15%"]},
+  {"id": "q03", "type": "factual", "question": "متى آخر موعد للانسحاب من مساق؟", "reference_answer": "حتى نهاية الأسبوع العاشر من الفصل، ويظهر المساق بعلامة W.", "relevant_sources": ["student_guide.md"], "relevant_keywords": ["الأسبوع العاشر"]},
+  {"id": "q04", "type": "table", "question": "كم سعر الساعة المعتمدة في كلية الهندسة؟", "reference_answer": "55 ديناراً للساعة، ورسوم التسجيل الفصلية 75 ديناراً.", "relevant_sources": ["fees_2026.docx"], "relevant_keywords": ["الهندسة"]},
+  {"id": "q05", "type": "factual", "question": "ما هي شروط منحة التفوق؟", "reference_answer": "معدل تراكمي 3.7 فأعلى، وتغطي 50% من سعر الساعات، ولا يجوز الجمع بين منحتين.", "relevant_sources": ["fees_2026.docx"], "relevant_keywords": ["3.7"]},
+  {"id": "q06", "type": "multi_hop", "question": "طالب هندسة سجل 15 ساعة، كم يدفع رسوم ساعات وتسجيل؟", "reference_answer": "15 × 55 = 825 ديناراً للساعات + 75 ديناراً رسوم تسجيل = 900 دينار.", "relevant_sources": ["fees_2026.docx"], "relevant_keywords": ["55"]},
+  {"id": "q07", "type": "factual", "question": "كم ساعة تطوع لازم للتخرج؟", "reference_answer": "120 ساعة عمل تطوعي في خدمة المجتمع.", "relevant_sources": ["student_guide.md"], "relevant_keywords": ["120 ساعة"]},
+  {"id": "q08", "type": "dialect", "question": "نسيت الباسوورد تبع البوابة، شو أعمل؟", "reference_answer": "اختيار نسيت كلمة السر من صفحة الدخول ليصل رابط على البريد الجامعي، أو مراجعة مركز الحاسوب.", "relevant_sources": ["faq.csv"], "relevant_keywords": ["كلمة السر"]},
+  {"id": "q09", "type": "factual", "question": "ما مواعيد دوام المكتبة يوم السبت؟", "reference_answer": "من 9 صباحاً حتى 2 ظهراً.", "relevant_sources": ["faq.csv"], "relevant_keywords": ["المكتبة"]},
+  {"id": "q10", "type": "factual", "question": "ماذا يحدث إذا حصل الطالب على ثلاثة إنذارات أكاديمية متتالية؟", "reference_answer": "يُفصل من التخصص ويحق له التحويل لتخصص آخر يقبله.", "relevant_sources": ["student_guide.md"], "relevant_keywords": ["ثلاثة إنذارات"]},
+  {"id": "q11", "type": "factual", "question": "How many courses can I repeat to raise my GPA?", "reference_answer": "Up to six courses with a grade below C; only the higher grade counts.", "relevant_sources": ["student_guide.md"], "relevant_keywords": ["ستة مساقات"]},
+  {"id": "q12", "type": "out_of_scope", "question": "من فاز بكأس العالم 2022؟"},
+  {"id": "q13", "type": "out_of_scope", "question": "ما هي عاصمة أستراليا؟"}
+]
