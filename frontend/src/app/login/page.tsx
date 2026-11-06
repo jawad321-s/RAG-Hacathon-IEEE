@@ -29,7 +29,7 @@ export default function LoginPage() {
         body: JSON.stringify({ email: f.get("email"), password: f.get("password"), name: f.get("name") ?? "" }),
       });
       setUser(res.user, res.token);
-      router.push(res.user.role === "admin" ? "/admin" : "/");
+      router.push(res.user.role === "admin" ? "/admin" : "/chat");
     } catch (err) {
       toast.error(t("error"), { description: (err as Error).message });
     } finally {

@@ -17,6 +17,8 @@ code quality 15, business 15, marketing 10, pitch 10, innovation 5, +10 bonus fo
   white surface, one family (IBM Plex Sans Arabic), one accent Yves Klein Blue #002FA7, hairline rules,
   square corners, no shadows, light mode only. Differentiator: "folio citations" (`.folio` class).
   Keep new UI inside those tokens; all on-screen strings go through `src/lib/i18n.ts`.
+- Routes: `/` landing (`components/landing.tsx`, content from domain.yaml + live API, no invented stats),
+  `/chat` chat (`components/chat/chat-view.tsx`, `?q=` asks a question on arrival), `/admin`, `/login`.
 - `docs/` hackathon-day playbook, per-problem playbooks, judge Q&A, business/marketing/pitch templates.
 
 ## Commands

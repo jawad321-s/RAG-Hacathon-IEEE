@@ -48,6 +48,8 @@ export type User = { id: number; email: string; name: string; role: "user" | "ad
 export type PublicConfig = {
   product_name: string;
   tagline: string;
+  audience?: string;
+  problem_statement?: string;
   language: "ar" | "en";
   sample_questions: string[];
   disclaimer: string;

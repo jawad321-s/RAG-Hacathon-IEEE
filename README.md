@@ -91,7 +91,7 @@ make reset                 # فهرسة المستندات في backend/data/raw
 make dev                   # API على :8000 والواجهة على :3000
 ```
 
-افتح http://localhost:3000 (الواجهة تمرّر `/api` للـ backend تلقائياً) — لوحة الإدارة: http://localhost:3000/admin (البريد وكلمة المرور من `.env`: `ADMIN_EMAIL` / `ADMIN_PASSWORD`).
+افتح http://localhost:3000 (صفحة الهبوط، والمحادثة على `/chat`؛ الواجهة تمرّر `/api` للـ backend تلقائياً) — لوحة الإدارة: http://localhost:3000/admin (البريد وكلمة المرور من `.env`: `ADMIN_EMAIL` / `ADMIN_PASSWORD`).
 توثيق الـ API التفاعلي: http://localhost:8000/docs
 
 <details><summary>بدون make (Windows)</summary>

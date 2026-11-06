@@ -49,7 +49,8 @@ make reset && make eval-fast && make dev   # تأكد أن كل شي يشتغل 
    - `product_name`, `tagline`, `audience`, `persona`
    - `system_prompt_extra` ← تعليمات المجال (انسخها من `PROBLEM_PLAYBOOKS.md`)
    - `refusal_message`, `disclaimer`, `escalation_message`
-   - `sample_questions` (4 أسئلة تعرف أن جوابها موجود — ستستخدمها في العرض)
+   - `sample_questions` (4 أسئلة تعرف أن جوابها موجود — ستستخدمها في العرض، وتظهر في صفحة الهبوط وصفحة المحادثة)
+   - `audience` و `problem_statement` ← تظهر في صفحة الهبوط (`/`). اكتب المشكلة بجملتين ومعها رقم ومصدره إن وجد. أرقام "المستندات" و"المقاطع" في الصفحة تُقرأ من النظام نفسه.
    - `metadata_filters` (مثلاً `category`, `year`, `version`)
 2. **المستندات** في `backend/data/raw/<category>/...` (اسم المجلد يصير `category`). احذف `data/raw/sample`.
 3. افحص كل PDF قبل الفهرسة:

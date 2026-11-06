@@ -28,6 +28,8 @@ def public_config():
     return {
         "product_name": d.product_name,
         "tagline": d.tagline,
+        "audience": d.audience,
+        "problem_statement": d.problem_statement,
         "language": d.language,
         "sample_questions": d.sample_questions,
         "disclaimer": d.disclaimer,

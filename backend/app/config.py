@@ -123,6 +123,7 @@ class DomainConfig(BaseModel):
     # "auto" = same language as the question.
     answer_language: str = "auto"
     audience: str = ""
+    problem_statement: str = ""
     persona: str = ""
     system_prompt_extra: str = ""
     refusal_message: str = "لا تتوفر لدي معلومات كافية في المصادر للإجابة عن هذا السؤال."

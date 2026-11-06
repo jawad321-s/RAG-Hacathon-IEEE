@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Languages, LayoutDashboard, LogIn, LogOut } from "lucide-react";
+import { Languages, LayoutDashboard, LogIn, LogOut, MessagesSquare } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { useApp } from "@/components/providers";
@@ -26,6 +26,14 @@ export function SiteHeader({ children }: { children?: React.ReactNode }) {
         </Link>
 
         <nav className="ms-auto flex items-center gap-1">
+          {!pathname.startsWith("/chat") && (
+            <Button asChild variant="ghost" size="sm">
+              <Link href="/chat">
+                <MessagesSquare />
+                <span className="hidden sm:inline">{t("chat")}</span>
+              </Link>
+            </Button>
+          )}
           {user?.role === "admin" && (
             <Button asChild variant="ghost" size="sm" className={cn(pathname.startsWith("/admin") && "underline underline-offset-8")}>
               <Link href="/admin">
