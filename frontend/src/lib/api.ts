@@ -1,6 +1,16 @@
 // Thin API client for the FastAPI backend.
-// Empty = same origin; Next.js rewrites /api/* to the FastAPI server (see next.config.ts).
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
+// Where the browser sends API calls:
+// 1. NEXT_PUBLIC_API_URL if set.
+// 2. On a local machine: straight to FastAPI on :8000 (streaming works best without a proxy hop).
+// 3. Otherwise (preview / tunnel): same origin; Next.js rewrites /api/* to FastAPI (see next.config.ts).
+function resolveApiUrl(): string {
+  if (process.env.NEXT_PUBLIC_API_URL) return process.env.NEXT_PUBLIC_API_URL;
+  if (typeof window !== "undefined" && ["localhost", "127.0.0.1"].includes(window.location.hostname)) {
+    return `http://${window.location.hostname}:8000`;
+  }
+  return "";
+}
+export const API_URL = resolveApiUrl();
 
 export type Source = {
   index: number;

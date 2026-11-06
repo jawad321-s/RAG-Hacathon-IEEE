@@ -30,7 +30,7 @@ class Settings(BaseSettings):
 
     # --- App ---------------------------------------------------------------
     app_env: Literal["dev", "prod", "test"] = "dev"
-    cors_origins: str = "http://localhost:3000"
+    cors_origins: str = "http://localhost:3000,http://127.0.0.1:3000"
     domain_config_path: Path = BACKEND_DIR / "config" / "domain.yaml"
 
     # --- Storage -----------------------------------------------------------
