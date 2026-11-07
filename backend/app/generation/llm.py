@@ -38,7 +38,7 @@ class LLM:
             api_key=s.openrouter_api_key or "missing-key",
             base_url=s.openrouter_base_url,
             default_headers={"HTTP-Referer": s.app_public_url, "X-Title": s.app_title},
-            timeout=60,
+            timeout=s.llm_timeout,
             max_retries=1,
         )
         self.separate_utility = bool(s.utility_base_url or s.utility_api_key)
@@ -47,7 +47,7 @@ class LLM:
                 api_key=s.utility_api_key or s.openrouter_api_key or "missing-key",
                 base_url=s.utility_base_url or s.openrouter_base_url,
                 default_headers={"HTTP-Referer": s.app_public_url, "X-Title": s.app_title},
-                timeout=60,
+                timeout=s.llm_timeout,
                 max_retries=1,
             )
             if self.separate_utility
