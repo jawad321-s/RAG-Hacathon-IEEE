@@ -1,0 +1,3308 @@
+{
+  "source": "https://www.hebron.edu/index.php/academic/aca01/undergraduate.html",
+  "scraped_at": "2026-11-07",
+  "majors": [
+    {
+      "major": "بكالوريوس اصول الدين",
+      "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-plans.html",
+      "department": "sharia-dep__sharia-dep1"
+    },
+    {
+      "major": "بكالوريوس الفقه واصوله",
+      "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep2/sharia-dep2-plans.html",
+      "department": "sharia-dep__sharia-dep2"
+    },
+    {
+      "major": "بكالوريوس الشريعة الإسلامية/ فرعي تربية",
+      "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-plans.html",
+      "department": "sharia-dep__sharia-dep1"
+    },
+    {
+      "major": "بكالوريوس الشريعة الإسلامية/ فرعي إعلام",
+      "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-plans.html",
+      "department": "sharia-dep__sharia-dep1"
+    },
+    {
+      "major": "بكالوريوس الشريعة الإسلامية/ مسار البنوك الاسلامية",
+      "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep2/sharia-dep2-plans.html",
+      "department": "sharia-dep__sharia-dep2"
+    },
+    {
+      "major": "بكالوريوس الفقه واصوله/ مسار التحكيم والمحاماة الشرعية",
+      "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep2/sharia-dep2-plans.html",
+      "department": "sharia-dep__sharia-dep2"
+    },
+    {
+      "major": "بكالوريوس رئيسي أصول دين / فرعي لغة عربية",
+      "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-plans.html",
+      "department": "sharia-dep__sharia-dep1"
+    },
+    {
+      "major": "بكالوريوس اللغة العربية وآدابها",
+      "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep1/arts-dep1-plans.html",
+      "department": "arts-dep-2__arts-dep1"
+    },
+    {
+      "major": "بكالوريوس اللغة الانجليزية وآدابها",
+      "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-plans.html",
+      "department": "arts-dep-2__arts-dep2"
+    },
+    {
+      "major": "بكالوريوس اللغة الانجليزية وآدابها- مسار الترجمة",
+      "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-plans.html",
+      "department": "arts-dep-2__arts-dep2"
+    },
+    {
+      "major": "بكالوريوس اللغة الانجليزية وآدابها- فرعي علاقات عامة",
+      "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-plans.html",
+      "department": "arts-dep-2__arts-dep2"
+    },
+    {
+      "major": "بكالوريوس اللغة الانجليزية فرعي اللغة الفرنسية",
+      "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-plans.html",
+      "department": "arts-dep-2__arts-dep2"
+    },
+    {
+      "major": "بكالوريوس التاريخ فرعي جغرافيا",
+      "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep3/arts-dep3-plans.html",
+      "department": "arts-dep-2__arts-dep3"
+    },
+    {
+      "major": "بكالوريوس رئيسي تاريخ /فرعي آثار",
+      "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep3/arts-dep3-plans.html",
+      "department": "arts-dep-2__arts-dep3"
+    },
+    {
+      "major": "بكالوريوس الاتصال والإعلام الرقمي",
+      "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep4/arts-dep4-plans.html",
+      "department": "arts-dep-2__arts-dep4"
+    },
+    {
+      "major": "بكالوريوس الاعلام - فرعي تسويق رقمي ريادي",
+      "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep4/arts-dep4-plans.html",
+      "department": "arts-dep-2__arts-dep4"
+    },
+    {
+      "major": "بكالوريوس الجغرافيا التطبيقية",
+      "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep5/arts-dep5-plans.html",
+      "department": "arts-dep-2__arts-dep5"
+    },
+    {
+      "major": "بكالوريوس السياحة والاثار",
+      "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep6/arts-dep6-plans.html",
+      "department": "arts-dep-2__arts-dep6"
+    },
+    {
+      "major": "بكالوريوس الترجمة التحريرية والفورية",
+      "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-plans.html",
+      "department": "arts-dep-2__arts-dep2"
+    },
+    {
+      "major": "بكالوريوس التخطيط العقاري",
+      "url": "https://www.hebron.edu/index.php/arts-dep8/sharia-dep1-mission.html",
+      "department": "arts-dep8"
+    },
+    {
+      "major": "بكالوريوس معلم المرحلة الاساسية الدنيا",
+      "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html",
+      "department": "edu-dep__edu-dep1"
+    },
+    {
+      "major": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم التربية الاسلامية",
+      "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html",
+      "department": "edu-dep__edu-dep1"
+    },
+    {
+      "major": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم اللغة العربية",
+      "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html",
+      "department": "edu-dep__edu-dep1"
+    },
+    {
+      "major": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم اللغة الانجليزية",
+      "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html",
+      "department": "edu-dep__edu-dep1"
+    },
+    {
+      "major": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم الاجتماعيات",
+      "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html",
+      "department": "edu-dep__edu-dep1"
+    },
+    {
+      "major": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم الرياضيات",
+      "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html",
+      "department": "edu-dep__edu-dep1"
+    },
+    {
+      "major": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم العلوم",
+      "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html",
+      "department": "edu-dep__edu-dep1"
+    },
+    {
+      "major": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم التكنولوجيا",
+      "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html",
+      "department": "edu-dep__edu-dep1"
+    },
+    {
+      "major": "بكالوريوس الارشاد النفسي والتربوي",
+      "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep2/edu-dep2-plans.html",
+      "department": "edu-dep__edu-dep2"
+    },
+    {
+      "major": "بكالوريوس التربية الرياضية",
+      "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html",
+      "department": "edu-dep__edu-dep1"
+    },
+    {
+      "major": "بكالوريوس رياض الاطفال",
+      "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html",
+      "department": "edu-dep__edu-dep1"
+    },
+    {
+      "major": "بكالوريوس الرياضيات",
+      "url": "https://www.hebron.edu/index.php/science-dep/science-dep1/science-dep1-plans.html",
+      "department": "science-dep__science-dep1"
+    },
+    {
+      "major": "بكالوريوس رئيسي الرياضيات- فرعي العلوم المالية والمحاسبية",
+      "url": "https://www.hebron.edu/index.php/science-dep/science-dep1/science-dep1-plans.html",
+      "department": "science-dep__science-dep1"
+    },
+    {
+      "major": "بكالوريوس رئيسي الرياضيات- فرعي الحاسوب",
+      "url": "https://www.hebron.edu/index.php/science-dep/science-dep1/science-dep1-plans.html",
+      "department": "science-dep__science-dep1"
+    },
+    {
+      "major": "بكالوريوس الكيمياء",
+      "url": "https://www.hebron.edu/index.php/science-dep/science-dep2/science-dep2-plans.html",
+      "department": "science-dep__science-dep2"
+    },
+    {
+      "major": "بكالوريوس الكيمياء- فرعي كيمياء صناعية",
+      "url": "https://www.hebron.edu/index.php/science-dep/science-dep2/science-dep2-plans.html",
+      "department": "science-dep__science-dep2"
+    },
+    {
+      "major": "بكالوريوس الاحياء",
+      "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-plans.html",
+      "department": "science-dep__science-dep3"
+    },
+    {
+      "major": "بكالوريوس الاحياء- مسار الصحة العامة",
+      "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-plans.html",
+      "department": "science-dep__science-dep3"
+    },
+    {
+      "major": "بكالوريوس الاحياء- مسار العلوم الطبية المخبرية",
+      "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-plans.html",
+      "department": "science-dep__science-dep3"
+    },
+    {
+      "major": "بكالوريوس الأحياء- مسار التكنولوجيا الحيوية",
+      "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-plans.html",
+      "department": "science-dep__science-dep3"
+    },
+    {
+      "major": "بكالوريوس الانتاج النباتي والوقاية",
+      "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep1/agri-dep1-plans.html",
+      "department": "agri-dep__agri-dep1"
+    },
+    {
+      "major": "تكنولوجيا الإنتاج الحيواني",
+      "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep2/agri-dep2-plans.html",
+      "department": "agri-dep__agri-dep2"
+    },
+    {
+      "major": "بكالوريوس التغذية والتصنيع الغذائي",
+      "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep4/agri-dep4-plans.html",
+      "department": "agri-dep__agri-dep4"
+    },
+    {
+      "major": "بكالوريوس البستنة وإدارة الحدائق",
+      "url": "https://www.hebron.edu/index.php/agri-dep/hgm-dep/hgm-overview.html",
+      "department": "agri-dep__hgm-dep"
+    },
+    {
+      "major": "بكالوريوس ادارة الاعمال",
+      "url": "https://www.hebron.edu/index.php/man-dep/man-dep1/man-dep1-plans.html",
+      "department": "man-dep__man-dep1"
+    },
+    {
+      "major": "بكالوريوس العلوم المالية والمحاسبية",
+      "url": "https://www.hebron.edu/index.php/man-dep/man-dep2/man-dep2-plans.html",
+      "department": "man-dep__man-dep2"
+    },
+    {
+      "major": "بكالوريوس التسويق الرقمي الريادي",
+      "url": "https://www.hebron.edu/index.php/man-dep/man-dep4/man-dep4-mission.html",
+      "department": "man-dep__man-dep4"
+    },
+    {
+      "major": "بكالوريوس الادارة العامة",
+      "url": "https://www.hebron.edu/index.php/man-dep/man-dep3/man-dep3-plans.html",
+      "department": "man-dep__man-dep3"
+    },
+    {
+      "major": "بكالوريوس علوم التمريض",
+      "url": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep1/nursing-dep1-plans.html",
+      "department": "nursing-dep__nursing-dep1"
+    },
+    {
+      "major": "بكالوريوس القبالة",
+      "url": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep2/nursing-dep2-plans.html",
+      "department": "nursing-dep__nursing-dep2"
+    },
+    {
+      "major": "بكالوريوس الصيدلة",
+      "url": "https://www.hebron.edu/index.php/pharmacy-dep/pharmacy-dep1/pharmacy-dep1-plans.html",
+      "department": "pharmacy-dep__pharmacy-dep1"
+    },
+    {
+      "major": "بكالوريوس العلوم الطبية المخبرية",
+      "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep2-2/pharmacy-dep2-overview-2.html",
+      "department": "ahs-dep__pharmacy-dep2-2"
+    },
+    {
+      "major": "بكالوريوس الفيزياء الطبية الحيوية",
+      "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep3-2/pharmacy-dep2-overview.html",
+      "department": "ahs-dep__pharmacy-dep3-2"
+    },
+    {
+      "major": "بكالوريوس التصوير الطبي",
+      "url": "https://www.hebron.edu/index.php/ahs-dep/medical-imagin-dep4/pharmacy-dep4-overview.html",
+      "department": "ahs-dep__medical-imagin-dep4"
+    },
+    {
+      "major": "بكالوريوس دكتور صيدلاني",
+      "url": "https://www.hebron.edu/index.php/pharmacy-dep/pharmacy-dep1/pharmacy-dep1-plans.html",
+      "department": "pharmacy-dep__pharmacy-dep1"
+    },
+    {
+      "major": "بكالوريوس العلاج الطبيعي",
+      "url": "https://www.hebron.edu/index.php/ahs-dep/phy-the-dep/ph-th-overview.html",
+      "department": "ahs-dep__phy-the-dep"
+    },
+    {
+      "major": "بكالوريوس القانون العام",
+      "url": "https://www.hebron.edu/index.php/law-dep/law-dep1/law-dep1-plans.html",
+      "department": "law-dep__law-dep1"
+    },
+    {
+      "major": "بكالوريوس القانون الخاص",
+      "url": "https://www.hebron.edu/index.php/law-dep/law-dep2/law-dep2-plans.html",
+      "department": "law-dep__law-dep2"
+    },
+    {
+      "major": "بكالوريوس الفقه والقانون",
+      "url": "https://www.hebron.edu/index.php/law-dep/law-dep3/law-dep3-plans.html",
+      "department": "law-dep__law-dep3"
+    },
+    {
+      "major": "بكالوريوس العلوم السياسية",
+      "url": "https://www.hebron.edu/index.php/law-dep/law-dep4/law-dep4-plans.html",
+      "department": "law-dep__law-dep4"
+    },
+    {
+      "major": "بكالوريوس العلوم السياسية فرعي ادارة عامة",
+      "url": "https://www.hebron.edu/index.php/law-dep/law-dep4/law-dep4-plans.html",
+      "department": "law-dep__law-dep4"
+    },
+    {
+      "major": "بكالوريوس العلوم السياسية فرعي علاقات دولية",
+      "url": "https://www.hebron.edu/index.php/law-dep/law-dep4/law-dep4-plans.html",
+      "department": "law-dep__law-dep4"
+    },
+    {
+      "major": "بكالوريوس علم الحاسوب",
+      "url": "https://www.hebron.edu/index.php/it-dep/it-dep1/it-dep1-plans.html",
+      "department": "it-dep__it-dep1"
+    },
+    {
+      "major": "تخصص رئيسي علم الحاسوب/ فرعي علم البيانات والذكاء الاصطناعي",
+      "url": "https://www.hebron.edu/index.php/it-dep/it-dep1/it-dep1-plans.html",
+      "department": "it-dep__it-dep1"
+    },
+    {
+      "major": "بكالوريوس رئيسي علم الحاسوب- فرعي ادارة الاعمال",
+      "url": "https://www.hebron.edu/index.php/it-dep/it-dep1/it-dep1-plans.html",
+      "department": "it-dep__it-dep1"
+    },
+    {
+      "major": "بكالوريوس رئيسي علم الحاسوب- فرعي هندسة برمجيات",
+      "url": "https://www.hebron.edu/index.php/it-dep/it-dep1/it-dep1-plans.html",
+      "department": "it-dep__it-dep1"
+    },
+    {
+      "major": "بكالوريوس تكنولوجيا الويب والوسائط المتعددة",
+      "url": "https://www.hebron.edu/index.php/it-dep/it-dep2/it-dep2-plans.html",
+      "department": "it-dep__it-dep2"
+    },
+    {
+      "major": "بكالوريوس الامن السيبراني",
+      "url": "https://www.hebron.edu/index.php/it-dep/it-dep3/it-dep3-plans.html",
+      "department": "it-dep__it-dep3"
+    },
+    {
+      "major": "بكالوريوس الامن السيبراني/ مسار جرائم الكترونية",
+      "url": "https://www.hebron.edu/index.php/it-dep/it-dep3/it-dep3-plans.html",
+      "department": "it-dep__it-dep3"
+    },
+    {
+      "major": "بكالوريوس الطب البشري",
+      "url": "https://www.hebron.edu/index.php/med-col.html",
+      "department": "med-col"
+    }
+  ],
+  "departments": [
+    {
+      "slug": "sharia-dep__sharia-dep1",
+      "prefix": "/index.php/sharia-dep/sharia-dep1/",
+      "seed": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-plans.html",
+      "majors": [
+        "بكالوريوس اصول الدين",
+        "بكالوريوس الشريعة الإسلامية/ فرعي تربية",
+        "بكالوريوس الشريعة الإسلامية/ فرعي إعلام",
+        "بكالوريوس رئيسي أصول دين / فرعي لغة عربية"
+      ],
+      "pages": {
+        "sharia-dep1-ac-pro": {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-ac-pro.html",
+          "file": "pages/sharia-dep__sharia-dep1/sharia-dep1-ac-pro.md"
+        },
+        "sharia-dep1-courses": {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-courses.html",
+          "file": "pages/sharia-dep__sharia-dep1/sharia-dep1-courses.md"
+        },
+        "sharia-dep1-guideplan": {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-guideplan.html",
+          "file": "pages/sharia-dep__sharia-dep1/sharia-dep1-guideplan.md"
+        },
+        "sharia-dep1-jobs": {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-jobs.html",
+          "file": "pages/sharia-dep__sharia-dep1/sharia-dep1-jobs.md"
+        },
+        "sharia-dep1-obj": {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-obj.html",
+          "file": "pages/sharia-dep__sharia-dep1/sharia-dep1-obj.md"
+        },
+        "sharia-dep1-plans": {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-plans.html",
+          "file": "pages/sharia-dep__sharia-dep1/sharia-dep1-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/sharia-college/Course Description-Fundamentals of Islamic Religion.pdf",
+          "label": "وصف مساقات قسم اصول الدين",
+          "found_on": "sharia-dep1-courses",
+          "file": "pdfs/sharia-dep__sharia-dep1/Course_Description-Fundamentals_of_Islamic_Religion.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/sharia-college/Course Description-Islamic Sharia-Minor Mass Communication.pdf",
+          "label": "وصف مساقات تخصص الشريعة الاسلامية-فرعي اعلام",
+          "found_on": "sharia-dep1-courses",
+          "file": "pdfs/sharia-dep__sharia-dep1/Course_Description-Islamic_Sharia-Minor_Mass_Communication.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/sharia-college/Course Description-Major Fundamentals of Islamic Religion- Minor Arabic Language.pdf",
+          "label": "وصف مساقات تخصص أصول الدين رئيسي / فرعي لغة عربية",
+          "found_on": "sharia-dep1-courses",
+          "file": "pdfs/sharia-dep__sharia-dep1/Course_Description-Major_Fundamentals_of_Islamic_Religion-_Minor_Arabic_Language.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/sharia-college/Course Description-Islamic Sharia-Minor Education.pdf",
+          "label": "وصف مساقات تخصص الشريعة الاسلامية-فرعي تربية",
+          "found_on": "sharia-dep1-courses",
+          "file": "pdfs/sharia-dep__sharia-dep1/Course_Description-Islamic_Sharia-Minor_Education.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=166:sh02",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس أصول الدين 2017",
+          "found_on": "sharia-dep1-guideplan",
+          "file": "pdfs/sharia-dep__sharia-dep1/Academic_Advisory_Plan_arabic-_Fundamentals_of_Religion-2017.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=14:sh01",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس أصول الدين",
+          "found_on": "sharia-dep1-guideplan",
+          "file": "pdfs/sharia-dep__sharia-dep1/Academic_Advisory_Plan_arabic-_Fundamentals_of_Religion.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-plans.html?download=539:sh-p-2",
+          "label": "بكالوريوس اصول الدين 2022",
+          "found_on": "sharia-dep1-plans",
+          "file": "pdfs/sharia-dep__sharia-dep1/Academic-Plan-2022-Fundamentals-of-Islamic-Religion.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-plans.html?download=101:sh-p-01",
+          "label": "بكالوريوس اصول الدين 2017",
+          "found_on": "sharia-dep1-plans",
+          "file": "pdfs/sharia-dep__sharia-dep1/Academic-Plan-2017-Fundamentals-of-Islamic-Religion.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-plans.html?download=540:sh-p-3",
+          "label": "أصول الدين-فرعي لغة عربية 2022",
+          "found_on": "sharia-dep1-plans",
+          "file": "pdfs/sharia-dep__sharia-dep1/Academic-Plan-2022-Fundamentals-of-Islamic-Religion-Minor-Arabic-Lang.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-plans.html?download=102:sh-p-02",
+          "label": "أصول الدين-فرعي لغة عربية 2017",
+          "found_on": "sharia-dep1-plans",
+          "file": "pdfs/sharia-dep__sharia-dep1/Academic-Plan-2017-Fundamentals-of-Islamic-Religion-Minor-Arabic-Lang.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-plans.html?download=554:sh-p-4",
+          "label": "الشريعة الاسلامية-فرعي تربية 2022",
+          "found_on": "sharia-dep1-plans",
+          "file": "pdfs/sharia-dep__sharia-dep1/Academic-Plan-2022-Islamic-Sharia-Minor-education.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep1/sharia-dep1-plans.html?download=553:sh-p-03",
+          "label": "الشريعة الاسلامية-فرعي اعلام 2022",
+          "found_on": "sharia-dep1-plans",
+          "file": "pdfs/sharia-dep__sharia-dep1/Academic-Plan-2022-Islamic-Sharia-Minor-Mass-Communication.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "sharia-dep__sharia-dep2",
+      "prefix": "/index.php/sharia-dep/sharia-dep2/",
+      "seed": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep2/sharia-dep2-plans.html",
+      "majors": [
+        "بكالوريوس الفقه واصوله",
+        "بكالوريوس الشريعة الإسلامية/ مسار البنوك الاسلامية",
+        "بكالوريوس الفقه واصوله/ مسار التحكيم والمحاماة الشرعية"
+      ],
+      "pages": {
+        "sharia-dep2-acpro": {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep2/sharia-dep2-acpro.html",
+          "file": "pages/sharia-dep__sharia-dep2/sharia-dep2-acpro.md"
+        },
+        "sharia-dep2-courses": {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep2/sharia-dep2-courses.html",
+          "file": "pages/sharia-dep__sharia-dep2/sharia-dep2-courses.md"
+        },
+        "sharia-dep2-guideplan": {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep2/sharia-dep2-guideplan.html",
+          "file": "pages/sharia-dep__sharia-dep2/sharia-dep2-guideplan.md"
+        },
+        "sharia-dep2-jobs": {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep2/sharia-dep2-jobs.html",
+          "file": "pages/sharia-dep__sharia-dep2/sharia-dep2-jobs.md"
+        },
+        "sharia-dep2-obj": {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep2/sharia-dep2-obj.html",
+          "file": "pages/sharia-dep__sharia-dep2/sharia-dep2-obj.md"
+        },
+        "sharia-dep2-plans": {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep2/sharia-dep2-plans.html",
+          "file": "pages/sharia-dep__sharia-dep2/sharia-dep2-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/sharia-college/Course Description-Jurisprudence & Sharia.pdf",
+          "label": "وصف مساقات قسم الفقه واصوله",
+          "found_on": "sharia-dep2-courses",
+          "file": "pdfs/sharia-dep__sharia-dep2/Course_Description-Jurisprudence_Sharia.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/sharia-college/Course Description-Islamic Sharia Islamic Banks Path.pdf",
+          "label": "وصف مساقات تخصص الشريعة الاسلامية/ مسار البنوك الاسلامية",
+          "found_on": "sharia-dep2-courses",
+          "file": "pdfs/sharia-dep__sharia-dep2/Course_Description-Islamic_Sharia_Islamic_Banks_Path.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/sharia-college/Course Description-Jurisprudence & Legislation-Arbitration & Shareah Law Firm Path.pdf",
+          "label": "وصف مساقات تخصص الفقه وأصوله/مسار التحكيم والمحاماة الشرعية",
+          "found_on": "sharia-dep2-courses",
+          "file": "pdfs/sharia-dep__sharia-dep2/Course_Description-Jurisprudence_Legislation-Arbitration_Shareah_Law_Firm_Path.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=167:sh03",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس الفقه واصوله 2017",
+          "found_on": "sharia-dep2-guideplan",
+          "file": "pdfs/sharia-dep__sharia-dep2/Academic_Advisory_Plan_arabic-_Jurisprudence_and_Law-2017.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=15:sh02",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس الفقه واصوله",
+          "found_on": "sharia-dep2-guideplan",
+          "file": "pdfs/sharia-dep__sharia-dep2/Academic_Advisory_Plan_arabic-_Jurisprudence_and_Law.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep2/sharia-dep2-plans.html?download=551:langck-ar-aa-2022-langck-langck-en-gb-fiquh-and-jurisprudence-2022-langck",
+          "label": "الفقه واصوله 2022",
+          "found_on": "sharia-dep2-plans",
+          "file": "pdfs/sharia-dep__sharia-dep2/Academic-Plan-2022-Fiquh-and-Jurisprudence.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep2/sharia-dep2-plans.html?download=103:sh-p-03",
+          "label": "الفقه واصوله 2017",
+          "found_on": "sharia-dep2-plans",
+          "file": "pdfs/sharia-dep__sharia-dep2/Academic-Plan-2017-Fiquh-and-Jurisprudence.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep2/sharia-dep2-plans.html?download=354:sh-p04",
+          "label": "الفقه والتشريع/مسار التحكيم والمحاماة الشرعية 2021",
+          "found_on": "sharia-dep2-plans",
+          "file": "pdfs/sharia-dep__sharia-dep2/Academic-Plan-2021-Jurisprudence-and-Legislation-Arbitration-and-Shareah-Law-Firm-Path.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep2/sharia-dep2-plans.html?download=552:law-min",
+          "label": "الفقه واصوله/مسار التحكيم والمحاماة الشرعية 2022",
+          "found_on": "sharia-dep2-plans",
+          "file": "pdfs/sharia-dep__sharia-dep2/Academic-Plan-2022-Jurisprudence-and-Legislation-Arbitration-and-Shareah-Law-Firm-Path.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/sharia-dep/sharia-dep2/sharia-dep2-plans.html?download=555:banks-path",
+          "label": "الشريعة الاسلامية/مسار البنوك الاسلامية 2022",
+          "found_on": "sharia-dep2-plans",
+          "file": "pdfs/sharia-dep__sharia-dep2/Academic-Plan-2022-Islamic-Sharia-Minor-banks.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "arts-dep-2__arts-dep1",
+      "prefix": "/index.php/arts-dep-2/arts-dep1/",
+      "seed": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep1/arts-dep1-plans.html",
+      "majors": [
+        "بكالوريوس اللغة العربية وآدابها"
+      ],
+      "pages": {
+        "arts-dep1-courses": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep1/arts-dep1-courses.html",
+          "file": "pages/arts-dep-2__arts-dep1/arts-dep1-courses.md"
+        },
+        "arts-dep1-guideplan": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep1/arts-dep1-guideplan.html",
+          "file": "pages/arts-dep-2__arts-dep1/arts-dep1-guideplan.md"
+        },
+        "arts-dep1-jobs": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep1/arts-dep1-jobs.html",
+          "file": "pages/arts-dep-2__arts-dep1/arts-dep1-jobs.md"
+        },
+        "arts-dep1-plans": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep1/arts-dep1-plans.html",
+          "file": "pages/arts-dep-2__arts-dep1/arts-dep1-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/arts-college/Course Description-Arabic Language & Literature.pdf",
+          "label": "وصف مساقات قسم اللغة العربية وادابها",
+          "found_on": "arts-dep1-courses",
+          "file": "pdfs/arts-dep-2__arts-dep1/Course_Description-Arabic_Language_Literature.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=28:arts01",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس اللغة العربية وآدابها",
+          "found_on": "arts-dep1-guideplan",
+          "file": "pdfs/arts-dep-2__arts-dep1/Academic_Advisory_Plan_arabic-_Arabic_Language_and_Literature.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep1/arts-dep1-plans.html?download=668:apa022",
+          "label": "2022 بكالوريوس اللغة العربية وآدابها",
+          "found_on": "arts-dep1-plans",
+          "file": "pdfs/arts-dep-2__arts-dep1/Academic-Plan-2022-Arabic-Language-and-Literature.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep1/arts-dep1-plans.html?download=139:art-p-01",
+          "label": "2017 بكالوريوس اللغة العربية وآدابها",
+          "found_on": "arts-dep1-plans",
+          "file": "pdfs/arts-dep-2__arts-dep1/Academic-Plan-2017-Arabic-Language-and-Literature.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "arts-dep-2__arts-dep2",
+      "prefix": "/index.php/arts-dep-2/arts-dep2/",
+      "seed": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-plans.html",
+      "majors": [
+        "بكالوريوس اللغة الانجليزية وآدابها",
+        "بكالوريوس اللغة الانجليزية وآدابها- مسار الترجمة",
+        "بكالوريوس اللغة الانجليزية وآدابها- فرعي علاقات عامة",
+        "بكالوريوس اللغة الانجليزية فرعي اللغة الفرنسية",
+        "بكالوريوس الترجمة التحريرية والفورية"
+      ],
+      "pages": {
+        "arts-dep2-courses": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-courses.html",
+          "file": "pages/arts-dep-2__arts-dep2/arts-dep2-courses.md"
+        },
+        "arts-dep2-guideplan": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-guideplan.html",
+          "file": "pages/arts-dep-2__arts-dep2/arts-dep2-guideplan.md"
+        },
+        "arts-dep2-jobs": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-jobs.html",
+          "file": "pages/arts-dep-2__arts-dep2/arts-dep2-jobs.md"
+        },
+        "arts-dep2-obj": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-obj.html",
+          "file": "pages/arts-dep-2__arts-dep2/arts-dep2-obj.md"
+        },
+        "arts-dep2-overview": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-overview.html",
+          "file": "pages/arts-dep-2__arts-dep2/arts-dep2-overview.md"
+        },
+        "arts-dep2-plans": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-plans.html",
+          "file": "pages/arts-dep-2__arts-dep2/arts-dep2-plans.md"
+        },
+        "arts-dep2-prog": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-prog.html",
+          "file": "pages/arts-dep-2__arts-dep2/arts-dep2-prog.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/arts-college/Course Description-English Language & Literature.pdf",
+          "label": "وصف مساقات تخصص اللغة الانجليزية وادابها",
+          "found_on": "arts-dep2-courses",
+          "file": "pdfs/arts-dep-2__arts-dep2/Course_Description-English_Language_Literature.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/arts-college/Course Description-English Language and Literature-Minor in Public Relations.pdf",
+          "label": "وصف مساقات تخصص اللغة الانجليزية وادابها-فرعي علاقات عامة",
+          "found_on": "arts-dep2-courses",
+          "file": "pdfs/arts-dep-2__arts-dep2/Course_Description-English_Language_and_Literature-Minor_in_Public_Relations.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/arts-college/Course Description-English-Language -Minor-French.pdf",
+          "label": "وصف مساقات رئيسي اللغة الانجليزية -فرعي اللغة الفرنسية",
+          "found_on": "arts-dep2-courses",
+          "file": "pdfs/arts-dep-2__arts-dep2/Course_Description-English-Language_-Minor-French.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/arts-college/Course Description-English Language & Literature-Translation Track.pdf",
+          "label": "وصف مساقات تخصص اللغة الانجليزية وادابها -مسار الترجمة",
+          "found_on": "arts-dep2-courses",
+          "file": "pdfs/arts-dep-2__arts-dep2/Course_Description-English_Language_Literature-Translation_Track.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/arts-college/Course Description-Translation and Interpreting.pdf",
+          "label": "وصف مساقات تخصص الترجمة التحريرية والفورية",
+          "found_on": "arts-dep2-courses",
+          "file": "pdfs/arts-dep-2__arts-dep2/Course_Description-Translation_and_Interpreting.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=29:arts02",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس اللغة الانجليزية وآدابها",
+          "found_on": "arts-dep2-guideplan",
+          "file": "pdfs/arts-dep-2__arts-dep2/Academic-Advisory-Plan-English-lang-literatute.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=719:minor-french",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس رئيسي اللغة الانجليزية - فرعي اللغة الفرنسية",
+          "found_on": "arts-dep2-guideplan",
+          "file": "pdfs/arts-dep-2__arts-dep2/Academic-Advisory-Plan-English-major-minor-french.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=718:tra-path",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس اللغة الانجليزية وآدابها مسار الترجمة",
+          "found_on": "arts-dep2-guideplan",
+          "file": "pdfs/arts-dep-2__arts-dep2/Academic-Advisory-Plan-English-lang-literatute-translation.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=717:tran",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس الترجمة التحريرية والفورية",
+          "found_on": "arts-dep2-guideplan",
+          "file": "pdfs/arts-dep-2__arts-dep2/Academic_Advisory_Plan-translation-and-interpreting.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=764:en-pr",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس اللغة الانجليزية وآدابها - فرعي علاقات عامة",
+          "found_on": "arts-dep2-guideplan",
+          "file": "pdfs/arts-dep-2__arts-dep2/Academic-Advisory-Plan-English-lang-literatute-Minor-PR.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-plans.html?download=738:langck-ar-aa-2026-langck-langck-en-gb-english-language-and-literature-minor-in-public-relations-2026-langck",
+          "label": "اللغة الإنجليزية وآدابها – فرعي علاقات عامة 2026",
+          "found_on": "arts-dep2-plans",
+          "file": "pdfs/arts-dep-2__arts-dep2/Academic-Plan-2026-English-Language-Literature_-Minor-Public-Relations-v2.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-plans.html?download=549:art-p-6",
+          "label": "الترجمة التحريرية الفورية 2022",
+          "found_on": "arts-dep2-plans",
+          "file": "pdfs/arts-dep-2__arts-dep2/Academic-Plan-2022-Translation-and-Interpreting.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-plans.html?download=548:art-p-5",
+          "label": "اللغة الانجليزية وآدابها- مسار الترجمة 2022",
+          "found_on": "arts-dep2-plans",
+          "file": "pdfs/arts-dep-2__arts-dep2/Academic-Plan-2022-English-Major-Translation-Track.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-plans.html?download=547:art-p-4",
+          "label": "اللغة الانجليزية فرعي فرنسي 2022",
+          "found_on": "arts-dep2-plans",
+          "file": "pdfs/arts-dep-2__arts-dep2/Academic-Plan-2022-English-Major-Minor-French.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-plans.html?download=546:art-p-3",
+          "label": "اللغة الانجليزية وادابها 2022",
+          "found_on": "arts-dep2-plans",
+          "file": "pdfs/arts-dep-2__arts-dep2/Academic-Plan-2022-English-Language-and-Literature.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-plans.html?download=142:art-p-03",
+          "label": "اللغة الانجليزية وآدابها- مسار الترجمة 2017",
+          "found_on": "arts-dep2-plans",
+          "file": "pdfs/arts-dep-2__arts-dep2/Academic-Plan-2017-English-Major-Translation-Track.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-plans.html?download=141:art-p-02",
+          "label": "اللغة الانجليزية فرعي فرنسي 2017",
+          "found_on": "arts-dep2-plans",
+          "file": "pdfs/arts-dep-2__arts-dep2/Academic-Plan-2017-English-Major-Minor-French.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep2/arts-dep2-plans.html?download=140:art-p-02",
+          "label": "اللغة الانجليزية وادابها 2017",
+          "found_on": "arts-dep2-plans",
+          "file": "pdfs/arts-dep-2__arts-dep2/Academic-Plan-2017-English-Language-and-Literature.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "arts-dep-2__arts-dep3",
+      "prefix": "/index.php/arts-dep-2/arts-dep3/",
+      "seed": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep3/arts-dep3-plans.html",
+      "majors": [
+        "بكالوريوس التاريخ فرعي جغرافيا",
+        "بكالوريوس رئيسي تاريخ /فرعي آثار"
+      ],
+      "pages": {
+        "arts-dep2-prog": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep3/arts-dep2-prog.html",
+          "file": "pages/arts-dep-2__arts-dep3/arts-dep2-prog.md"
+        },
+        "arts-dep2": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep3/arts-dep2.html",
+          "file": "pages/arts-dep-2__arts-dep3/arts-dep2.md"
+        },
+        "arts-dep3-courses": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep3/arts-dep3-courses.html",
+          "file": "pages/arts-dep-2__arts-dep3/arts-dep3-courses.md"
+        },
+        "arts-dep3-guideplan": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep3/arts-dep3-guideplan.html",
+          "file": "pages/arts-dep-2__arts-dep3/arts-dep3-guideplan.md"
+        },
+        "arts-dep3-jobs": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep3/arts-dep3-jobs.html",
+          "file": "pages/arts-dep-2__arts-dep3/arts-dep3-jobs.md"
+        },
+        "arts-dep3-overview": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep3/arts-dep3-overview.html",
+          "file": "pages/arts-dep-2__arts-dep3/arts-dep3-overview.md"
+        },
+        "arts-dep3-plans": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep3/arts-dep3-plans.html",
+          "file": "pages/arts-dep-2__arts-dep3/arts-dep3-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/arts-college/Course Description-History.pdf",
+          "label": "وصف مساقات قسم التاريخ",
+          "found_on": "arts-dep3-courses",
+          "file": "pdfs/arts-dep-2__arts-dep3/Course_Description-History.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=30:arts03",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس التاريخ منفرد",
+          "found_on": "arts-dep3-guideplan",
+          "file": "pdfs/arts-dep-2__arts-dep3/Academic_Advisory_Plan_arabic-_History.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=31:arts04",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس التاريخ فرعي آثار",
+          "found_on": "arts-dep3-guideplan",
+          "file": "pdfs/arts-dep-2__arts-dep3/Academic_Advisory_Plan_arabic-History-Minor-Archeology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=32:arts05",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس التاريخ فرعي جغرافيا تطبيقية",
+          "found_on": "arts-dep3-guideplan",
+          "file": "pdfs/arts-dep-2__arts-dep3/Academic_Advisory_Plan_arabic-History-Minor-Geography.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep3/arts-dep3-plans.html?download=145:art-p-06",
+          "label": "بكالوريوس التاريخ فرعي آثار",
+          "found_on": "arts-dep3-plans",
+          "file": "pdfs/arts-dep-2__arts-dep3/Academic-Plan-2017-Major-History-Minor-Archeology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep3/arts-dep3-plans.html?download=144:art-p-05",
+          "label": "بكالوريوس التاريخ فرعي جغرافيا",
+          "found_on": "arts-dep3-plans",
+          "file": "pdfs/arts-dep-2__arts-dep3/Academic-Plan-2017-History-Minor-Geography.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep3/arts-dep3-plans.html?download=143:art-p-04",
+          "label": "بكالوريوس التاريخ",
+          "found_on": "arts-dep3-plans",
+          "file": "pdfs/arts-dep-2__arts-dep3/Academic-Plan-2017-History.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "arts-dep-2__arts-dep4",
+      "prefix": "/index.php/arts-dep-2/arts-dep4/",
+      "seed": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep4/arts-dep4-plans.html",
+      "majors": [
+        "بكالوريوس الاتصال والإعلام الرقمي",
+        "بكالوريوس الاعلام - فرعي تسويق رقمي ريادي"
+      ],
+      "pages": {
+        "arts-dep4-courses": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep4/arts-dep4-courses.html",
+          "file": "pages/arts-dep-2__arts-dep4/arts-dep4-courses.md"
+        },
+        "arts-dep4-guideplan": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep4/arts-dep4-guideplan.html",
+          "file": "pages/arts-dep-2__arts-dep4/arts-dep4-guideplan.md"
+        },
+        "arts-dep4-jobs": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep4/arts-dep4-jobs.html",
+          "file": "pages/arts-dep-2__arts-dep4/arts-dep4-jobs.md"
+        },
+        "arts-dep4-obj": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep4/arts-dep4-obj.html",
+          "file": "pages/arts-dep-2__arts-dep4/arts-dep4-obj.md"
+        },
+        "arts-dep4-overview": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep4/arts-dep4-overview.html",
+          "file": "pages/arts-dep-2__arts-dep4/arts-dep4-overview.md"
+        },
+        "arts-dep4-plans": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep4/arts-dep4-plans.html",
+          "file": "pages/arts-dep-2__arts-dep4/arts-dep4-plans.md"
+        },
+        "arts-dep4-pro": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep4/arts-dep4-pro.html",
+          "file": "pages/arts-dep-2__arts-dep4/arts-dep4-pro.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/arts-college/Course Description-mass-communication.pdf",
+          "label": "وصف مساقات بكالوريوس الاتصال والإعلام الرقمي",
+          "found_on": "arts-dep4-courses",
+          "file": "pdfs/arts-dep-2__arts-dep4/Course_Description-mass-communication.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/arts-college/Course Description-Media-minor-Entrepreneurial-Digital-Marketing.pdf",
+          "label": "وصف مساقات بكالوريوس الاعلام- فرعي تسويق رقمي ريادي",
+          "found_on": "arts-dep4-courses",
+          "file": "pdfs/arts-dep-2__arts-dep4/Course_Description-Media-minor-Entrepreneurial-Digital-Marketing.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=34:arts07",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس الاتصال والإعلام الرقمي",
+          "found_on": "arts-dep4-guideplan",
+          "file": "pdfs/arts-dep-2__arts-dep4/Academic_Advisory_Plan_arabic-_Media.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=737:dm",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس الاعلام- فرعي تسويق رقمي ريادي",
+          "found_on": "arts-dep4-guideplan",
+          "file": "pdfs/arts-dep-2__arts-dep4/Academic-Advisory-Plan-2026-Media-minor-Entrepreneurial-Digital-Marketing.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep4/arts-dep4-plans.html?download=735:mdm",
+          "label": "الخطة الدراسية- بكالوريوس الاعلام- فرعي تسويق رقمي ريادي 2026",
+          "found_on": "arts-dep4-plans",
+          "file": "pdfs/arts-dep-2__arts-dep4/Academic-Plan-2026-Media-minor-Entrepreneurial-Digital-Marketing.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep4/arts-dep4-plans.html?download=518:art-p-7",
+          "label": "الخطة الدراسية- بكالوريوس الاتصال والإعلام الرقمي 2022",
+          "found_on": "arts-dep4-plans",
+          "file": "pdfs/arts-dep-2__arts-dep4/Academic-Plan-2022-Media.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep4/arts-dep4-plans.html?download=146:art-p-06",
+          "label": "الخطة الدراسية- بكالوريوس الاعلام 2017",
+          "found_on": "arts-dep4-plans",
+          "file": "pdfs/arts-dep-2__arts-dep4/Academic-Plan-2017-Media.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "arts-dep-2__arts-dep5",
+      "prefix": "/index.php/arts-dep-2/arts-dep5/",
+      "seed": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep5/arts-dep5-plans.html",
+      "majors": [
+        "بكالوريوس الجغرافيا التطبيقية"
+      ],
+      "pages": {
+        "arts-dep2-prog": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep5/arts-dep2-prog.html",
+          "file": "pages/arts-dep-2__arts-dep5/arts-dep2-prog.md"
+        },
+        "arts-dep2": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep5/arts-dep2.html",
+          "file": "pages/arts-dep-2__arts-dep5/arts-dep2.md"
+        },
+        "arts-dep3-overview": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep5/arts-dep3-overview.html",
+          "file": "pages/arts-dep-2__arts-dep5/arts-dep3-overview.md"
+        },
+        "arts-dep5-courses": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep5/arts-dep5-courses.html",
+          "file": "pages/arts-dep-2__arts-dep5/arts-dep5-courses.md"
+        },
+        "arts-dep5-guideplan": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep5/arts-dep5-guideplan.html",
+          "file": "pages/arts-dep-2__arts-dep5/arts-dep5-guideplan.md"
+        },
+        "arts-dep5-jobs": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep5/arts-dep5-jobs.html",
+          "file": "pages/arts-dep-2__arts-dep5/arts-dep5-jobs.md"
+        },
+        "arts-dep5-plans": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep5/arts-dep5-plans.html",
+          "file": "pages/arts-dep-2__arts-dep5/arts-dep5-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/arts-college/Course Description-Applied-Geography.pdf",
+          "label": "وصف مساقات قسم الجغرافيا التطبيقية",
+          "found_on": "arts-dep5-courses",
+          "file": "pdfs/arts-dep-2__arts-dep5/Course_Description-Applied-Geography.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=35:arts08",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس الجغرافيا التطبيقية",
+          "found_on": "arts-dep5-guideplan",
+          "file": "pdfs/arts-dep-2__arts-dep5/Academic_Advisory_Plan_arabic-Applied_Geography.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep5/arts-dep5-plans.html?download=147:art-p-07",
+          "label": "بكالوريوس الجغرافيا التطبيقية",
+          "found_on": "arts-dep5-plans",
+          "file": "pdfs/arts-dep-2__arts-dep5/Academic-Plan-2017-Applied-Geography.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "arts-dep-2__arts-dep6",
+      "prefix": "/index.php/arts-dep-2/arts-dep6/",
+      "seed": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep6/arts-dep6-plans.html",
+      "majors": [
+        "بكالوريوس السياحة والاثار"
+      ],
+      "pages": {
+        "arts-dep2-prog": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep6/arts-dep2-prog.html",
+          "file": "pages/arts-dep-2__arts-dep6/arts-dep2-prog.md"
+        },
+        "arts-dep6-courses": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep6/arts-dep6-courses.html",
+          "file": "pages/arts-dep-2__arts-dep6/arts-dep6-courses.md"
+        },
+        "arts-dep6-guideplan": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep6/arts-dep6-guideplan.html",
+          "file": "pages/arts-dep-2__arts-dep6/arts-dep6-guideplan.md"
+        },
+        "arts-dep6-jobs": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep6/arts-dep6-jobs.html",
+          "file": "pages/arts-dep-2__arts-dep6/arts-dep6-jobs.md"
+        },
+        "arts-dep6-plans": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep6/arts-dep6-plans.html",
+          "file": "pages/arts-dep-2__arts-dep6/arts-dep6-plans.md"
+        },
+        "ta-obj": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep6/ta-obj.html",
+          "file": "pages/arts-dep-2__arts-dep6/ta-obj.md"
+        },
+        "ta-overview": {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep6/ta-overview.html",
+          "file": "pages/arts-dep-2__arts-dep6/ta-overview.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/arts-college/Course Description-Tourism & Antiquities.pdf",
+          "label": "وصف مساقات قسم السياحة والاثار",
+          "found_on": "arts-dep6-courses",
+          "file": "pdfs/arts-dep-2__arts-dep6/Course_Description-Tourism_Antiquities.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=36:arts09",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس السياحة والآثار",
+          "found_on": "arts-dep6-guideplan",
+          "file": "pdfs/arts-dep-2__arts-dep6/Academic_Advisory_Plan-Tourism_and_Antiquities.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep-2/arts-dep6/arts-dep6-plans.html?download=148:art-p-010",
+          "label": "بكالوريوس السياحة والاثار",
+          "found_on": "arts-dep6-plans",
+          "file": "pdfs/arts-dep-2__arts-dep6/Academic-Plan-2017-Tourism-and-Antiquities.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "arts-dep8",
+      "prefix": "/index.php/arts-dep8/",
+      "seed": "https://www.hebron.edu/index.php/arts-dep8/sharia-dep1-mission.html",
+      "majors": [
+        "بكالوريوس التخطيط العقاري"
+      ],
+      "pages": {
+        "arts-dep8-courses": {
+          "url": "https://www.hebron.edu/index.php/arts-dep8/arts-dep8-courses.html",
+          "file": "pages/arts-dep8/arts-dep8-courses.md"
+        },
+        "arts-dep8-guideplan": {
+          "url": "https://www.hebron.edu/index.php/arts-dep8/arts-dep8-guideplan.html",
+          "file": "pages/arts-dep8/arts-dep8-guideplan.md"
+        },
+        "arts-dep8-jobs": {
+          "url": "https://www.hebron.edu/index.php/arts-dep8/arts-dep8-jobs.html",
+          "file": "pages/arts-dep8/arts-dep8-jobs.md"
+        },
+        "arts-dep8-outcoms": {
+          "url": "https://www.hebron.edu/index.php/arts-dep8/arts-dep8-outcoms.html",
+          "file": "pages/arts-dep8/arts-dep8-outcoms.md"
+        },
+        "arts-dep8-plans": {
+          "url": "https://www.hebron.edu/index.php/arts-dep8/arts-dep8-plans.html",
+          "file": "pages/arts-dep8/arts-dep8-plans.md"
+        },
+        "sharia-dep8-obj": {
+          "url": "https://www.hebron.edu/index.php/arts-dep8/sharia-dep8-obj.html",
+          "file": "pages/arts-dep8/sharia-dep8-obj.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/arts-college/Course Description-cadaster.pdf",
+          "label": "وصف مساقات تخصص التخطيط العقاري",
+          "found_on": "arts-dep8-courses",
+          "file": "pdfs/arts-dep8/Course_Description-cadaster.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/guide-plans/Academic Advisory Plan Cadaster 2025.pdf",
+          "label": "الخطة الاسترشادية - بكالوريوس التخطيط العقاري",
+          "found_on": "arts-dep8-guideplan",
+          "file": "pdfs/arts-dep8/Academic_Advisory_Plan_Cadaster_2025.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/arts-dep8/arts-dep8-plans.html?download=685:cadaster-acpl",
+          "label": "2025 بكالوريوس التخطيط العقاري",
+          "found_on": "arts-dep8-plans",
+          "file": "pdfs/arts-dep8/Academic-Plan-2025-Cadaster.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "edu-dep__edu-dep1",
+      "prefix": "/index.php/edu-dep/edu-dep1/",
+      "seed": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html",
+      "majors": [
+        "بكالوريوس معلم المرحلة الاساسية الدنيا",
+        "بكالوريوس معلم المرحلة الاساسية العليا- تعليم التربية الاسلامية",
+        "بكالوريوس معلم المرحلة الاساسية العليا- تعليم اللغة العربية",
+        "بكالوريوس معلم المرحلة الاساسية العليا- تعليم اللغة الانجليزية",
+        "بكالوريوس معلم المرحلة الاساسية العليا- تعليم الاجتماعيات",
+        "بكالوريوس معلم المرحلة الاساسية العليا- تعليم الرياضيات",
+        "بكالوريوس معلم المرحلة الاساسية العليا- تعليم العلوم",
+        "بكالوريوس معلم المرحلة الاساسية العليا- تعليم التكنولوجيا",
+        "بكالوريوس التربية الرياضية",
+        "بكالوريوس رياض الاطفال"
+      ],
+      "pages": {
+        "edu-dep1-courses": {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-courses.html",
+          "file": "pages/edu-dep__edu-dep1/edu-dep1-courses.md"
+        },
+        "edu-dep1-guideplan": {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-guideplan.html",
+          "file": "pages/edu-dep__edu-dep1/edu-dep1-guideplan.md"
+        },
+        "edu-dep1-jobs": {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-jobs.html",
+          "file": "pages/edu-dep__edu-dep1/edu-dep1-jobs.md"
+        },
+        "edu-dep1-overview": {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-overview.html",
+          "file": "pages/edu-dep__edu-dep1/edu-dep1-overview.md"
+        },
+        "edu-dep1-plans": {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html",
+          "file": "pages/edu-dep__edu-dep1/edu-dep1-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/education-college/Course Description-foundation-education-department.pdf",
+          "label": "وصف مساقات قسم أصول التربية",
+          "found_on": "edu-dep1-courses",
+          "file": "pdfs/edu-dep__edu-dep1/Course_Description-foundation-education-department.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/education-college/Course Description- Kindergarten.pdf",
+          "label": "وصف مساقات تخصص رياض الاطفال",
+          "found_on": "edu-dep1-courses",
+          "file": "pdfs/edu-dep__edu-dep1/Course_Description-_Kindergarten.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/education-college/Course Description-Physical-Training.pdf",
+          "label": "وصف مساقات تخصص التربية الرياضية",
+          "found_on": "edu-dep1-courses",
+          "file": "pdfs/edu-dep__edu-dep1/Course_Description-Physical-Training.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=50:edu05",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس معلم مرحلة أساسية دنيا",
+          "found_on": "edu-dep1-guideplan",
+          "file": "pdfs/edu-dep__edu-dep1/Academic_Advisory_Plan_arabic-_Lower_basic_Phase_Teacher.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=47:edu02",
+          "label": "الخطة الإرشادية - بكالوريوس معلم مرحلة أساسية عليا- أساليب تدريس لغة عربية",
+          "found_on": "edu-dep1-guideplan",
+          "file": "pdfs/edu-dep__edu-dep1/Academic_Advisory_Plan_arabic-_Arbic_lang.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=48:edu03",
+          "label": "الخطة الإرشادية - بكالوريوس معلم مرحلة أساسية عليا- أساليب تدريس لغة انجليزية",
+          "found_on": "edu-dep1-guideplan",
+          "file": "pdfs/edu-dep__edu-dep1/Academic_Advisory_Plan_arabic-_English_lang.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=49:edu04",
+          "label": "الخطة الإرشادية - بكالوريوس معلم مرحلة أساسية عليا- أساليب تدريس تربية اسلامية",
+          "found_on": "edu-dep1-guideplan",
+          "file": "pdfs/edu-dep__edu-dep1/Academic_Advisory_Plan_arabic-_Islamic_Education.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=721:gp-enedu",
+          "label": "الخطة الإرشادية - بكالوريوس معلم مرحلة أساسية عليا- أساليب تدريس اللغة الانجليزية",
+          "found_on": "edu-dep1-guideplan",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Advisory-Plan-english-Education.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=51:edu06",
+          "label": "الخطة الإرشادية - بكالوريوس معلم مرحلة أساسية عليا- أساليب تدريس رياضيات",
+          "found_on": "edu-dep1-guideplan",
+          "file": "pdfs/edu-dep__edu-dep1/Academic_Advisory_Plan_arabic-_Mathematics.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=52:edu07",
+          "label": "الخطة الإرشادية - بكالوريوس معلم مرحلة أساسية عليا- أساليب تدريس علوم",
+          "found_on": "edu-dep1-guideplan",
+          "file": "pdfs/edu-dep__edu-dep1/Academic_Advisory_Plan_arabic-_Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=53:edu08",
+          "label": "الخطة الإرشادية - بكالوريوس معلم مرحلة أساسية عليا- أساليب تدريس اجتماعيات",
+          "found_on": "edu-dep1-guideplan",
+          "file": "pdfs/edu-dep__edu-dep1/Academic_Advisory_Plan_arabic-_social_science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=54:edu09",
+          "label": "الخطة الإرشادية - بكالوريوس معلم مرحلة أساسية عليا- أساليب تدريس تكنولوجيا",
+          "found_on": "edu-dep1-guideplan",
+          "file": "pdfs/edu-dep__edu-dep1/Academic_Advisory_Plan_arabic-_Technology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=678:langck-ar-aa-2022-langck-langck-en-gb-upper-basic-level-teacher-teaching-arabic-language-2022-langck",
+          "label": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم اللغة العربية 2022",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2022-Upper-Basic-Phase-Teacher-Arabic_Language.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=677:langck-ar-aa-2022-langck-langck-en-gb-upper-basic-level-teacher-teaching-english-language-2022-langck",
+          "label": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم اللغة الانجليزية 2022",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2022-Upper-Basic-Phase-Teacher-English-Language.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=676:langck-ar-aa-2022-langck-langck-en-gb-upper-basic-level-teacher-teaching-science2022-langck",
+          "label": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم العلوم 2022",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2022-Upper-Basic-Phase-Teacher-Teaching-Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=675:langck-ar-aa-2022-langck-langck-en-gb-upper-basic-level-teacher-teaching-mathematics-2022-langck",
+          "label": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم الرياضيات 2022",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2022-Upper-Basic-Phase-Teacher-Mathematics.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=674:langck-ar-aa-2022-langck-langck-en-gb-upper-basic-level-teacher-teaching-technology-2022-langck",
+          "label": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم التكنولوجيا 2022",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2022-Upper-Basic-Phase-Teacher-Technology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=673:langck-ar-aa-2022-langck-langck-en-gb-upper-basic-level-teacher-teaching-islamic-education2022-langck",
+          "label": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم التربية الاسلامية 2022",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2022-Upper-Basic-Phase-Teacher-Islamic_Education.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=672:langck-ar-aa-2022-langck-langck-en-gb-upper-basic-level-teacher-teaching-social-sciences2022-langck",
+          "label": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم الاجتماعيات 2022",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2022-Upper-Basic-Phase-Teacher-Social-Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=671:langck-ar-aa-2022-langck-langck-en-gb-lower-basic-level-teacher-2022-langck",
+          "label": "بكالوريوس معلم المرحلة الاساسية الدنيا2022",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2022-Lower-basic-Phase-Teacher.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=670:2022",
+          "label": "بكالوريوس التربية الرياضية 2022",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2022-Physical-Training.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=502:edu-10",
+          "label": "بكالوريوس رياض الاطفال 2022",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2022-Kindergarten.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=316:edu-p-09",
+          "label": "بكالوريوس التربية الرياضية 2020",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2020-Physical-Training.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=131:edu-p-08",
+          "label": "بكالوريوس معلم المرحلة الاساسية الدنيا2017",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2017-Lower-basic-Phase-Teacher.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=130:edu-p-07",
+          "label": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم التكنولوجيا 2017",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2017-Upper-Basic-Phase-Teacher-Technology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=129:edu-p-06",
+          "label": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم العلوم 2017",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2017-Upper-Basic-Phase-Teacher-Teaching-Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=128:edu-p-05",
+          "label": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم الرياضيات 2017",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2017-Upper-Basic-Phase-Teacher-Mathematics.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=127:edu-p-04",
+          "label": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم الاجتماعيات 2017",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2017-Upper-Basic-Phase-Teacher-Social-Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=126:edu-p-03",
+          "label": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم اللغة الانجليزية 2017",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2017-Upper-Basic-Phase-Teacher-English-Language.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=125:edu-p-02",
+          "label": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم اللغة العربية 2017",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2017-Upper-Basic-Phase-Teacher-Arabic_Language.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep1/edu-dep1-plans.html?download=124:edu-p-01",
+          "label": "بكالوريوس معلم المرحلة الاساسية العليا- تعليم التربية الاسلامية 2017",
+          "found_on": "edu-dep1-plans",
+          "file": "pdfs/edu-dep__edu-dep1/Academic-Plan-2017-Upper-Basic-Phase-Teacher-Islamic_Education.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "edu-dep__edu-dep2",
+      "prefix": "/index.php/edu-dep/edu-dep2/",
+      "seed": "https://www.hebron.edu/index.php/edu-dep/edu-dep2/edu-dep2-plans.html",
+      "majors": [
+        "بكالوريوس الارشاد النفسي والتربوي"
+      ],
+      "pages": {
+        "edu-dep2-courses": {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep2/edu-dep2-courses.html",
+          "file": "pages/edu-dep__edu-dep2/edu-dep2-courses.md"
+        },
+        "edu-dep2-guideplan": {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep2/edu-dep2-guideplan.html",
+          "file": "pages/edu-dep__edu-dep2/edu-dep2-guideplan.md"
+        },
+        "edu-dep2-jobs": {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep2/edu-dep2-jobs.html",
+          "file": "pages/edu-dep__edu-dep2/edu-dep2-jobs.md"
+        },
+        "edu-dep2-plans": {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep2/edu-dep2-plans.html",
+          "file": "pages/edu-dep__edu-dep2/edu-dep2-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/education-college/Course Description-Psychology-department.pdf",
+          "label": "وصف مساقات قسم علم النفس",
+          "found_on": "edu-dep2-courses",
+          "file": "pdfs/edu-dep__edu-dep2/Course_Description-Psychology-department.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/education-college/course description- Psychological and Educational Counseling using Multimedia.pdf",
+          "label": "وصف مساقات **بكالوريوس الإرشاد النفسي والتربوي عبر الوسائط المتعددة",
+          "found_on": "edu-dep2-courses",
+          "file": "pdfs/edu-dep__edu-dep2/course_description-_Psychological_and_Educational_Counseling_using_Multimedia.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=46:edu01",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس التوجيه والارشاد",
+          "found_on": "edu-dep2-guideplan",
+          "file": "pdfs/edu-dep__edu-dep2/Academic_Advisory_Plan_arabic-_Counseling-and-Guidance.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=760:gp-pesm",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس الإرشاد النفسي والتربوي عبر الوسائط المتعددة",
+          "found_on": "edu-dep2-guideplan",
+          "file": "pdfs/edu-dep__edu-dep2/Academic_Advisory_Plan_arabic-_Psychological_and_Educational_Counseling_using_Multimedia.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep2/edu-dep2-plans.html?download=723:con-017",
+          "label": "بكالوريوس الارشاد النفسي والتربوي 2017",
+          "found_on": "edu-dep2-plans",
+          "file": "pdfs/edu-dep__edu-dep2/Academic-Plan-2017-Psychologica-and-Educational-Counseling.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep2/edu-dep2-plans.html?download=722:con-022",
+          "label": "بكالوريوس الارشاد النفسي والتربوي 2022",
+          "found_on": "edu-dep2-plans",
+          "file": "pdfs/edu-dep__edu-dep2/Academic-Plan-2022-Psychologica-and-Educational-Counseling.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/edu-dep/edu-dep2/edu-dep2-plans.html?download=761:ap-epum",
+          "label": "بكالوريوس الإرشاد النفسي والتربوي عبر الوسائط المتعددة 2026",
+          "found_on": "edu-dep2-plans",
+          "file": "pdfs/edu-dep__edu-dep2/Academic-Plan-2026-Psychological-Educational-Counseling-using-Multimedia.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "science-dep__science-dep1",
+      "prefix": "/index.php/science-dep/science-dep1/",
+      "seed": "https://www.hebron.edu/index.php/science-dep/science-dep1/science-dep1-plans.html",
+      "majors": [
+        "بكالوريوس الرياضيات",
+        "بكالوريوس رئيسي الرياضيات- فرعي العلوم المالية والمحاسبية",
+        "بكالوريوس رئيسي الرياضيات- فرعي الحاسوب"
+      ],
+      "pages": {
+        "science-dep1-courses": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep1/science-dep1-courses.html",
+          "file": "pages/science-dep__science-dep1/science-dep1-courses.md"
+        },
+        "science-dep1-guideplan": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep1/science-dep1-guideplan.html",
+          "file": "pages/science-dep__science-dep1/science-dep1-guideplan.md"
+        },
+        "science-dep1-jobs": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep1/science-dep1-jobs.html",
+          "file": "pages/science-dep__science-dep1/science-dep1-jobs.md"
+        },
+        "science-dep1-plans": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep1/science-dep1-plans.html",
+          "file": "pages/science-dep__science-dep1/science-dep1-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/science-college/Course Description-Mathematics.pdf",
+          "label": "وصف مساقات تخصص الرياضيات منفرد",
+          "found_on": "science-dep1-courses",
+          "file": "pdfs/science-dep__science-dep1/Course_Description-Mathematics.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/science-college/Course Description-Major Mathematics Minor Finance & Accounting.pdf",
+          "label": "وصف مساقات تخصص رئيسي الرياضيات- فرعي العلوم المالية والمحاسبية",
+          "found_on": "science-dep1-courses",
+          "file": "pdfs/science-dep__science-dep1/Course_Description-Major_Mathematics_Minor_Finance_Accounting.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/science-college/Course Description-Major Mathematics-Track Computer Programming.pdf",
+          "label": "وصف مساقات تخصص رئيسي الرياضيات- مسار برمجة الحاسوب",
+          "found_on": "science-dep1-courses",
+          "file": "pdfs/science-dep__science-dep1/Course_Description-Major_Mathematics-Track_Computer_Programming.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/science-college/Course Description-Major Mathematics-Minor Computer Science2025.pdf",
+          "label": "وصف مساقات تخصص رئيسي الرياضيات- فرعي حاسوب",
+          "found_on": "science-dep1-courses",
+          "file": "pdfs/science-dep__science-dep1/Course_Description-Major_Mathematics-Minor_Computer_Science2025.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=37:scie01",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس الرياضيات",
+          "found_on": "science-dep1-guideplan",
+          "file": "pdfs/science-dep__science-dep1/Academic-Advisory-Plan-Mathematics.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=447:2022-12-26-12-52-02",
+          "label": "الخطة الإرشادية الأكاديمية - برنامج علم الحاسوب- فرعي ادارة",
+          "found_on": "science-dep1-guideplan",
+          "file": "pdfs/science-dep__science-dep1/Academic-Advisory-Plan-2022-Computer-Science-minor-bus-administration.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=448:2022-12-26-12-52-41",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس الرياضيات فرعي العلوم المالية والمحاسبية",
+          "found_on": "science-dep1-guideplan",
+          "file": "pdfs/science-dep__science-dep1/Academic-Advisory-Plan-Mathematics-Minor-Finance-Accounting.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep1/science-dep1-plans.html?download=527:sc-p-2",
+          "label": "الرياضيات منفرد 2022",
+          "found_on": "science-dep1-plans",
+          "file": "pdfs/science-dep__science-dep1/Academic-Plan-2022-Mathmatices.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep1/science-dep1-plans.html?download=105:sc-p-01",
+          "label": "الرياضيات منفرد 2017",
+          "found_on": "science-dep1-plans",
+          "file": "pdfs/science-dep__science-dep1/Academic-Plan-2017-Mathmatices.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep1/science-dep1-plans.html?download=528:sc-p-3",
+          "label": "رئيسي الرياضيات- فرعي العلوم المالية والمحاسبية 2022",
+          "found_on": "science-dep1-plans",
+          "file": "pdfs/science-dep__science-dep1/Academic-Plan-2022-Math-minor-Accounting.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep1/science-dep1-plans.html?download=106:sc-p-02",
+          "label": "رئيسي الرياضيات- فرعي العلوم المالية والمحاسبية 2017",
+          "found_on": "science-dep1-plans",
+          "file": "pdfs/science-dep__science-dep1/Academic-Plan-2017-Math-minor-Accounting.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep1/science-dep1-plans.html?download=691:langck-ar-aa-2025-langck-langck-en-gb-major-mathematics-minor-computer-science-2025-langck",
+          "label": "رئيسي الرياضيات- فرعي الحاسوب 2025",
+          "found_on": "science-dep1-plans",
+          "file": "pdfs/science-dep__science-dep1/Academic-Plan-2025-Major_Mathematics-_Minor_Computer_Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep1/science-dep1-plans.html?download=529:sc-p-4",
+          "label": "رئيسي الرياضيات- مسار برمجة الحاسوب 2022",
+          "found_on": "science-dep1-plans",
+          "file": "pdfs/science-dep__science-dep1/Academic-Plan-2022-Math-track-computer-science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep1/science-dep1-plans.html?download=107:sc-p-03",
+          "label": "رئيسي الرياضيات- مسار برمجة الحاسوب 2017",
+          "found_on": "science-dep1-plans",
+          "file": "pdfs/science-dep__science-dep1/Academic-Plan-2017-Math-track-computer-science.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "science-dep__science-dep2",
+      "prefix": "/index.php/science-dep/science-dep2/",
+      "seed": "https://www.hebron.edu/index.php/science-dep/science-dep2/science-dep2-plans.html",
+      "majors": [
+        "بكالوريوس الكيمياء",
+        "بكالوريوس الكيمياء- فرعي كيمياء صناعية"
+      ],
+      "pages": {
+        "science-dep2-courses": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep2/science-dep2-courses.html",
+          "file": "pages/science-dep__science-dep2/science-dep2-courses.md"
+        },
+        "science-dep2-guideplan-2": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep2/science-dep2-guideplan-2.html",
+          "file": "pages/science-dep__science-dep2/science-dep2-guideplan-2.md"
+        },
+        "science-dep2-guideplan": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep2/science-dep2-guideplan.html",
+          "file": "pages/science-dep__science-dep2/science-dep2-guideplan.md"
+        },
+        "science-dep2-jobs": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep2/science-dep2-jobs.html",
+          "file": "pages/science-dep__science-dep2/science-dep2-jobs.md"
+        },
+        "science-dep2-plans": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep2/science-dep2-plans.html",
+          "file": "pages/science-dep__science-dep2/science-dep2-plans.md"
+        },
+        "science-dep2": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep2/science-dep2.html",
+          "file": "pages/science-dep__science-dep2/science-dep2.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/science-college/Course Description-Chemistry.pdf",
+          "label": "وصف مساقات تخصص الكيمياء الصناعية",
+          "found_on": "science-dep2-courses",
+          "file": "pdfs/science-dep__science-dep2/Course_Description-Chemistry.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/science-college/Course Description-Chemistry minor Industrial Chemistry.pdf",
+          "label": "وصف مساقات تخصص الكيمياء- مسار الكيمياء الصناعية",
+          "found_on": "science-dep2-courses",
+          "file": "pdfs/science-dep__science-dep2/Course_Description-Chemistry_minor_Industrial_Chemistry.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=38:scie02",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس الكيمياء",
+          "found_on": "science-dep2-guideplan",
+          "file": "pdfs/science-dep__science-dep2/Academic-Advisory-Plan-Chemistry.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=452:2022-12-27-11-43-11",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس الكيمياء فرعي التغذية والتصنيع الغذائي",
+          "found_on": "science-dep2-guideplan",
+          "file": "pdfs/science-dep__science-dep2/Academic-Advisory-Plan-Chemistry-Minor-Nutrition-Food-Processing.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=453:2022-12-27-11-44-41",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس الكيمياء مسار الكيمياء الصناعية",
+          "found_on": "science-dep2-guideplan",
+          "file": "pdfs/science-dep__science-dep2/Academic-Advisory-Plan-Chemistry-Track-Industrial-Chemistry.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep2/science-dep2-plans.html?download=744:ch-m-ic",
+          "label": "الكيمياء- فرعي الكيمياء الصناعية 2026",
+          "found_on": "science-dep2-plans",
+          "file": "pdfs/science-dep__science-dep2/Academic-Plan-2026-Chemistry-minor-Industrial-Chemistry.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep2/science-dep2-plans.html?download=530:sc-p-5",
+          "label": "الكيمياء منفرد 2022",
+          "found_on": "science-dep2-plans",
+          "file": "pdfs/science-dep__science-dep2/Academic-Plan-2022-Chemistry.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep2/science-dep2-plans.html?download=108:sc-p-04",
+          "label": "الكيمياء منفرد 2017",
+          "found_on": "science-dep2-plans",
+          "file": "pdfs/science-dep__science-dep2/Academic-Plan-2017-Chemistry.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "science-dep__science-dep3",
+      "prefix": "/index.php/science-dep/science-dep3/",
+      "seed": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-plans.html",
+      "majors": [
+        "بكالوريوس الاحياء",
+        "بكالوريوس الاحياء- مسار الصحة العامة",
+        "بكالوريوس الاحياء- مسار العلوم الطبية المخبرية",
+        "بكالوريوس الأحياء- مسار التكنولوجيا الحيوية"
+      ],
+      "pages": {
+        "science-dep3-courses": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-courses.html",
+          "file": "pages/science-dep__science-dep3/science-dep3-courses.md"
+        },
+        "science-dep3-fac": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-fac.html",
+          "file": "pages/science-dep__science-dep3/science-dep3-fac.md"
+        },
+        "science-dep3-guideplan": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-guideplan.html",
+          "file": "pages/science-dep__science-dep3/science-dep3-guideplan.md"
+        },
+        "science-dep3-jobs": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-jobs.html",
+          "file": "pages/science-dep__science-dep3/science-dep3-jobs.md"
+        },
+        "science-dep3-obj": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-obj.html",
+          "file": "pages/science-dep__science-dep3/science-dep3-obj.md"
+        },
+        "science-dep3-overview": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-overview.html",
+          "file": "pages/science-dep__science-dep3/science-dep3-overview.md"
+        },
+        "science-dep3-plans": {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-plans.html",
+          "file": "pages/science-dep__science-dep3/science-dep3-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/science-college/Course Description-Biology.pdf",
+          "label": "وصف مساقات تخصص الاحياء منفرد",
+          "found_on": "science-dep3-courses",
+          "file": "pdfs/science-dep__science-dep3/Course_Description-Biology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/science-college/Course Description-Biology track Medical Laboratory Science.pdf",
+          "label": "وصف مساقات تخصص الاحياء مسار العلوم الطبية المخبرية",
+          "found_on": "science-dep3-courses",
+          "file": "pdfs/science-dep__science-dep3/Course_Description-Biology_track_Medical_Laboratory_Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/science-college/Course Description-Biology track Public Health.pdf",
+          "label": "وصف مساقات تخصص الاحياء مسار الصحة العامة",
+          "found_on": "science-dep3-courses",
+          "file": "pdfs/science-dep__science-dep3/Course_Description-Biology_track_Public_Health.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/science-college/Course Description-Biology track Biotechnology.pdf",
+          "label": "وصف مساقات تخصص الاحياء مسار التكنولوجيا الحيوية",
+          "found_on": "science-dep3-courses",
+          "file": "pdfs/science-dep__science-dep3/Course_Description-Biology_track_Biotechnology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=39:scie03",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس الاحياء",
+          "found_on": "science-dep3-guideplan",
+          "file": "pdfs/science-dep__science-dep3/Academic-Advisory-Plan-Biology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=445:2022-12-26-12-21-12",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس الاحياء مسار تكنولوجيا حيوية",
+          "found_on": "science-dep3-guideplan",
+          "file": "pdfs/science-dep__science-dep3/Academic-Advisory-Plan-Biology-Biotechnology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=446:2022-12-26-12-23-29",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس الاحياء مسار علوم طبية مخبرية",
+          "found_on": "science-dep3-guideplan",
+          "file": "pdfs/science-dep__science-dep3/Academic-Advisory-Plan-Biology-Medical-Laboratory-Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-plans.html?download=534:sc-p-6",
+          "label": "الاحياء منفرد 2022",
+          "found_on": "science-dep3-plans",
+          "file": "pdfs/science-dep__science-dep3/Academic-Plan-2022-biology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-plans.html?download=111:sc-p-05",
+          "label": "الاحياء منفرد 2017",
+          "found_on": "science-dep3-plans",
+          "file": "pdfs/science-dep__science-dep3/Academic-Plan-2017-biology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-plans.html?download=537:sc-p-10",
+          "label": "الاحياء- مسار تكنولوجيا حيوية 2022",
+          "found_on": "science-dep3-plans",
+          "file": "pdfs/science-dep__science-dep3/Academic-Plan-2022-biology-Biotechnology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-plans.html?download=533:sc-p-7",
+          "label": "الاحياء- مسار تكنولوجيا حيوية 2017",
+          "found_on": "science-dep3-plans",
+          "file": "pdfs/science-dep__science-dep3/Academic-Plan-2017-biology-Biotechnology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-plans.html?download=535:sc-p-8",
+          "label": "الاحياء- مسار الصحة العامة 2022",
+          "found_on": "science-dep3-plans",
+          "file": "pdfs/science-dep__science-dep3/Academic-Plan-2022-biology-track-public-health.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-plans.html?download=112:sc-p-06",
+          "label": "الاحياء- مسار الصحة العامة 2017",
+          "found_on": "science-dep3-plans",
+          "file": "pdfs/science-dep__science-dep3/Academic-Plan-2017-biology-track-public-health.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-plans.html?download=536:sc-p-9",
+          "label": "الاحياء- مسار العلوم الطبية المخبرية 2022",
+          "found_on": "science-dep3-plans",
+          "file": "pdfs/science-dep__science-dep3/Academic-Plan-2022-biology-track-Medical-Laboratory-Sciences.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/science-dep/science-dep3/science-dep3-plans.html?download=113:sc-p-06",
+          "label": "الاحياء- مسار العلوم الطبية المخبرية 2017",
+          "found_on": "science-dep3-plans",
+          "file": "pdfs/science-dep__science-dep3/Academic-Plan-2017-biology-track-Medical-Laboratory-Sciences.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "agri-dep__agri-dep1",
+      "prefix": "/index.php/agri-dep/agri-dep1/",
+      "seed": "https://www.hebron.edu/index.php/agri-dep/agri-dep1/agri-dep1-plans.html",
+      "majors": [
+        "بكالوريوس الانتاج النباتي والوقاية"
+      ],
+      "pages": {
+        "agri-dep1-courses": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep1/agri-dep1-courses.html",
+          "file": "pages/agri-dep__agri-dep1/agri-dep1-courses.md"
+        },
+        "agri-dep1-guideplan": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep1/agri-dep1-guideplan.html",
+          "file": "pages/agri-dep__agri-dep1/agri-dep1-guideplan.md"
+        },
+        "agri-dep1-jobs": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep1/agri-dep1-jobs.html",
+          "file": "pages/agri-dep__agri-dep1/agri-dep1-jobs.md"
+        },
+        "agri-dep1-obj": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep1/agri-dep1-obj.html",
+          "file": "pages/agri-dep__agri-dep1/agri-dep1-obj.md"
+        },
+        "agri-dep1-overview": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep1/agri-dep1-overview.html",
+          "file": "pages/agri-dep__agri-dep1/agri-dep1-overview.md"
+        },
+        "agri-dep1-plans": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep1/agri-dep1-plans.html",
+          "file": "pages/agri-dep__agri-dep1/agri-dep1-plans.md"
+        },
+        "agri-dep1-prog": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep1/agri-dep1-prog.html",
+          "file": "pages/agri-dep__agri-dep1/agri-dep1-prog.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/agriculture-college/Course Description-Plant Production & Protection.pdf",
+          "label": "وصف مساقات قسم الانتاج النباتي والوقاية",
+          "found_on": "agri-dep1-courses",
+          "file": "pdfs/agri-dep__agri-dep1/Course_Description-Plant_Production_Protection.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=41:agri01",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس الانتاج النباتي والوقاية",
+          "found_on": "agri-dep1-guideplan",
+          "file": "pdfs/agri-dep__agri-dep1/Academic-Advisory-Plan-Plant_production-and-_Protection.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep1/agri-dep1-plans.html?download=543:agri-p-2",
+          "label": "الانتاج النباتي والوقاية 2022",
+          "found_on": "agri-dep1-plans",
+          "file": "pdfs/agri-dep__agri-dep1/Academic-Plan-2022-Plant-Production-Protection.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep1/agri-dep1-plans.html?download=115:agri-p-01",
+          "label": "الانتاج النباتي والووقاية 2017",
+          "found_on": "agri-dep1-plans",
+          "file": "pdfs/agri-dep__agri-dep1/Academic-Plan-2017-Plant-Production-Protection.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "agri-dep__agri-dep2",
+      "prefix": "/index.php/agri-dep/agri-dep2/",
+      "seed": "https://www.hebron.edu/index.php/agri-dep/agri-dep2/agri-dep2-plans.html",
+      "majors": [
+        "تكنولوجيا الإنتاج الحيواني"
+      ],
+      "pages": {
+        "agri-dep2-courses": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep2/agri-dep2-courses.html",
+          "file": "pages/agri-dep__agri-dep2/agri-dep2-courses.md"
+        },
+        "agri-dep2-guideplan": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep2/agri-dep2-guideplan.html",
+          "file": "pages/agri-dep__agri-dep2/agri-dep2-guideplan.md"
+        },
+        "agri-dep2-jobs": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep2/agri-dep2-jobs.html",
+          "file": "pages/agri-dep__agri-dep2/agri-dep2-jobs.md"
+        },
+        "agri-dep2-plans": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep2/agri-dep2-plans.html",
+          "file": "pages/agri-dep__agri-dep2/agri-dep2-plans.md"
+        },
+        "an-tech-about": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep2/an-tech-about.html",
+          "file": "pages/agri-dep__agri-dep2/an-tech-about.md"
+        },
+        "an-tech-obj": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep2/an-tech-obj.html",
+          "file": "pages/agri-dep__agri-dep2/an-tech-obj.md"
+        },
+        "an-tech-prog": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep2/an-tech-prog.html",
+          "file": "pages/agri-dep__agri-dep2/an-tech-prog.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/agriculture-college/Course Description-Animal Production Technology.pdf",
+          "label": "وصف مساقات قسم تكنولوجيا الانتاج الحيواني",
+          "found_on": "agri-dep2-courses",
+          "file": "pdfs/agri-dep__agri-dep2/Course_Description-Animal_Production_Technology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=42:agri02",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس تكنولوجيا الانتاج الحيواني",
+          "found_on": "agri-dep2-guideplan",
+          "file": "pdfs/agri-dep__agri-dep2/Academic-Advisory-Animal-Production-and-Protectiont.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep2/agri-dep2-plans.html?download=544:langck-ar-aa-2022-langck-langck-en-gb-animal-production-technology-2022-langck",
+          "label": "تكنولوجيا الانتاج الحيواني 2022",
+          "found_on": "agri-dep2-plans",
+          "file": "pdfs/agri-dep__agri-dep2/Academic-Plan-2022-Animal-Production-Technology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep2/agri-dep2-plans.html?download=116:agri-p-02",
+          "label": "الانتاج الحيواني والوقاية 2017",
+          "found_on": "agri-dep2-plans",
+          "file": "pdfs/agri-dep__agri-dep2/Academic-Plan-2017-Animal-Production-Protection.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "agri-dep__agri-dep4",
+      "prefix": "/index.php/agri-dep/agri-dep4/",
+      "seed": "https://www.hebron.edu/index.php/agri-dep/agri-dep4/agri-dep4-plans.html",
+      "majors": [
+        "بكالوريوس التغذية والتصنيع الغذائي"
+      ],
+      "pages": {
+        "agri-dep4-courses": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep4/agri-dep4-courses.html",
+          "file": "pages/agri-dep__agri-dep4/agri-dep4-courses.md"
+        },
+        "agri-dep4-guideplan": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep4/agri-dep4-guideplan.html",
+          "file": "pages/agri-dep__agri-dep4/agri-dep4-guideplan.md"
+        },
+        "agri-dep4-jobs": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep4/agri-dep4-jobs.html",
+          "file": "pages/agri-dep__agri-dep4/agri-dep4-jobs.md"
+        },
+        "agri-dep4-plans": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep4/agri-dep4-plans.html",
+          "file": "pages/agri-dep__agri-dep4/agri-dep4-plans.md"
+        },
+        "nfp-about": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep4/nfp-about.html",
+          "file": "pages/agri-dep__agri-dep4/nfp-about.md"
+        },
+        "nfp-obj": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep4/nfp-obj.html",
+          "file": "pages/agri-dep__agri-dep4/nfp-obj.md"
+        },
+        "nfp-prog": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep4/nfp-prog.html",
+          "file": "pages/agri-dep__agri-dep4/nfp-prog.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/agriculture-college/Course Description-Nutrition and Food Processing.pdf",
+          "label": "وصف مساقات قسم التغذية والتصنيع الغذائي",
+          "found_on": "agri-dep4-courses",
+          "file": "pdfs/agri-dep__agri-dep4/Course_Description-Nutrition_and_Food_Processing.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=44:agri04",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس التغذية والتصنيع الغذائي",
+          "found_on": "agri-dep4-guideplan",
+          "file": "pdfs/agri-dep__agri-dep4/Academic-Advisory-Plan-Nutrition_and_Food_Technology_Department.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep4/agri-dep4-plans.html?download=545:langck-ar-aa-2022-langck-langck-en-gb-nutrition-and-food-processing-2022-langck",
+          "label": "التغذية والتصنيع الغذائي 2022",
+          "found_on": "agri-dep4-plans",
+          "file": "pdfs/agri-dep__agri-dep4/Academic-Plan-2022-Nutrition-Food-Processing.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/agri-dep/agri-dep4/agri-dep4-plans.html?download=117:agri-p-03",
+          "label": "التغذية والتصنيع الغذائي 2017",
+          "found_on": "agri-dep4-plans",
+          "file": "pdfs/agri-dep__agri-dep4/Academic-Plan-2017-Nutrition-Food-Processing.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "agri-dep__hgm-dep",
+      "prefix": "/index.php/agri-dep/hgm-dep/",
+      "seed": "https://www.hebron.edu/index.php/agri-dep/hgm-dep/hgm-overview.html",
+      "majors": [
+        "بكالوريوس البستنة وإدارة الحدائق"
+      ],
+      "pages": {
+        "hgm-courses": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/hgm-dep/hgm-courses.html",
+          "file": "pages/agri-dep__hgm-dep/hgm-courses.md"
+        },
+        "hgm-guideplan": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/hgm-dep/hgm-guideplan.html",
+          "file": "pages/agri-dep__hgm-dep/hgm-guideplan.md"
+        },
+        "hgm-jobs": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/hgm-dep/hgm-jobs.html",
+          "file": "pages/agri-dep__hgm-dep/hgm-jobs.md"
+        },
+        "hgm-obj": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/hgm-dep/hgm-obj.html",
+          "file": "pages/agri-dep__hgm-dep/hgm-obj.md"
+        },
+        "hgm-overview": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/hgm-dep/hgm-overview.html",
+          "file": "pages/agri-dep__hgm-dep/hgm-overview.md"
+        },
+        "hgm-plans": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/hgm-dep/hgm-plans.html",
+          "file": "pages/agri-dep__hgm-dep/hgm-plans.md"
+        },
+        "hgm-prog": {
+          "url": "https://www.hebron.edu/index.php/agri-dep/hgm-dep/hgm-prog.html",
+          "file": "pages/agri-dep__hgm-dep/hgm-prog.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/agriculture-college/Course Description-Horticulture & Gardening.pdf",
+          "label": "وصف مساقات قسم البستنة وادارة الحدائق",
+          "found_on": "hgm-courses",
+          "file": "pdfs/agri-dep__hgm-dep/Course_Description-Horticulture_Gardening.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=701:hgm-ad-plan",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس البستنة وادارة الحدائق",
+          "found_on": "hgm-guideplan",
+          "file": "pdfs/agri-dep__hgm-dep/Academic-Advisory-Plan-Horticulture-Garden-Management.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/agri-dep/hgm-dep/hgm-plans.html?download=703:horticulture-and-gardening",
+          "label": "2022 البستنة وادارة الحدائق",
+          "found_on": "hgm-plans",
+          "file": "pdfs/agri-dep__hgm-dep/Academic-Plan-2022-Horticulture-and-Gardening.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "man-dep__man-dep1",
+      "prefix": "/index.php/man-dep/man-dep1/",
+      "seed": "https://www.hebron.edu/index.php/man-dep/man-dep1/man-dep1-plans.html",
+      "majors": [
+        "بكالوريوس ادارة الاعمال"
+      ],
+      "pages": {
+        "man-dep1-courses": {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep1/man-dep1-courses.html",
+          "file": "pages/man-dep__man-dep1/man-dep1-courses.md"
+        },
+        "man-dep1-guideplan": {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep1/man-dep1-guideplan.html",
+          "file": "pages/man-dep__man-dep1/man-dep1-guideplan.md"
+        },
+        "man-dep1-jobs": {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep1/man-dep1-jobs.html",
+          "file": "pages/man-dep__man-dep1/man-dep1-jobs.md"
+        },
+        "man-dep1-plans": {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep1/man-dep1-plans.html",
+          "file": "pages/man-dep__man-dep1/man-dep1-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/managment-college/Course Description- Business Administration Department.pdf",
+          "label": "وصف مساقات قسم ادارة الاعمال",
+          "found_on": "man-dep1-courses",
+          "file": "pdfs/man-dep__man-dep1/Course_Description-_Business_Administration_Department.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=55:man01",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس ادارة الاعمال",
+          "found_on": "man-dep1-guideplan",
+          "file": "pdfs/man-dep__man-dep1/Academic-Advisory-Plan-Business-Administration.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=373:man02",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس إدارة الأعمال/ مسار التحليل الاكتواري وإدارة المخاطر",
+          "found_on": "man-dep1-guideplan",
+          "file": "pdfs/man-dep__man-dep1/Academic-Advisory-Plan-Business-Administration-Actuarial_Analysis.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=374:man03",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس إدارة الأعمال/ مسار الريادة وإدارة المشاريع",
+          "found_on": "man-dep1-guideplan",
+          "file": "pdfs/man-dep__man-dep1/Academic-Advisory-Plan-Business-Administration-Entrepreneurship-Project_Management.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=375:man04",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس إدارة الأعمال/ مسار المشتريات وسلسلة التوريد",
+          "found_on": "man-dep1-guideplan",
+          "file": "pdfs/man-dep__man-dep1/Academic-Advisory-Plan-Business-Administration-Procurement-Supply-Management.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep1/man-dep1-plans.html?download=378:man-p-04",
+          "label": "بكالوريوس إدارة الأعمال/ مسار المشتريات وسلسلة التوريد",
+          "found_on": "man-dep1-plans",
+          "file": "pdfs/man-dep__man-dep1/Academic-Plan-2017-Business-Administration-Procurement-Supply-Management.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep1/man-dep1-plans.html?download=377:man-p-03",
+          "label": "بكالوريوس إدارة الأعمال/ مسار الريادة وإدارة المشاريع",
+          "found_on": "man-dep1-plans",
+          "file": "pdfs/man-dep__man-dep1/Academic-Plan-2017-Business-Administration-Entrepreneurship-Project-Management.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep1/man-dep1-plans.html?download=376:man-p-02",
+          "label": "بكالوريوس إدارة الأعمال/ مسار التحليل الاكتواري وإدارة المخاطر",
+          "found_on": "man-dep1-plans",
+          "file": "pdfs/man-dep__man-dep1/Academic-Plan-2017-Business-Administration-Actuarial_Analysis.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep1/man-dep1-plans.html?download=118:man-p-01",
+          "label": "بكالوريوس ادارة الاعمال- منفرد",
+          "found_on": "man-dep1-plans",
+          "file": "pdfs/man-dep__man-dep1/Academic-Plan-2017-Business-Administration.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "man-dep__man-dep2",
+      "prefix": "/index.php/man-dep/man-dep2/",
+      "seed": "https://www.hebron.edu/index.php/man-dep/man-dep2/man-dep2-plans.html",
+      "majors": [
+        "بكالوريوس العلوم المالية والمحاسبية"
+      ],
+      "pages": {
+        "man-dep2-courses": {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep2/man-dep2-courses.html",
+          "file": "pages/man-dep__man-dep2/man-dep2-courses.md"
+        },
+        "man-dep2-guideplan": {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep2/man-dep2-guideplan.html",
+          "file": "pages/man-dep__man-dep2/man-dep2-guideplan.md"
+        },
+        "man-dep2-jobs": {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep2/man-dep2-jobs.html",
+          "file": "pages/man-dep__man-dep2/man-dep2-jobs.md"
+        },
+        "man-dep2-plans": {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep2/man-dep2-plans.html",
+          "file": "pages/man-dep__man-dep2/man-dep2-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/managment-college/Course Description- Finance & Accounting Department.pdf",
+          "label": "وصف مساقات قسم العلوم المالية والمحاسبية",
+          "found_on": "man-dep2-courses",
+          "file": "pdfs/man-dep__man-dep2/Course_Description-_Finance_Accounting_Department.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=56:man02",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس العلوم المالية المحاسبية",
+          "found_on": "man-dep2-guideplan",
+          "file": "pdfs/man-dep__man-dep2/Academic-Advisory-Plan-Finance-and-Accounting.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep2/man-dep2-plans.html?download=433:langck-ar-aa-langck-langck-en-gb-ba-finance-and-accounting-entrepreneurship-project-management-langck",
+          "label": "بكالوريوس العلوم المالية والمحاسبية/ مسار الريادة وإدارة المشاريع",
+          "found_on": "man-dep2-plans",
+          "file": "pdfs/man-dep__man-dep2/Academic-Plan-2017-Finance-and-Accounting-Entrepreneurship-Project-Management.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep2/man-dep2-plans.html?download=432:langck-ar-aa-langck-langck-en-gb-ba-finance-and-accounting-actuarial-analysis-langck",
+          "label": "بكالوريوس العلوم المالية والمحاسبية/ مسار التحليل الاكتواري وإدارة المخاطر",
+          "found_on": "man-dep2-plans",
+          "file": "pdfs/man-dep__man-dep2/Academic-Plan-2017-Finance-and-Accounting-Actuarial_Analysis.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep2/man-dep2-plans.html?download=431:langck-ar-aa-langck-langck-en-gb-ba-finance-and-accounting-procurement-supply-management-langck",
+          "label": "بكالوريوس العلوم المالية والمحاسبية/ مسار المشتريات وسلسلة التوريد",
+          "found_on": "man-dep2-plans",
+          "file": "pdfs/man-dep__man-dep2/Academic-Plan-2017-Finance-and-Accounting-Procurement-Supply-Management.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep2/man-dep2-plans.html?download=119:man-p-02",
+          "label": "العلوم المالية والمحاسبية",
+          "found_on": "man-dep2-plans",
+          "file": "pdfs/man-dep__man-dep2/Academic-Plan-2017-Finance-and-Accounting.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "man-dep__man-dep4",
+      "prefix": "/index.php/man-dep/man-dep4/",
+      "seed": "https://www.hebron.edu/index.php/man-dep/man-dep4/man-dep4-mission.html",
+      "majors": [
+        "بكالوريوس التسويق الرقمي الريادي"
+      ],
+      "pages": {
+        "man-dep3-courses": {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep4/man-dep3-courses.html",
+          "file": "pages/man-dep__man-dep4/man-dep3-courses.md"
+        },
+        "man-dep3-plans": {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep4/man-dep3-plans.html",
+          "file": "pages/man-dep__man-dep4/man-dep3-plans.md"
+        },
+        "man-dep4-jobs": {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep4/man-dep4-jobs.html",
+          "file": "pages/man-dep__man-dep4/man-dep4-jobs.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/managment-college/Course Description-Digital Entrepreneurial Marketing Department.pdf",
+          "label": "وصف مساقات قسم التسويق الرقمي الريادي",
+          "found_on": "man-dep3-courses",
+          "file": "pdfs/man-dep__man-dep4/Course_Description-Digital_Entrepreneurial_Marketing_Department.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep4/man-dep3-plans.html?download=120:man-p-03",
+          "label": "2022قسم التسويق الرقمي الريادي",
+          "found_on": "man-dep3-plans",
+          "file": "pdfs/man-dep__man-dep4/Academic-Plan-2022-Digital_Entrepreneurial_Marketing.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "man-dep__man-dep3",
+      "prefix": "/index.php/man-dep/man-dep3/",
+      "seed": "https://www.hebron.edu/index.php/man-dep/man-dep3/man-dep3-plans.html",
+      "majors": [
+        "بكالوريوس الادارة العامة"
+      ],
+      "pages": {
+        "man-dep3-courses": {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep3/man-dep3-courses.html",
+          "file": "pages/man-dep__man-dep3/man-dep3-courses.md"
+        },
+        "man-dep3-guideplan": {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep3/man-dep3-guideplan.html",
+          "file": "pages/man-dep__man-dep3/man-dep3-guideplan.md"
+        },
+        "man-dep3-jobs": {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep3/man-dep3-jobs.html",
+          "file": "pages/man-dep__man-dep3/man-dep3-jobs.md"
+        },
+        "man-dep3-plans": {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep3/man-dep3-plans.html",
+          "file": "pages/man-dep__man-dep3/man-dep3-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/managment-college/Course Description-Public Administration Department.pdf",
+          "label": "وصف مساقات قسم الادارة العامة",
+          "found_on": "man-dep3-courses",
+          "file": "pdfs/man-dep__man-dep3/Course_Description-Public_Administration_Department.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=382:man05",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس الادارة العامة",
+          "found_on": "man-dep3-guideplan",
+          "file": "pdfs/man-dep__man-dep3/Academic-Advisory-Plan-Public-Administration.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/man-dep/man-dep3/man-dep3-plans.html?download=121:man-p-04",
+          "label": "الادارة العامة",
+          "found_on": "man-dep3-plans",
+          "file": "pdfs/man-dep__man-dep3/Academic-Plan-2017-Public-Administration.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "nursing-dep__nursing-dep1",
+      "prefix": "/index.php/nursing-dep/nursing-dep1/",
+      "seed": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep1/nursing-dep1-plans.html",
+      "majors": [
+        "بكالوريوس علوم التمريض"
+      ],
+      "pages": {
+        "nursing-dep1-courses": {
+          "url": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep1/nursing-dep1-courses.html",
+          "file": "pages/nursing-dep__nursing-dep1/nursing-dep1-courses.md"
+        },
+        "nursing-dep1-guideplan": {
+          "url": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep1/nursing-dep1-guideplan.html",
+          "file": "pages/nursing-dep__nursing-dep1/nursing-dep1-guideplan.md"
+        },
+        "nursing-dep1-jobs": {
+          "url": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep1/nursing-dep1-jobs.html",
+          "file": "pages/nursing-dep__nursing-dep1/nursing-dep1-jobs.md"
+        },
+        "nursing-dep1-plans": {
+          "url": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep1/nursing-dep1-plans.html",
+          "file": "pages/nursing-dep__nursing-dep1/nursing-dep1-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/nursing-college/Course Description- Nursing Science.pdf",
+          "label": "وصف مساقات قسم علوم التمريض",
+          "found_on": "nursing-dep1-courses",
+          "file": "pdfs/nursing-dep__nursing-dep1/Course_Description-_Nursing_Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=682:gb",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس علوم التمريض 2022-2023 Group B",
+          "found_on": "nursing-dep1-guideplan",
+          "file": "pdfs/nursing-dep__nursing-dep1/Academic_Advisory_Plan_nursing_023-groupB.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=681:nur02-2",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس علوم التمريض 2022-2023 Group A",
+          "found_on": "nursing-dep1-guideplan",
+          "file": "pdfs/nursing-dep__nursing-dep1/Academic_Advisory_Plan_nursing_023-groupA.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=59:nur02",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس علوم التمريض 2017-2018 Group A",
+          "found_on": "nursing-dep1-guideplan",
+          "file": "pdfs/nursing-dep__nursing-dep1/Academic_Advisory_Plan_nursing_017-018.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=305:nur03",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس علوم التمريض 2017-2018 Group B",
+          "found_on": "nursing-dep1-guideplan",
+          "file": "pdfs/nursing-dep__nursing-dep1/Academic_Advisory_Plan_nursing_017-018-b.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep1/nursing-dep1-plans.html?download=463:langck-ar-aa-2022-2023-langck-langck-en-gb-nursing-science-2022-2023-langck",
+          "label": "بكالوريوس علوم التمريض 2022-2023",
+          "found_on": "nursing-dep1-plans",
+          "file": "pdfs/nursing-dep__nursing-dep1/Academic-Plan-2023-Nursing-Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep1/nursing-dep1-plans.html?download=122:nur-p-01",
+          "label": "بكالوريوس علوم التمريض 2017-2018",
+          "found_on": "nursing-dep1-plans",
+          "file": "pdfs/nursing-dep__nursing-dep1/Academic-Plan-2017-Nursing-Science.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "nursing-dep__nursing-dep2",
+      "prefix": "/index.php/nursing-dep/nursing-dep2/",
+      "seed": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep2/nursing-dep2-plans.html",
+      "majors": [
+        "بكالوريوس القبالة"
+      ],
+      "pages": {
+        "nursing-dep2-courses": {
+          "url": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep2/nursing-dep2-courses.html",
+          "file": "pages/nursing-dep__nursing-dep2/nursing-dep2-courses.md"
+        },
+        "nursing-dep2-guideplan": {
+          "url": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep2/nursing-dep2-guideplan.html",
+          "file": "pages/nursing-dep__nursing-dep2/nursing-dep2-guideplan.md"
+        },
+        "nursing-dep2-jobs": {
+          "url": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep2/nursing-dep2-jobs.html",
+          "file": "pages/nursing-dep__nursing-dep2/nursing-dep2-jobs.md"
+        },
+        "nursing-dep2-plans": {
+          "url": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep2/nursing-dep2-plans.html",
+          "file": "pages/nursing-dep__nursing-dep2/nursing-dep2-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/nursing-college/Course Description- Midwifery.pdf",
+          "label": "وصف مساقات قسم القبالة",
+          "found_on": "nursing-dep2-courses",
+          "file": "pdfs/nursing-dep__nursing-dep2/Course_Description-_Midwifery.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=60:nur02",
+          "label": "الخطة الارشادية الاكاديمية- بكالوريوس القبالة",
+          "found_on": "nursing-dep2-guideplan",
+          "file": "pdfs/nursing-dep__nursing-dep2/Academic-Advisory-Plan-midwifery020.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep2/nursing-dep2-plans.html?download=464:langck-ar-aa-2022-2023-langck-langck-en-gb-midwifery-2022-2023-langck",
+          "label": "بكالوريوس القبالة2022-2023",
+          "found_on": "nursing-dep2-plans",
+          "file": "pdfs/nursing-dep__nursing-dep2/Academic-Plan-2023-Midwifery.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/nursing-dep/nursing-dep2/nursing-dep2-plans.html?download=123:nur-p-02",
+          "label": "بكالوريوس القبالة2017-2018",
+          "found_on": "nursing-dep2-plans",
+          "file": "pdfs/nursing-dep__nursing-dep2/Academic-Plan-2017-Midwifery.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "pharmacy-dep__pharmacy-dep1",
+      "prefix": "/index.php/pharmacy-dep/pharmacy-dep1/",
+      "seed": "https://www.hebron.edu/index.php/pharmacy-dep/pharmacy-dep1/pharmacy-dep1-plans.html",
+      "majors": [
+        "بكالوريوس الصيدلة",
+        "بكالوريوس دكتور صيدلاني"
+      ],
+      "pages": {
+        "pharmacy-dep-prog": {
+          "url": "https://www.hebron.edu/index.php/pharmacy-dep/pharmacy-dep1/pharmacy-dep-prog.html",
+          "file": "pages/pharmacy-dep__pharmacy-dep1/pharmacy-dep-prog.md"
+        },
+        "pharmacy-dep1-courses": {
+          "url": "https://www.hebron.edu/index.php/pharmacy-dep/pharmacy-dep1/pharmacy-dep1-courses.html",
+          "file": "pages/pharmacy-dep__pharmacy-dep1/pharmacy-dep1-courses.md"
+        },
+        "pharmacy-dep1-guideplan": {
+          "url": "https://www.hebron.edu/index.php/pharmacy-dep/pharmacy-dep1/pharmacy-dep1-guideplan.html",
+          "file": "pages/pharmacy-dep__pharmacy-dep1/pharmacy-dep1-guideplan.md"
+        },
+        "pharmacy-dep1-jobs": {
+          "url": "https://www.hebron.edu/index.php/pharmacy-dep/pharmacy-dep1/pharmacy-dep1-jobs.html",
+          "file": "pages/pharmacy-dep__pharmacy-dep1/pharmacy-dep1-jobs.md"
+        },
+        "pharmacy-dep1-mission-2": {
+          "url": "https://www.hebron.edu/index.php/pharmacy-dep/pharmacy-dep1/pharmacy-dep1-mission-2.html",
+          "file": "pages/pharmacy-dep__pharmacy-dep1/pharmacy-dep1-mission-2.md"
+        },
+        "pharmacy-dep1-obj": {
+          "url": "https://www.hebron.edu/index.php/pharmacy-dep/pharmacy-dep1/pharmacy-dep1-obj.html",
+          "file": "pages/pharmacy-dep__pharmacy-dep1/pharmacy-dep1-obj.md"
+        },
+        "pharmacy-dep1-plans": {
+          "url": "https://www.hebron.edu/index.php/pharmacy-dep/pharmacy-dep1/pharmacy-dep1-plans.html",
+          "file": "pages/pharmacy-dep__pharmacy-dep1/pharmacy-dep1-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/pharmacy-college/Course Description-Pharmacy Department.pdf",
+          "label": "وصف مساقات تخصص الصيدلة",
+          "found_on": "pharmacy-dep1-courses",
+          "file": "pdfs/pharmacy-dep__pharmacy-dep1/Course_Description-Pharmacy_Department.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/pharmacy-college/Course Description-Doctor-of-Pharmacy.pdf",
+          "label": "وصف مساقات تخصص دكتور صيدلي",
+          "found_on": "pharmacy-dep1-courses",
+          "file": "pdfs/pharmacy-dep__pharmacy-dep1/Course_Description-Doctor-of-Pharmacy.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=57:ph01",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس الصيدلة",
+          "found_on": "pharmacy-dep1-guideplan",
+          "file": "pdfs/pharmacy-dep__pharmacy-dep1/Academic_Advisory_Plan_english-Pharmacy.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=689:2025-06-12-06-43-42",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس دكتور صيدلي",
+          "found_on": "pharmacy-dep1-guideplan",
+          "file": "pdfs/pharmacy-dep__pharmacy-dep1/Academic-Advisory-Plan-Doctor-of-Pharmacy-2025.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/pharmacy-dep/pharmacy-dep1/pharmacy-dep1-plans.html?download=520:ph-p-2",
+          "label": "2022 بكالوريوس الصيدلة",
+          "found_on": "pharmacy-dep1-plans",
+          "file": "pdfs/pharmacy-dep__pharmacy-dep1/Academic-Plan-2022-Pharmacy.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/pharmacy-dep/pharmacy-dep1/pharmacy-dep1-plans.html?download=133:ph-p-01",
+          "label": "2017 بكالوريوس الصيدلة",
+          "found_on": "pharmacy-dep1-plans",
+          "file": "pdfs/pharmacy-dep__pharmacy-dep1/Academic-Plan-2017-Pharmacy.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/pharmacy-dep/pharmacy-dep1/pharmacy-dep1-plans.html?download=688:pharmd",
+          "label": "بكالوريوس دكتور صيدلي 2025",
+          "found_on": "pharmacy-dep1-plans",
+          "file": "pdfs/pharmacy-dep__pharmacy-dep1/Academic-Plan-2025-Doctor-of-Pharmacy.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "ahs-dep__pharmacy-dep2-2",
+      "prefix": "/index.php/ahs-dep/pharmacy-dep2-2/",
+      "seed": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep2-2/pharmacy-dep2-overview-2.html",
+      "majors": [
+        "بكالوريوس العلوم الطبية المخبرية"
+      ],
+      "pages": {
+        "ms-mission-2": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep2-2/ms-mission-2.html",
+          "file": "pages/ahs-dep__pharmacy-dep2-2/ms-mission-2.md"
+        },
+        "ms-obj-2": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep2-2/ms-obj-2.html",
+          "file": "pages/ahs-dep__pharmacy-dep2-2/ms-obj-2.md"
+        },
+        "ms-prog-2": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep2-2/ms-prog-2.html",
+          "file": "pages/ahs-dep__pharmacy-dep2-2/ms-prog-2.md"
+        },
+        "ms-vision-2": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep2-2/ms-vision-2.html",
+          "file": "pages/ahs-dep__pharmacy-dep2-2/ms-vision-2.md"
+        },
+        "pharmacy-dep2-courses-2": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep2-2/pharmacy-dep2-courses-2.html",
+          "file": "pages/ahs-dep__pharmacy-dep2-2/pharmacy-dep2-courses-2.md"
+        },
+        "pharmacy-dep2-guideplan-2": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep2-2/pharmacy-dep2-guideplan-2.html",
+          "file": "pages/ahs-dep__pharmacy-dep2-2/pharmacy-dep2-guideplan-2.md"
+        },
+        "pharmacy-dep2-jobs-2": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep2-2/pharmacy-dep2-jobs-2.html",
+          "file": "pages/ahs-dep__pharmacy-dep2-2/pharmacy-dep2-jobs-2.md"
+        },
+        "pharmacy-dep2-overview-2": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep2-2/pharmacy-dep2-overview-2.html",
+          "file": "pages/ahs-dep__pharmacy-dep2-2/pharmacy-dep2-overview-2.md"
+        },
+        "pharmacy-dep2-plans-2": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep2-2/pharmacy-dep2-plans-2.html",
+          "file": "pages/ahs-dep__pharmacy-dep2-2/pharmacy-dep2-plans-2.md"
+        },
+        "pharmacy-dep2-staff-2": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep2-2/pharmacy-dep2-staff-2.html",
+          "file": "pages/ahs-dep__pharmacy-dep2-2/pharmacy-dep2-staff-2.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/pharmacy-college/Course Description-Medical Laboratory Science Department.pdf",
+          "label": "وصف مساقات قسم العلوم الطبية المخبرية",
+          "found_on": "pharmacy-dep2-courses-2",
+          "file": "pdfs/ahs-dep__pharmacy-dep2-2/Course_Description-Medical_Laboratory_Science_Department.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=58:ph02",
+          "label": "الخطة الارشادية الاكاديمية- بكالوريوس العلوم الطبية المخبرية",
+          "found_on": "pharmacy-dep2-guideplan-2",
+          "file": "pdfs/ahs-dep__pharmacy-dep2-2/Academic_Advisory_Plan-Medical-science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep2-2/pharmacy-dep2-plans-2.html?download=519:ph-p-3",
+          "label": "الخطة الدراسية 2022",
+          "found_on": "pharmacy-dep2-plans-2",
+          "file": "pdfs/ahs-dep__pharmacy-dep2-2/Academic-Plan-2022-Medical-Laboratory-Sciences.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep2-2/pharmacy-dep2-plans-2.html?download=134:ph-p-02",
+          "label": "الخطة الدراسية 2017",
+          "found_on": "pharmacy-dep2-plans-2",
+          "file": "pdfs/ahs-dep__pharmacy-dep2-2/Academic-Plan-2017-Medical-Laboratory-Sciences.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "ahs-dep__pharmacy-dep3-2",
+      "prefix": "/index.php/ahs-dep/pharmacy-dep3-2/",
+      "seed": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep3-2/pharmacy-dep2-overview.html",
+      "majors": [
+        "بكالوريوس الفيزياء الطبية الحيوية"
+      ],
+      "pages": {
+        "ms-prog": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep3-2/ms-prog.html",
+          "file": "pages/ahs-dep__pharmacy-dep3-2/ms-prog.md"
+        },
+        "pharmacy-dep2-overview": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep3-2/pharmacy-dep2-overview.html",
+          "file": "pages/ahs-dep__pharmacy-dep3-2/pharmacy-dep2-overview.md"
+        },
+        "pharmacy-dep3-courses": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep3-2/pharmacy-dep3-courses.html",
+          "file": "pages/ahs-dep__pharmacy-dep3-2/pharmacy-dep3-courses.md"
+        },
+        "pharmacy-dep3-guideplan": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep3-2/pharmacy-dep3-guideplan.html",
+          "file": "pages/ahs-dep__pharmacy-dep3-2/pharmacy-dep3-guideplan.md"
+        },
+        "pharmacy-dep3-jobs": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep3-2/pharmacy-dep3-jobs.html",
+          "file": "pages/ahs-dep__pharmacy-dep3-2/pharmacy-dep3-jobs.md"
+        },
+        "pharmacy-dep3-obj": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep3-2/pharmacy-dep3-obj.html",
+          "file": "pages/ahs-dep__pharmacy-dep3-2/pharmacy-dep3-obj.md"
+        },
+        "pharmacy-dep3-plans": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep3-2/pharmacy-dep3-plans.html",
+          "file": "pages/ahs-dep__pharmacy-dep3-2/pharmacy-dep3-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/pharmacy-college/Course Description-Medical Biophysics Department.pdf",
+          "label": "وصف مساقات قسم الفيزياء الطبية الحيوية",
+          "found_on": "pharmacy-dep3-courses",
+          "file": "pdfs/ahs-dep__pharmacy-dep3-2/Course_Description-Medical_Biophysics_Department.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=331:2021-07-01-11-27-51",
+          "label": "الخطة الارشادية الاكاديمية- برنامج الفيزياء الطبية",
+          "found_on": "pharmacy-dep3-guideplan",
+          "file": "pdfs/ahs-dep__pharmacy-dep3-2/Academic-Advisory-Plan-biomedical-physics.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep3-2/pharmacy-dep3-plans.html?download=542:langck-ar-aa-2022-langck-langck-en-gb-medical-biophysics-2022-langck",
+          "label": "بكالوريوس الفيزياء الطبية الحيوية 2022",
+          "found_on": "pharmacy-dep3-plans",
+          "file": "pdfs/ahs-dep__pharmacy-dep3-2/Academic-Plan-2022-biomedical-physics.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/pharmacy-dep3-2/pharmacy-dep3-plans.html?download=332:biomed-phy",
+          "label": "بكالوريوس الفيزياء الطبية الحيوية 2021",
+          "found_on": "pharmacy-dep3-plans",
+          "file": "pdfs/ahs-dep__pharmacy-dep3-2/Academic-Plan-2021-biomedical-physics.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "ahs-dep__medical-imagin-dep4",
+      "prefix": "/index.php/ahs-dep/medical-imagin-dep4/",
+      "seed": "https://www.hebron.edu/index.php/ahs-dep/medical-imagin-dep4/pharmacy-dep4-overview.html",
+      "majors": [
+        "بكالوريوس التصوير الطبي"
+      ],
+      "pages": {
+        "mi-obj": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/medical-imagin-dep4/mi-obj.html",
+          "file": "pages/ahs-dep__medical-imagin-dep4/mi-obj.md"
+        },
+        "mi-prog": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/medical-imagin-dep4/mi-prog.html",
+          "file": "pages/ahs-dep__medical-imagin-dep4/mi-prog.md"
+        },
+        "pharmacy-dep4-courses": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/medical-imagin-dep4/pharmacy-dep4-courses.html",
+          "file": "pages/ahs-dep__medical-imagin-dep4/pharmacy-dep4-courses.md"
+        },
+        "pharmacy-dep4-guideplan": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/medical-imagin-dep4/pharmacy-dep4-guideplan.html",
+          "file": "pages/ahs-dep__medical-imagin-dep4/pharmacy-dep4-guideplan.md"
+        },
+        "pharmacy-dep4-jobs": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/medical-imagin-dep4/pharmacy-dep4-jobs.html",
+          "file": "pages/ahs-dep__medical-imagin-dep4/pharmacy-dep4-jobs.md"
+        },
+        "pharmacy-dep4-overview": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/medical-imagin-dep4/pharmacy-dep4-overview.html",
+          "file": "pages/ahs-dep__medical-imagin-dep4/pharmacy-dep4-overview.md"
+        },
+        "pharmacy-dep4-plans": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/medical-imagin-dep4/pharmacy-dep4-plans.html",
+          "file": "pages/ahs-dep__medical-imagin-dep4/pharmacy-dep4-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/pharmacy-college/Course Description-Medical Imaging Department.pdf",
+          "label": "وصف مساقات قسم التصوير الطبي",
+          "found_on": "pharmacy-dep4-courses",
+          "file": "pdfs/ahs-dep__medical-imagin-dep4/Course_Description-Medical_Imaging_Department.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=390:med-ima-gplan",
+          "label": "الخطة الارشادية الاكاديمية- بكالوريوس التصوير الطبي",
+          "found_on": "pharmacy-dep4-guideplan",
+          "file": "pdfs/ahs-dep__medical-imagin-dep4/Academic-Advisory-Plan-Medical-Imaging.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/medical-imagin-dep4/pharmacy-dep4-plans.html?download=389:langck-ar-aa-langck-langck-en-gb-medical-imaging-program-langck",
+          "label": "بكالوريوس التصوير الطبي 2022",
+          "found_on": "pharmacy-dep4-plans",
+          "file": "pdfs/ahs-dep__medical-imagin-dep4/Academic-Plan-2022-Medical-Imaging.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "ahs-dep__phy-the-dep",
+      "prefix": "/index.php/ahs-dep/phy-the-dep/",
+      "seed": "https://www.hebron.edu/index.php/ahs-dep/phy-the-dep/ph-th-overview.html",
+      "majors": [
+        "بكالوريوس العلاج الطبيعي"
+      ],
+      "pages": {
+        "ph-th-courses": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/phy-the-dep/ph-th-courses.html",
+          "file": "pages/ahs-dep__phy-the-dep/ph-th-courses.md"
+        },
+        "ph-th-guideplan": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/phy-the-dep/ph-th-guideplan.html",
+          "file": "pages/ahs-dep__phy-the-dep/ph-th-guideplan.md"
+        },
+        "ph-th-jobs": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/phy-the-dep/ph-th-jobs.html",
+          "file": "pages/ahs-dep__phy-the-dep/ph-th-jobs.md"
+        },
+        "ph-th-obj": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/phy-the-dep/ph-th-obj.html",
+          "file": "pages/ahs-dep__phy-the-dep/ph-th-obj.md"
+        },
+        "ph-th-overview": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/phy-the-dep/ph-th-overview.html",
+          "file": "pages/ahs-dep__phy-the-dep/ph-th-overview.md"
+        },
+        "ph-th-plans": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/phy-the-dep/ph-th-plans.html",
+          "file": "pages/ahs-dep__phy-the-dep/ph-th-plans.md"
+        },
+        "ph-th-prog": {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/phy-the-dep/ph-th-prog.html",
+          "file": "pages/ahs-dep__phy-the-dep/ph-th-prog.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/pharmacy-college/Course Description-Physical-Therapy.pdf",
+          "label": "وصف مساقات تخصص العلاج الطبيعي",
+          "found_on": "ph-th-courses",
+          "file": "pdfs/ahs-dep__phy-the-dep/Course_Description-Physical-Therapy.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/guide-plans/Academic-Advisory-Plan-Physical-Therapy-2025.pdf",
+          "label": "الخطة الاسترشادية - بكالوريوس العلاج الطبيعي",
+          "found_on": "ph-th-guideplan",
+          "file": "pdfs/ahs-dep__phy-the-dep/Academic-Advisory-Plan-Physical-Therapy-2025.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/ahs-dep/phy-the-dep/ph-th-plans.html?download=694:ph-th-plan",
+          "label": "بكالوريوس العلاج الطبيعي- الخطة الدراسية 2025",
+          "found_on": "ph-th-plans",
+          "file": "pdfs/ahs-dep__phy-the-dep/Academic-Plan-2025-physical-Therapy.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "law-dep__law-dep1",
+      "prefix": "/index.php/law-dep/law-dep1/",
+      "seed": "https://www.hebron.edu/index.php/law-dep/law-dep1/law-dep1-plans.html",
+      "majors": [
+        "بكالوريوس القانون العام"
+      ],
+      "pages": {
+        "law-dep1-courses": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep1/law-dep1-courses.html",
+          "file": "pages/law-dep__law-dep1/law-dep1-courses.md"
+        },
+        "law-dep1-guideplan": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep1/law-dep1-guideplan.html",
+          "file": "pages/law-dep__law-dep1/law-dep1-guideplan.md"
+        },
+        "law-dep1-jobs": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep1/law-dep1-jobs.html",
+          "file": "pages/law-dep__law-dep1/law-dep1-jobs.md"
+        },
+        "law-dep1-plans": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep1/law-dep1-plans.html",
+          "file": "pages/law-dep__law-dep1/law-dep1-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/law-college/Course Description- Public Law Department.pdf",
+          "label": "وصف مساقات قسم القانون العام",
+          "found_on": "law-dep1-courses",
+          "file": "pdfs/law-dep__law-dep1/Course_Description-_Public_Law_Department.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/64-coll-form.html?download=61:law01",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس القانون العام",
+          "found_on": "law-dep1-guideplan",
+          "file": "pdfs/law-dep__law-dep1/Academic-Advisory-General_Division.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep1/law-dep1-plans.html?download=521:law-p-2",
+          "label": "الخطة الدراسية 2022",
+          "found_on": "law-dep1-plans",
+          "file": "pdfs/law-dep__law-dep1/Academic-Plan-2022-Public-Law.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep1/law-dep1-plans.html?download=135:law-p-01",
+          "label": "الخطة الدراسية 2017",
+          "found_on": "law-dep1-plans",
+          "file": "pdfs/law-dep__law-dep1/Academic-Plan-2017-Public-Law.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "law-dep__law-dep2",
+      "prefix": "/index.php/law-dep/law-dep2/",
+      "seed": "https://www.hebron.edu/index.php/law-dep/law-dep2/law-dep2-plans.html",
+      "majors": [
+        "بكالوريوس القانون الخاص"
+      ],
+      "pages": {
+        "law-dep2-courses": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep2/law-dep2-courses.html",
+          "file": "pages/law-dep__law-dep2/law-dep2-courses.md"
+        },
+        "law-dep2-guideplan": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep2/law-dep2-guideplan.html",
+          "file": "pages/law-dep__law-dep2/law-dep2-guideplan.md"
+        },
+        "law-dep2-jobs": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep2/law-dep2-jobs.html",
+          "file": "pages/law-dep__law-dep2/law-dep2-jobs.md"
+        },
+        "law-dep2-plans": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep2/law-dep2-plans.html",
+          "file": "pages/law-dep__law-dep2/law-dep2-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/law-college/Course Description- Private Law Department.pdf",
+          "label": "وصف مساقات قسم القانون الخاص",
+          "found_on": "law-dep2-courses",
+          "file": "pdfs/law-dep__law-dep2/Course_Description-_Private_Law_Department.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=62:law02",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس القانون الخاص",
+          "found_on": "law-dep2-guideplan",
+          "file": "pdfs/law-dep__law-dep2/Academic-Advisory-Private_law.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep2/law-dep2-plans.html?download=525:law-p-3",
+          "label": "الخطة الدراسية 2022",
+          "found_on": "law-dep2-plans",
+          "file": "pdfs/law-dep__law-dep2/Academic-Plan-2022-Private-Law.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep2/law-dep2-plans.html?download=136:law-p-02",
+          "label": "الخطة الدراسية 2017",
+          "found_on": "law-dep2-plans",
+          "file": "pdfs/law-dep__law-dep2/Academic-Plan-2017-Private-Law.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "law-dep__law-dep3",
+      "prefix": "/index.php/law-dep/law-dep3/",
+      "seed": "https://www.hebron.edu/index.php/law-dep/law-dep3/law-dep3-plans.html",
+      "majors": [
+        "بكالوريوس الفقه والقانون"
+      ],
+      "pages": {
+        "law-dep3-courses": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep3/law-dep3-courses.html",
+          "file": "pages/law-dep__law-dep3/law-dep3-courses.md"
+        },
+        "law-dep3-guideplan": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep3/law-dep3-guideplan.html",
+          "file": "pages/law-dep__law-dep3/law-dep3-guideplan.md"
+        },
+        "law-dep3-jobs": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep3/law-dep3-jobs.html",
+          "file": "pages/law-dep__law-dep3/law-dep3-jobs.md"
+        },
+        "law-dep3-plans": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep3/law-dep3-plans.html",
+          "file": "pages/law-dep__law-dep3/law-dep3-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/law-college/Course Description- Jurisprudence & Law Department.pdf",
+          "label": "وصف مساقات قسم الفقه والقانون",
+          "found_on": "law-dep3-courses",
+          "file": "pdfs/law-dep__law-dep3/Course_Description-_Jurisprudence_Law_Department.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=63:law03",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس الفقه والقانون",
+          "found_on": "law-dep3-guideplan",
+          "file": "pdfs/law-dep__law-dep3/Academic-Advisory-Jurispredance_and_Law.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep3/law-dep3-plans.html?download=522:law-p-4",
+          "label": "الخطة الدراسية 2022",
+          "found_on": "law-dep3-plans",
+          "file": "pdfs/law-dep__law-dep3/Academic-Plan-2022-Jurisprudence-and-Law.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep3/law-dep3-plans.html?download=137:law-p-03",
+          "label": "الخطة الدراسية 2017",
+          "found_on": "law-dep3-plans",
+          "file": "pdfs/law-dep__law-dep3/Academic-Plan-2017-Jurisprudence-and-Law.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "law-dep__law-dep4",
+      "prefix": "/index.php/law-dep/law-dep4/",
+      "seed": "https://www.hebron.edu/index.php/law-dep/law-dep4/law-dep4-plans.html",
+      "majors": [
+        "بكالوريوس العلوم السياسية",
+        "بكالوريوس العلوم السياسية فرعي ادارة عامة",
+        "بكالوريوس العلوم السياسية فرعي علاقات دولية"
+      ],
+      "pages": {
+        "law-dep4-courses": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep4/law-dep4-courses.html",
+          "file": "pages/law-dep__law-dep4/law-dep4-courses.md"
+        },
+        "law-dep4-guideplan": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep4/law-dep4-guideplan.html",
+          "file": "pages/law-dep__law-dep4/law-dep4-guideplan.md"
+        },
+        "law-dep4-jobs": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep4/law-dep4-jobs.html",
+          "file": "pages/law-dep__law-dep4/law-dep4-jobs.md"
+        },
+        "law-dep4-plans": {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep4/law-dep4-plans.html",
+          "file": "pages/law-dep__law-dep4/law-dep4-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/law-college/Course Description- Political Science Department.pdf",
+          "label": "وصف مساقات قسم العلوم السياسية",
+          "found_on": "law-dep4-courses",
+          "file": "pdfs/law-dep__law-dep4/Course_Description-_Political_Science_Department.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/law-college/Course Description- Political Science-Minor-International-Relations.pdf",
+          "label": "وصف مساقات تخصص العلوم السياسية- فرعي علاقات دولية",
+          "found_on": "law-dep4-courses",
+          "file": "pdfs/law-dep__law-dep4/Course_Description-_Political_Science-Minor-International-Relations.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=64:law04",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس العلوم السياسية",
+          "found_on": "law-dep4-guideplan",
+          "file": "pdfs/law-dep__law-dep4/Academic_Advisory_Plan_arabic-Political-Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=741:ps-il",
+          "label": "الخطة الإرشادية الأكاديمية - بكالوريوس العلوم السياسية فرعي العلاقات الدولية",
+          "found_on": "law-dep4-guideplan",
+          "file": "pdfs/law-dep__law-dep4/Academic-Advisory-Plan-Political_Science-Minor-International-Relations.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep4/law-dep4-plans.html?download=740:ps-il",
+          "label": "الخطة الدراسية: العلوم السياسية فرعي علاقات دولية 2026",
+          "found_on": "law-dep4-plans",
+          "file": "pdfs/law-dep__law-dep4/Academic-Plan-2026-Political_Science-Minor-International-Relations.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep4/law-dep4-plans.html?download=524:law-p-5",
+          "label": "الخطة الدراسية: العلوم السياسية 2022",
+          "found_on": "law-dep4-plans",
+          "file": "pdfs/law-dep__law-dep4/Academic-Plan-2022-Political_Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep4/law-dep4-plans.html?download=138:law-p-04",
+          "label": "الخطة الدراسية: العلوم السياسية 2017",
+          "found_on": "law-dep4-plans",
+          "file": "pdfs/law-dep__law-dep4/Academic-Plan-2017-Political_Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep4/law-dep4-plans.html?download=523:law-p-6",
+          "label": "الخطة الدراسية: العلوم السياسية- فرعي ادارة عامة 2022",
+          "found_on": "law-dep4-plans",
+          "file": "pdfs/law-dep__law-dep4/Academic-Plan-2022-Political_Science-_Minor-Public-Administration.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/law-dep/law-dep4/law-dep4-plans.html?download=317:law-p-05",
+          "label": "الخطة الدراسية: العلوم السياسية- فرعي ادارة عامة 2017",
+          "found_on": "law-dep4-plans",
+          "file": "pdfs/law-dep__law-dep4/Academic-Plan-2017-Political_Science-_Minor-Public-Administration.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "it-dep__it-dep1",
+      "prefix": "/index.php/it-dep/it-dep1/",
+      "seed": "https://www.hebron.edu/index.php/it-dep/it-dep1/it-dep1-plans.html",
+      "majors": [
+        "بكالوريوس علم الحاسوب",
+        "تخصص رئيسي علم الحاسوب/ فرعي علم البيانات والذكاء الاصطناعي",
+        "بكالوريوس رئيسي علم الحاسوب- فرعي ادارة الاعمال",
+        "بكالوريوس رئيسي علم الحاسوب- فرعي هندسة برمجيات"
+      ],
+      "pages": {
+        "it-dep1-courses": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep1/it-dep1-courses.html",
+          "file": "pages/it-dep__it-dep1/it-dep1-courses.md"
+        },
+        "it-dep1-guideplan": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep1/it-dep1-guideplan.html",
+          "file": "pages/it-dep__it-dep1/it-dep1-guideplan.md"
+        },
+        "it-dep1-jobs": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep1/it-dep1-jobs.html",
+          "file": "pages/it-dep__it-dep1/it-dep1-jobs.md"
+        },
+        "it-dep1-obj": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep1/it-dep1-obj.html",
+          "file": "pages/it-dep__it-dep1/it-dep1-obj.md"
+        },
+        "it-dep1-overview": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep1/it-dep1-overview.html",
+          "file": "pages/it-dep__it-dep1/it-dep1-overview.md"
+        },
+        "it-dep1-plans": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep1/it-dep1-plans.html",
+          "file": "pages/it-dep__it-dep1/it-dep1-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/it-college/Course Description-Computer-Science.pdf",
+          "label": "وصف مساقات قسم علم الحاسوب",
+          "found_on": "it-dep1-courses",
+          "file": "pdfs/it-dep__it-dep1/Course_Description-Computer-Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/it-college/Course Description-Computer-Science-minor-Software Engineering.pdf",
+          "label": "وصف مساقات تخصص رئيسي علم الحاسوب- فرعي هندسة برمجيات",
+          "found_on": "it-dep1-courses",
+          "file": "pdfs/it-dep__it-dep1/Course_Description-Computer-Science-minor-Software_Engineering.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=438:2022",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس علم الحاسوب 2022",
+          "found_on": "it-dep1-guideplan",
+          "file": "pdfs/it-dep__it-dep1/Academic-Advisory-Plan-2022-Computer-Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=447:2022-12-26-12-52-02",
+          "label": "الخطة الإرشادية الأكاديمية - برنامج علم الحاسوب- فرعي ادارة",
+          "found_on": "it-dep1-guideplan",
+          "file": "pdfs/science-dep__science-dep1/Academic-Advisory-Plan-2022-Computer-Science-minor-bus-administration.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep1/it-dep1-plans.html?download=746:cs-se",
+          "label": "بكالوريوس رئيسي علم حاسوب – فرعي هندسة برمجيات 2026",
+          "found_on": "it-dep1-plans",
+          "file": "pdfs/it-dep__it-dep1/Academic-Plan-2026-Major-Computer-Science-Minor_Software_Engineering.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep1/it-dep1-plans.html?download=160:it-p-01",
+          "label": "بكالوريوس علم الحاسوب 2022",
+          "found_on": "it-dep1-plans",
+          "file": "pdfs/it-dep__it-dep1/Academic-Plan-2022-Computer-Science.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep1/it-dep1-plans.html?download=163:it-p-04",
+          "label": "بكالوريوس رئيسي علم الحاسوب- فرعي ادارة الاعمال 2022",
+          "found_on": "it-dep1-plans",
+          "file": "pdfs/it-dep__it-dep1/Academic-Plan-2022-Major-computer-science-Minor-business-administration.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep1/it-dep1-plans.html?download=472:it-p-02",
+          "label": "تخصص رئيسي علم الحاسوب/ فرعي علم البيانات والذكاء الاصطناعي 2024",
+          "found_on": "it-dep1-plans",
+          "file": "pdfs/it-dep__it-dep1/Academic-Plan-2024-Major-Computer-Science-Minor-Data-Science-AI.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "it-dep__it-dep2",
+      "prefix": "/index.php/it-dep/it-dep2/",
+      "seed": "https://www.hebron.edu/index.php/it-dep/it-dep2/it-dep2-plans.html",
+      "majors": [
+        "بكالوريوس تكنولوجيا الويب والوسائط المتعددة"
+      ],
+      "pages": {
+        "it-dep2-courses": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep2/it-dep2-courses.html",
+          "file": "pages/it-dep__it-dep2/it-dep2-courses.md"
+        },
+        "it-dep2-guideplan": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep2/it-dep2-guideplan.html",
+          "file": "pages/it-dep__it-dep2/it-dep2-guideplan.md"
+        },
+        "it-dep2-jobs": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep2/it-dep2-jobs.html",
+          "file": "pages/it-dep__it-dep2/it-dep2-jobs.md"
+        },
+        "it-dep2-obj": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep2/it-dep2-obj.html",
+          "file": "pages/it-dep__it-dep2/it-dep2-obj.md"
+        },
+        "it-dep2-overview": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep2/it-dep2-overview.html",
+          "file": "pages/it-dep__it-dep2/it-dep2-overview.md"
+        },
+        "it-dep2-plans": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep2/it-dep2-plans.html",
+          "file": "pages/it-dep__it-dep2/it-dep2-plans.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/it-college/Course Description-Web-Technology-and-Multimedia.pdf",
+          "label": "وصف مساقات قسم تكنولوجيا الويب والوسائط المتعددة",
+          "found_on": "it-dep2-courses",
+          "file": "pdfs/it-dep__it-dep2/Course_Description-Web-Technology-and-Multimedia.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=442:2022",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس تكنولوجيا الويب والوسائط المتعددة 2022",
+          "found_on": "it-dep2-guideplan",
+          "file": "pdfs/it-dep__it-dep2/Academic-Advisory-Plan-2022-Multimedia-and-Web-Technology.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep2/it-dep2-plans.html?download=164:it-p-05",
+          "label": "بكالوريوس تكنولوجيا الويب والوسائط المتعددة 2022",
+          "found_on": "it-dep2-plans",
+          "file": "pdfs/it-dep__it-dep2/Academic-Plan-2022-Multimedia-and-Web-Technology.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "it-dep__it-dep3",
+      "prefix": "/index.php/it-dep/it-dep3/",
+      "seed": "https://www.hebron.edu/index.php/it-dep/it-dep3/it-dep3-plans.html",
+      "majors": [
+        "بكالوريوس الامن السيبراني",
+        "بكالوريوس الامن السيبراني/ مسار جرائم الكترونية"
+      ],
+      "pages": {
+        "it-dep3-courses": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep3/it-dep3-courses.html",
+          "file": "pages/it-dep__it-dep3/it-dep3-courses.md"
+        },
+        "it-dep3-guideplan": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep3/it-dep3-guideplan.html",
+          "file": "pages/it-dep__it-dep3/it-dep3-guideplan.md"
+        },
+        "it-dep3-jobs": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep3/it-dep3-jobs.html",
+          "file": "pages/it-dep__it-dep3/it-dep3-jobs.md"
+        },
+        "it-dep3-obj": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep3/it-dep3-obj.html",
+          "file": "pages/it-dep__it-dep3/it-dep3-obj.md"
+        },
+        "it-dep3-plans": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep3/it-dep3-plans.html",
+          "file": "pages/it-dep__it-dep3/it-dep3-plans.md"
+        },
+        "science-dep3-overview": {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep3/science-dep3-overview.html",
+          "file": "pages/it-dep__it-dep3/science-dep3-overview.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/phocadownloadpap/course-description/it-college/Course Description-CyberSecurity.pdf",
+          "label": "وصف مساقات قسم الأمن السيبراني",
+          "found_on": "it-dep3-courses",
+          "file": "pdfs/it-dep__it-dep3/Course_Description-CyberSecurity.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/65-guide-plans.html?download=440:2022",
+          "label": "الخطة الإرشادية الأكاديمية- بكالوريوس الأمن السيبراني 2022",
+          "found_on": "it-dep3-guideplan",
+          "file": "pdfs/it-dep__it-dep3/Academic-Advisory-Plan-2022-Computer-Networks-Security-and-Safety.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep3/it-dep3-plans.html?download=165:it-p-05",
+          "label": "بكالوريوس الأمن السيبراني 2022",
+          "found_on": "it-dep3-plans",
+          "file": "pdfs/it-dep__it-dep3/Academic-Plan-2022-CyberSecurity.pdf"
+        },
+        {
+          "url": "https://www.hebron.edu/index.php/it-dep/it-dep3/it-dep3-plans.html?download=474:it-p-02",
+          "label": "بكالوريوس الأمن السيبراني- مسار جرائم الكترونية 2022",
+          "found_on": "it-dep3-plans",
+          "file": "pdfs/it-dep__it-dep3/Academic-Plan-2022-Cyber_Security-Cybercrimes-Investigation.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "med-col",
+      "prefix": null,
+      "seed": "https://www.hebron.edu/index.php/med-col.html",
+      "majors": [
+        "بكالوريوس الطب البشري"
+      ],
+      "pages": {
+        "med-col": {
+          "url": "https://www.hebron.edu/index.php/med-col.html",
+          "file": "pages/med-col/med-col.md"
+        },
+        "med-coll-dep": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep.html",
+          "file": "pages/med-col/med-coll-dep.md"
+        },
+        "main-dep1": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep2/main-dep1.html",
+          "file": "pages/med-col/main-dep1.md"
+        },
+        "gs-jobs": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep01/gs-jobs.html",
+          "file": "pages/med-col/gs-jobs.md"
+        },
+        "gs-obj": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep01/gs-obj.html",
+          "file": "pages/med-col/gs-obj.md"
+        },
+        "gs-traning": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep01/gs-traning.html",
+          "file": "pages/med-col/gs-traning.md"
+        },
+        "med-dep01": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep2/med-dep01.html",
+          "file": "pages/med-col/med-dep01.md"
+        },
+        "ped-jobs": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep02/ped-jobs.html",
+          "file": "pages/med-col/ped-jobs.md"
+        },
+        "ped-obj": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep02/ped-obj.html",
+          "file": "pages/med-col/ped-obj.md"
+        },
+        "ped-overview": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep02/ped-overview.html",
+          "file": "pages/med-col/ped-overview.md"
+        },
+        "og-jobs": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep03/og-jobs.html",
+          "file": "pages/med-col/og-jobs.md"
+        },
+        "og-obj": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep03/og-obj.html",
+          "file": "pages/med-col/og-obj.md"
+        },
+        "og-overview": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep03/og-overview.html",
+          "file": "pages/med-col/og-overview.md"
+        },
+        "fcm-jobs": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep04/fcm-jobs.html",
+          "file": "pages/med-col/fcm-jobs.md"
+        },
+        "fcm-obj": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep04/fcm-obj.html",
+          "file": "pages/med-col/fcm-obj.md"
+        },
+        "fcm-overview": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep04/fcm-overview.html",
+          "file": "pages/med-col/fcm-overview.md"
+        },
+        "im-jobs": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep05/im-jobs.html",
+          "file": "pages/med-col/im-jobs.md"
+        },
+        "im-obj": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep05/im-obj.html",
+          "file": "pages/med-col/im-obj.md"
+        },
+        "im-overview": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep05/im-overview.html",
+          "file": "pages/med-col/im-overview.md"
+        },
+        "med-dep06": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep06.html",
+          "file": "pages/med-col/med-dep06.md"
+        },
+        "ims-jobs": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep06/ims-jobs.html",
+          "file": "pages/med-col/ims-jobs.md"
+        },
+        "ims-obj": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep06/ims-obj.html",
+          "file": "pages/med-col/ims-obj.md"
+        },
+        "ims-overview": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep06/ims-overview.html",
+          "file": "pages/med-col/ims-overview.md"
+        },
+        "med-dep07": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep07.html",
+          "file": "pages/med-col/med-dep07.md"
+        },
+        "ss-jobs": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep07/ss-jobs.html",
+          "file": "pages/med-col/ss-jobs.md"
+        },
+        "ss-obj": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep07/ss-obj.html",
+          "file": "pages/med-col/ss-obj.md"
+        },
+        "ss-overview": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep1/med-dep07/ss-overview.html",
+          "file": "pages/med-col/ss-overview.md"
+        },
+        "bms-jobs": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep2/med-dep01/bms-jobs.html",
+          "file": "pages/med-col/bms-jobs.md"
+        },
+        "bms-obj": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep2/med-dep01/bms-obj.html",
+          "file": "pages/med-col/bms-obj.md"
+        },
+        "bms-overview": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep2/med-dep01/bms-overview.html",
+          "file": "pages/med-col/bms-overview.md"
+        },
+        "med-dep02": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep2/med-dep02.html",
+          "file": "pages/med-col/med-dep02.md"
+        },
+        "bs-jobs": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep2/med-dep02/bs-jobs.html",
+          "file": "pages/med-col/bs-jobs.md"
+        },
+        "bs-obj": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep2/med-dep02/bs-obj.html",
+          "file": "pages/med-col/bs-obj.md"
+        },
+        "bs-overview": {
+          "url": "https://www.hebron.edu/index.php/med-coll-dep/med-maindep2/med-dep02/bs-overview.html",
+          "file": "pages/med-col/bs-overview.md"
+        }
+      },
+      "pdfs": [
+        {
+          "url": "https://www.hebron.edu/index.php/component/phocadownload/category/75-attachments.html?download=512:2024-07-18-08-28-33",
+          "label": "بروشور كلية الطب البشري",
+          "found_on": "med-coll-letter",
+          "file": "pdfs/med-col/med-coll-brouchure.pdf"
+        }
+      ]
+    }
+  ],
+  "general": {
+    "pages": {
+      "undergraduate-programs": {
+        "url": "https://www.hebron.edu/index.php/academic/aca01/undergraduate.html",
+        "file": "general/undergraduate-programs.md"
+      },
+      "colleges": {
+        "url": "https://www.hebron.edu/index.php/academic/aca01/colleges.html",
+        "file": "general/colleges.md"
+      },
+      "admissions": {
+        "url": "https://www.hebron.edu/index.php/academic/aca02/admissions.html",
+        "file": "general/admissions.md"
+      },
+      "admissions-regulations": {
+        "url": "https://www.hebron.edu/index.php/academic/aca02/admissions-regulations.html",
+        "file": "general/admissions-regulations.md"
+      },
+      "fees": {
+        "url": "https://www.hebron.edu/index.php/academic/aca02/hu-fees.html",
+        "file": "general/fees.md"
+      },
+      "new-students": {
+        "url": "https://www.hebron.edu/index.php/academic/aca02/newstd.html",
+        "file": "general/new-students.md"
+      },
+      "scholarships": {
+        "url": "https://www.hebron.edu/index.php/academic/aca02/scholarships.html",
+        "file": "general/scholarships.md"
+      },
+      "student-affairs": {
+        "url": "https://www.hebron.edu/index.php/student-life-2/std01/student-affairs.html",
+        "file": "general/student-affairs.md"
+      }
+    },
+    "pdfs": []
+  }
+}
