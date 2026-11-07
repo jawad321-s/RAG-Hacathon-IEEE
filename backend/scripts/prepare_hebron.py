@@ -114,13 +114,134 @@ def general(src: Path, out: Path) -> int:
     return n
 
 
+# --------------------------------------------------------------------------- overview
+# Questions like "شو في تخصصات شريعة؟" need ONE place that lists a college's majors.
+# The site has that only as two flat tables (colleges -> departments, and all programs),
+# whose rows never mention the college. We join them into one section per college.
+
+COLLEGE_RULES = [  # (keyword in program name, college) — first match wins, order matters
+    ("الفقه والقانون", "كلية الحقوق والعلوم السياسية"), ("القانون", "كلية الحقوق والعلوم السياسية"),
+    ("العلوم السياسية", "كلية الحقوق والعلوم السياسية"),
+    ("معلم", "كلية العلوم الإنسانية والتربوية"), ("الارشاد النفسي", "كلية العلوم الإنسانية والتربوية"),
+    ("رياض الاطفال", "كلية العلوم الإنسانية والتربوية"),
+    ("اصول الدين", "كلية الشريعة"), ("أصول الدين", "كلية الشريعة"), ("أصول دين", "كلية الشريعة"),
+    ("الفقه", "كلية الشريعة"), ("الشريعة", "كلية الشريعة"),
+    ("الرياضيات", "كلية العلوم والتكنولوجيا"), ("الكيمياء", "كلية العلوم والتكنولوجيا"),
+    ("الاحياء", "كلية العلوم والتكنولوجيا"), ("الأحياء", "كلية العلوم والتكنولوجيا"),
+    ("الحاسوب", "كلية تكنولوجيا المعلومات"), ("الويب", "كلية تكنولوجيا المعلومات"),
+    ("الامن السيبراني", "كلية تكنولوجيا المعلومات"), ("الأمن السيبراني", "كلية تكنولوجيا المعلومات"),
+    ("العلوم الطبية المخبرية", "كلية العلوم الصحية التطبيقية"), ("الفيزياء الطبية", "كلية العلوم الصحية التطبيقية"),
+    ("التصوير الطبي", "كلية العلوم الصحية التطبيقية"), ("العلاج الطبيعي", "كلية العلوم الصحية التطبيقية"),
+    ("صيدل", "كلية الصيدلة"), ("التمريض", "كلية التمريض"), ("القبالة", "كلية التمريض"),
+    ("الانتاج النباتي", "كلية الهندسة الزراعة"), ("الإنتاج الحيواني", "كلية الهندسة الزراعة"),
+    ("الانتاج الحيواني", "كلية الهندسة الزراعة"), ("التغذية", "كلية الهندسة الزراعة"), ("البستنة", "كلية الهندسة الزراعة"),
+    ("ادارة الاعمال", "كلية التمويل والادارة"), ("العلوم المالية", "كلية التمويل والادارة"),
+    ("التسويق الرقمي", "كلية التمويل والادارة"), ("الادارة العامة", "كلية التمويل والادارة"),
+    ("اللغة العربية", "كلية العلوم الإنسانية والتربوية"), ("اللغة الانجليزية", "كلية العلوم الإنسانية والتربوية"),
+    ("التاريخ", "كلية العلوم الإنسانية والتربوية"), ("تاريخ", "كلية العلوم الإنسانية والتربوية"), ("الاعلام", "كلية العلوم الإنسانية والتربوية"),
+    ("الإعلام", "كلية العلوم الإنسانية والتربوية"), ("الجغرافيا", "كلية العلوم الإنسانية والتربوية"),
+    ("السياحة", "كلية العلوم الإنسانية والتربوية"), ("الترجمة", "كلية العلوم الإنسانية والتربوية"),
+    ("الطب البشري", "كلية الطب البشري"),
+]
+COLLEGE_ALIASES = {  # words students use, so the section is found by dialect/informal questions
+    "كلية الشريعة": "تخصصات الشريعة، الدراسات الإسلامية، أصول الدين، الفقه",
+    "كلية تكنولوجيا المعلومات": "تخصصات الحاسوب والبرمجة وتكنولوجيا المعلومات IT",
+    "كلية العلوم والتكنولوجيا": "تخصصات العلوم: رياضيات، كيمياء، أحياء، بيئة",
+    "كلية العلوم الصحية التطبيقية": "التخصصات الصحية والطبية المساندة",
+    "كلية الهندسة الزراعة": "تخصصات الزراعة",
+    "كلية التمويل والادارة": "تخصصات الإدارة والمحاسبة والتسويق والبزنس",
+    "كلية العلوم الإنسانية والتربوية": "تخصصات الآداب واللغات والتربية والتعليم والإعلام",
+    "كلية الحقوق والعلوم السياسية": "تخصصات القانون والحقوق والسياسة",
+}
+OTHER = "برامج لم تحدد صفحة الكليات كليتها"
+
+
+def _college_of(program: str) -> str:
+    return next((c for k, c in COLLEGE_RULES if k in program), OTHER)
+
+
+def _parse_colleges(text: str) -> dict[str, str]:
+    out = {}
+    for m in re.finditer(r"\*\*((?:كلية|برامج)[^*]+)\*\*([^|]*)", text):
+        out[re.sub(r"\s+", " ", m.group(1)).strip()] = re.sub(r"\s+", " ", m.group(2)).strip()
+    return out
+
+
+def _table_rows(text: str) -> list[list[str]]:
+    rows = []
+    for line in text.splitlines():
+        if line.startswith("|") and "---" not in line:
+            cells = [re.sub(r"\*+", "", c).strip() for c in line.strip().strip("|").split("|")]
+            if any(cells):
+                rows.append(cells)
+    return rows
+
+
+def overview(general_dir: Path, out: Path) -> int:
+    out.mkdir(parents=True, exist_ok=True)
+    colleges = _parse_colleges((general_dir / "colleges.md").read_text(encoding="utf-8"))
+    programs = [r for r in _table_rows((general_dir / "undergraduate-programs.md").read_text(encoding="utf-8"))
+                if len(r) >= 2 and r[1].isdigit()]
+    diplomas = [r for r in _table_rows((general_dir / "admissions-regulations.md").read_text(encoding="utf-8"))
+                if len(r) >= 5 and r[1].isdigit()]
+    by_college: dict[str, list[list[str]]] = {}
+    for r in programs:
+        c = _college_of(r[0])
+        by_college.setdefault(c if c in colleges else OTHER, []).append(r)  # never drop a program
+
+    src = "المصدر: https://www.hebron.edu/index.php/academic/aca01/colleges.html و https://www.hebron.edu/index.php/academic/aca01/undergraduate.html"
+    lines = ["# الكليات والتخصصات في جامعة الخليل", "",
+             "## قائمة كليات جامعة الخليل", ""]
+    lines += [f"- {c}" for c in colleges if c.startswith("كلية")]
+    lines += ["", f"عدد برامج البكالوريوس: {len(programs)} برنامجاً. عدد برامج الدبلوم المتوسط: {len(diplomas)}.", src, ""]
+    for college, depts in colleges.items():
+        if not college.startswith("كلية") or college == "كلية الدراسات العليا والبحث العلمي":
+            continue
+        alias = f" ({COLLEGE_ALIASES[college]})" if college in COLLEGE_ALIASES else ""
+        lines += [f"## {college} — التخصصات{alias}", ""]
+        if depts:
+            lines += [f"أقسام {college}: {depts}.", ""]
+        progs = by_college.get(college, [])
+        if progs:
+            lines += [f"برامج البكالوريوس في {college} ({len(progs)}):", "",
+                      "| البرنامج | الساعات المعتمدة | فروع الثانوية العامة المقبولة |", "|---|---|---|"]
+            lines += [f"| {r[0]} | {r[1]} | {r[2] if len(r) > 2 else ''} |" for r in progs]
+            lines.append("")
+        lines += [src, ""]
+    if by_college.get(OTHER):
+        lines += [f"## {OTHER}", "", "| البرنامج | الساعات المعتمدة | فروع الثانوية العامة المقبولة |", "|---|---|---|"]
+        lines += [f"| {r[0]} | {r[1]} | {r[2] if len(r) > 2 else ''} |" for r in by_college[OTHER]] + [""]
+    # Programs open to each high-school (Tawjihi) stream: "شو بقدر أدرس إذا أنا أدبي؟"
+    streams = ["العلمي", "الأدبي", "الصناعي", "الزراعي", "الفندقي", "الريادة والأعمال", "تكنولوجيا المعلومات", "الشرعي"]
+    norm = lambda t: t.replace("الادبي", "الأدبي")  # noqa: E731
+    for st in streams:
+        ok = [r for r in programs if len(r) > 2 and st in norm(r[2])]
+        if not ok:
+            continue
+        lines += [f"## التخصصات المتاحة لطلبة الفرع {st} في الثانوية العامة (التوجيهي)", "",
+                  f"عدد برامج البكالوريوس التي تقبل الفرع {st}: {len(ok)}.", ""]
+        lines += [f"- {r[0]} ({r[1]} ساعة) — {_college_of(r[0])}" for r in ok] + ["", src, ""]
+    grad = colleges.get("كلية الدراسات العليا والبحث العلمي", "")
+    if grad:
+        items = [x.strip() for x in re.split(r"\s(?=ماجستير|الدكتوراة|دكتوراة)", grad) if x.strip()]
+        lines += ["## الدراسات العليا (الماجستير والدكتوراة) — كلية الدراسات العليا والبحث العلمي", ""]
+        lines += [f"- {x}" for x in items] + ["", src, ""]
+    if diplomas:
+        lines += ["## برامج الدبلوم المتوسط (سنتان)", "",
+                  "| البرنامج | الساعات | مدة الدراسة | علامة الثانوية | شروط القبول |", "|---|---|---|---|---|"]
+        lines += [f"| {' | '.join(r[:5])} |" for r in diplomas]
+        lines += ["", "المصدر: https://www.hebron.edu/index.php/academic/aca02/admission-req.html", ""]
+    (out / "colleges-and-majors.md").write_text("\n".join(lines), encoding="utf-8")
+    return len(programs)
+
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         sys.exit(__doc__)
     src = Path(sys.argv[1])
     if not (src / "advisor" / "courses.json").exists():
         sys.exit(f"{src}/advisor/courses.json not found — run the branch's build_advisor_data.py first")
-    for sub in ("plans", "courses", "departments", "general"):
+    for sub in ("plans", "courses", "departments", "general", "overview"):
         shutil.rmtree(RAW / sub, ignore_errors=True)
     stats = {
         "plans": plans(src, RAW / "plans"),
@@ -128,4 +249,5 @@ if __name__ == "__main__":
         "departments": departments(src, RAW / "departments"),
         "general": general(src, RAW / "general"),
     }
+    stats["overview_programs"] = overview(RAW / "general", RAW / "overview")
     print(json.dumps(stats, ensure_ascii=False))
