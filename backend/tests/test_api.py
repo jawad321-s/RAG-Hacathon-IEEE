@@ -117,3 +117,24 @@ def test_free_only_blocks_paid_openrouter_models():
     assert s.paid_model_reason("openai/gpt-4.1-mini", url)
     assert s.paid_model_reason("meta-llama/llama-3.3-70b-instruct:free", url) is None
     assert s.paid_model_reason("gemini-2.5-flash", "https://generativelanguage.googleapis.com/v1beta/openai/") is None
+
+
+def test_create_drops_rejected_optional_params():
+    from types import SimpleNamespace
+
+    from app.generation.llm import LLM
+
+    calls = []
+
+    class BadParam(Exception):
+        status_code = 400
+
+    def create(**kw):
+        calls.append(sorted(k for k in kw if k not in ("model", "messages")))
+        if "reasoning_effort" in kw:
+            raise BadParam("unknown parameter")
+        return "ok"
+
+    client = SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=create)))
+    assert LLM._create(client, {"model": "m", "messages": []}, {"reasoning_effort": "low"}) == "ok"
+    assert calls == [["reasoning_effort"], []]

@@ -65,6 +65,9 @@ class Settings(BaseSettings):
     # Fast model for query rewriting, translation & LLM-as-judge evaluation.
     llm_utility_model: str = "gemini-3.5-flash-lite"
     llm_temperature: float = 0.1
+    # Thinking budget for reasoning models (e.g. Gemini 3.x): "low" = fast answers.
+    # Empty = don't send the parameter. Dropped automatically if a provider rejects it.
+    llm_reasoning_effort: str = "low"
     llm_max_tokens: int = 1024
     # USD per 1M tokens for cost tracking. 0 on free tiers; put the PAID list price here
     # only when modelling costs for the business plan (make cost).

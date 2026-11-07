@@ -24,7 +24,7 @@ if __name__ == "__main__":
     except Exception as exc:
         print("⚠️ could not list models:", exc)
     try:
-        r = llm.complete([{"role": "user", "content": "قل: النظام يعمل"}], max_tokens=20)
+        r = llm.complete([{"role": "user", "content": "قل: النظام يعمل"}], max_tokens=300)
     except Exception as exc:
         print("❌", exc)
         try:
@@ -38,5 +38,5 @@ if __name__ == "__main__":
     print(f"✅ answer model via {r.model}: {r.text} ({r.latency_ms} ms)")
     if llm.separate_utility:
         print(f"Utility provider: {s.utility_base_url or s.openrouter_base_url}")
-    r = llm.complete([{"role": "user", "content": "قل: جاهز"}], max_tokens=20, utility=True, model=s.llm_utility_model)
+    r = llm.complete([{"role": "user", "content": "قل: جاهز"}], max_tokens=300, utility=True, model=s.llm_utility_model)
     print(f"✅ utility model via {r.model}: {r.text} ({r.latency_ms} ms)")

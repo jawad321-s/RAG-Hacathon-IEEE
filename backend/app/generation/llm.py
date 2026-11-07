@@ -81,6 +81,26 @@ class LLM:
         primary = model or self.settings.llm_model
         return [primary] + [m for m in self.settings.fallback_models if m != primary]
 
+    def _extras(self) -> dict:
+        """Optional request params. reasoning_effort keeps "thinking" models (Gemini 3.x, etc.)
+        from spending the whole token budget and a minute of latency on hidden reasoning."""
+        e = self.settings.llm_reasoning_effort.strip()
+        return {"reasoning_effort": e} if e else {}
+
+    @staticmethod
+    def _create(client, base: dict, extras: dict):
+        """Call the API; if the provider rejects optional params, drop them one by one and retry."""
+        keys = list(extras)
+        while True:
+            try:
+                return client.chat.completions.create(**base, **{k: extras[k] for k in keys})
+            except Exception as exc:
+                status = getattr(exc, "status_code", None)
+                if not keys or status not in (400, 422):  # only retry on "bad parameter" errors
+                    raise
+                log.info("Provider rejected %s; retrying without it", keys[-1])
+                keys.pop()
+
     def complete(
         self,
         messages: list[dict],
@@ -106,18 +126,13 @@ class LLM:
                 continue
             t0 = time.perf_counter()
             try:
-                kwargs = {}
+                extras = self._extras()
                 if json_mode:
-                    kwargs["response_format"] = {"type": "json_object"}
+                    extras["response_format"] = {"type": "json_object"}
                 base = dict(model=m, messages=messages,
                             temperature=self.settings.llm_temperature if temperature is None else temperature,
                             max_tokens=max_tokens or self.settings.llm_max_tokens)
-                try:
-                    resp = client.chat.completions.create(**base, **kwargs)
-                except Exception:
-                    if not kwargs:
-                        raise
-                    resp = client.chat.completions.create(**base)  # provider without JSON mode
+                resp = self._create(client, base, extras)
                 usage = resp.usage
                 return LLMResult(
                     text=(resp.choices[0].message.content or "").strip(),
@@ -151,10 +166,7 @@ class LLM:
             try:
                 base = dict(model=m, messages=messages, temperature=self.settings.llm_temperature,
                             max_tokens=self.settings.llm_max_tokens, stream=True)
-                try:
-                    stream = self.client.chat.completions.create(**base, stream_options={"include_usage": True})
-                except Exception:  # some OpenAI-compatible providers (free tiers) reject stream_options
-                    stream = self.client.chat.completions.create(**base)
+                stream = self._create(self.client, base, {**self._extras(), "stream_options": {"include_usage": True}})
                 usage = {"model": m, "prompt_tokens": 0, "completion_tokens": 0}
                 for chunk in stream:
                     if chunk.usage:
