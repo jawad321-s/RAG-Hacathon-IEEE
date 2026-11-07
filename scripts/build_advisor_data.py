@@ -262,6 +262,9 @@ def parse_descriptions(md_text):
             m = re.match(rf"^({CODE})\s*[-–:]?\s+(.{{2,120}}?)\s*[:：]?$", t)
         if m:
             cur = m.group(1).upper()
+            if cur in out and out[cur]["description"]:
+                cur = None  # same course listed again (another tab) - keep first text
+                continue
             out.setdefault(cur, {"name_ar": m.group(2).strip(" :"), "description": "", "section": section})
             continue
         if cur and s and not s.startswith(("*", "#", "[", "---", "|")):
@@ -302,6 +305,9 @@ def main():
             f = p.get("file")
             if not f or not f.lower().endswith(".pdf"):
                 continue
+            base = os.path.basename(f).lower()
+            if "course" in base and "desc" in base:
+                continue
             try:
                 plan = parse_plan(os.path.join(ROOT, f))
             except Exception as e:
@@ -310,7 +316,8 @@ def main():
             if not plan:
                 continue
             ym = re.search(r"(20\d\d)", os.path.basename(f))
-            plan.update({"title": p.get("label") or plan["major_name"], "department": d["slug"],
+            plan.update({"plan_type": "guide_plan (الخطة الاسترشادية)" if "advisory" in base else "study_plan (الخطة الدراسية)",
+                         "title": p.get("label") or plan["major_name"], "department": d["slug"],
                          "plan_year": int(ym.group(1)) if ym else None,
                          "source_url": p["url"], "department_majors": d["majors"]})
             if not any(x["source_pdf"] == plan["source_pdf"] for x in plans):
@@ -325,6 +332,9 @@ def main():
                     e = courses.setdefault(c["code"], {"code": c["code"], "name_ar": c["name_ar"], "name_en": c["name_en"],
                                                        "credit_hours": c["credit_hours"], "prerequisites": [],
                                                        "description": "", "in_plans": []})
+                    for k in ("name_ar", "name_en", "credit_hours"):
+                        if not e.get(k) and c.get(k):
+                            e[k] = c[k]
                     for pre in c["prerequisites"]:
                         if pre not in e["prerequisites"]:
                             e["prerequisites"].append(pre)
@@ -345,7 +355,8 @@ def main():
     # 4) one markdown document per plan (student friendly)
     for plan in plans:
         slug = os.path.basename(plan["source_pdf"])[:-4]
-        L = [f"# الخطة الدراسية: {plan['title']}", "",
+        kind = "الخطة الاسترشادية" if plan["plan_type"].startswith("guide") else "الخطة الدراسية"
+        L = [f"# {kind}: {plan['title']}", "",
              f"- التخصص (حسب نظام التسجيل): {plan['major_name']}",
              f"- سنة الخطة: {plan['plan_year']}",
              f"- مجموع ساعات الخطة: {plan['total_hours']} ساعة معتمدة",
