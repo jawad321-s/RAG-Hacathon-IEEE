@@ -88,13 +88,15 @@ class LLM:
                 kwargs = {}
                 if json_mode:
                     kwargs["response_format"] = {"type": "json_object"}
-                resp = self.client.chat.completions.create(
-                    model=m,
-                    messages=messages,
-                    temperature=self.settings.llm_temperature if temperature is None else temperature,
-                    max_tokens=max_tokens or self.settings.llm_max_tokens,
-                    **kwargs,
-                )
+                base = dict(model=m, messages=messages,
+                            temperature=self.settings.llm_temperature if temperature is None else temperature,
+                            max_tokens=max_tokens or self.settings.llm_max_tokens)
+                try:
+                    resp = self.client.chat.completions.create(**base, **kwargs)
+                except Exception:
+                    if not kwargs:
+                        raise
+                    resp = self.client.chat.completions.create(**base)  # provider without JSON mode
                 usage = resp.usage
                 return LLMResult(
                     text=(resp.choices[0].message.content or "").strip(),
@@ -122,14 +124,12 @@ class LLM:
             t0 = time.perf_counter()
             emitted = False
             try:
-                stream = self.client.chat.completions.create(
-                    model=m,
-                    messages=messages,
-                    temperature=self.settings.llm_temperature,
-                    max_tokens=self.settings.llm_max_tokens,
-                    stream=True,
-                    stream_options={"include_usage": True},
-                )
+                base = dict(model=m, messages=messages, temperature=self.settings.llm_temperature,
+                            max_tokens=self.settings.llm_max_tokens, stream=True)
+                try:
+                    stream = self.client.chat.completions.create(**base, stream_options={"include_usage": True})
+                except Exception:  # some OpenAI-compatible providers (free tiers) reject stream_options
+                    stream = self.client.chat.completions.create(**base)
                 usage = {"model": m, "prompt_tokens": 0, "completion_tokens": 0}
                 for chunk in stream:
                     if chunk.usage:
