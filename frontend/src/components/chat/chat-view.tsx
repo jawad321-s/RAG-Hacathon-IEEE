@@ -42,6 +42,12 @@ type Msg = {
 };
 
 type ConvSummary = { id: number; title: string; updated_at: string };
+
+function formatWhen(iso: string, lang: string): string {
+  const d = new Date(iso.endsWith("Z") || iso.includes("+") ? iso : `${iso}Z`);
+  if (Number.isNaN(d.getTime())) return "";
+  return new Intl.DateTimeFormat(lang === "ar" ? "ar-u-nu-latn" : "en", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }).format(d);
+}
 type Doc = { source: string; chunks: number; pages: number };
 
 /**
@@ -210,13 +216,21 @@ export function ChatView() {
           <button
             key={c.id}
             onClick={() => openConversation(c.id)}
+            title={c.title}
             className={cn(
-              "truncate border-b px-4 py-3 text-start text-sm hover:bg-background",
-              c.id === conversationId && "border-s-2 border-s-primary bg-background font-semibold"
+              "block w-full border-b px-4 py-3 text-start hover:bg-background",
+              c.id === conversationId && "border-s-2 border-s-primary bg-background"
             )}
-            dir="auto"
           >
-            {c.title}
+            {/* The title keeps its own direction (Arabic RTL / English LTR) whatever the UI language,
+                and wraps to two lines instead of being cut at its start. */}
+            <span
+              dir="auto"
+              className={cn("line-clamp-2 text-sm leading-6 [text-align:start]", c.id === conversationId && "font-semibold")}
+            >
+              {c.title.trim() || t("newChat")}
+            </span>
+            <span className="mt-1 block text-[11px] text-muted-foreground">{formatWhen(c.updated_at, lang)}</span>
           </button>
         ))
       ) : (
