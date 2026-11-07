@@ -152,7 +152,10 @@ def load_json(path: Path) -> list[PageContent]:
             meta = {k: v for k, v in item.items() if k not in ("text", "content") and isinstance(v, (str, int, float, bool))}
         else:
             text, meta = str(item), {}
-        out.append(PageContent(text=clean_text(text), source=path.name, page=i, metadata=meta))
+        title = next((str(item[k]) for k in ("title", "course", "name") if isinstance(item, dict) and item.get(k)), "")
+        if title:
+            meta["section"] = f"{meta.get('code', '')} {title}".strip()
+        out.append(PageContent(text=clean_text(text), source=path.name, page=None, metadata={**meta, "record": i}))
     return out
 
 

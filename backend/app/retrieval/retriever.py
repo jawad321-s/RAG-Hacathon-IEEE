@@ -60,6 +60,24 @@ def reciprocal_rank_fusion(result_lists: list[list[Hit]], weights: list[float], 
     return sorted(fused.values(), key=lambda h: h.score, reverse=True)
 
 
+def diversify(hits: list[Hit], cap: int, limit: int) -> list[Hit]:
+    """Keep ranking order but allow at most `cap` hits per source file; if that leaves
+    fewer than `limit`, top up with the skipped ones (still in order)."""
+    if cap <= 0:
+        return hits[:limit]
+    picked, skipped, count = [], [], {}
+    for h in hits:
+        src = h.metadata.get("source", "")
+        if count.get(src, 0) < cap:
+            picked.append(h)
+            count[src] = count.get(src, 0) + 1
+        else:
+            skipped.append(h)
+        if len(picked) >= limit:
+            break
+    return (picked + skipped)[:limit]
+
+
 def rewrite_query(question: str, history: list[dict] | None = None) -> tuple[str, list[str], bool]:
     s = get_settings()
     llm = get_llm()
@@ -115,12 +133,14 @@ def retrieve(
     sparse = store.bm25_search(sparse_q, s.candidate_k, filters)
     timings["search"] = int((time.perf_counter() - t) * 1000)
 
-    fused = reciprocal_rank_fusion([dense, sparse], [s.hybrid_alpha, 1 - s.hybrid_alpha], k=s.rrf_k)[: s.candidate_k]
+    fused = reciprocal_rank_fusion([dense, sparse], [s.hybrid_alpha, 1 - s.hybrid_alpha], k=s.rrf_k)
+    fused = diversify(fused, s.max_per_source * 3, s.candidate_k)
 
     t = time.perf_counter()
     reranker = get_reranker()
     if reranker and fused:
-        hits = reranker.rerank(rewritten, fused, top_k)
+        ranked = reranker.rerank(rewritten, fused, len(fused))
+        hits = ranked[:top_k]  # the reranker decides; diversity was applied to its input pool
         confident = bool(hits) and hits[0].scores.get("rerank", 0) >= s.min_relevance_score
     else:
         hits = fused[:top_k]

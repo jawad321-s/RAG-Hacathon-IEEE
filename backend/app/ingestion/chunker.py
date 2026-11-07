@@ -178,10 +178,10 @@ def chunk_pages(pages: list[PageContent], size: int = 900, overlap: int = 150, e
                 "source": page.source,
                 "page": page.page if page.page is not None else -1,
                 "chunk_index": idx,
-                "section": sec_name or "",
+                "section": sec_name or page.metadata.get("section", ""),
                 "is_table": piece.startswith("[جدول"),
                 "char_len": len(piece),
-                **{k: v for k, v in page.metadata.items() if isinstance(v, (str, int, float, bool))},
+                **{k: v for k, v in page.metadata.items() if isinstance(v, (str, int, float, bool)) and k != "section"},
                 **(extra_metadata or {}),
             }
             # Prefix document title + section so the chunk is self-contained for embeddings/LLM.
@@ -191,6 +191,6 @@ def chunk_pages(pages: list[PageContent], size: int = 900, overlap: int = 150, e
             text = f"[{' — '.join(labels)}]\n{piece}" if labels else piece
             if doc_title:
                 meta["title"] = doc_title
-            digest = hashlib.sha1(f"{page.source}|{page.page}|{idx}|{text}".encode()).hexdigest()[:16]
+            digest = hashlib.sha1(f"{page.source}|{page.page}|{page.metadata.get('record', '')}|{idx}|{text}".encode()).hexdigest()[:16]
             chunks.append(Chunk(id=digest, text=text, metadata=meta))
     return chunks

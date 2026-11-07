@@ -19,6 +19,9 @@ os.environ.update(
         "SQLITE_URL": f"sqlite:///{_TMP / 'test.db'}",
         "COLLECTION_NAME": "test",
         "RATE_LIMIT_PER_MINUTE": "1000",
+        "LLM_MOCK": "false",
+        "TRANSLATE_DOCS_TO": "",
+        "MAX_PER_SOURCE": "3",
     }
 )
 

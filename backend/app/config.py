@@ -102,14 +102,17 @@ class Settings(BaseSettings):
 
     # --- Retrieval ---------------------------------------------------------
     top_k: int = 5  # chunks sent to the LLM
-    candidate_k: int = 20  # candidates per retriever before fusion / rerank
+    candidate_k: int = 30  # candidates per retriever before fusion / rerank
     hybrid_alpha: float = 0.5  # weight of dense vs BM25 in RRF (0..1)
     rrf_k: int = 60
     use_reranker: bool = True
     reranker_model: str = "jinaai/jina-reranker-v2-base-multilingual"
     use_query_rewrite: bool = True  # dialect -> MSA + keyword expansion via LLM
     # If the best reranker / fused score is below this, refuse instead of guessing.
-    min_relevance_score: float = 0.15
+    min_relevance_score: float = 0.05
+    # Source diversity of the RERANK POOL: at most 3*N candidates from one file, so 2,000+
+    # course records can't crowd the one admission page out before the reranker sees it.
+    max_per_source: int = 3
 
     # --- Auth --------------------------------------------------------------
     jwt_secret: str = "change-me-in-.env-please-use-a-long-random-string"
