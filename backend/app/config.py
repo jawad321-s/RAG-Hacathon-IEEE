@@ -109,7 +109,7 @@ class Settings(BaseSettings):
     reranker_model: str = "jinaai/jina-reranker-v2-base-multilingual"
     use_query_rewrite: bool = True  # dialect -> MSA + keyword expansion via LLM
     # If the best reranker / fused score is below this, refuse instead of guessing.
-    min_relevance_score: float = 0.05
+    min_relevance_score: float = 0.2  # calibrated with make calibrate: in-scope >= 0.317, out-of-scope <= 0.114
     # Source diversity of the RERANK POOL: at most 3*N candidates from one file, so 2,000+
     # course records can't crowd the one admission page out before the reranker sees it.
     max_per_source: int = 3

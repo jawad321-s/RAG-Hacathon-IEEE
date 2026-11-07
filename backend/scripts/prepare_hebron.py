@@ -211,6 +211,15 @@ def overview(general_dir: Path, out: Path) -> int:
     if by_college.get(OTHER):
         lines += [f"## {OTHER}", "", "| البرنامج | الساعات المعتمدة | فروع الثانوية العامة المقبولة |", "|---|---|---|"]
         lines += [f"| {r[0]} | {r[1]} | {r[2] if len(r) > 2 else ''} |" for r in by_college[OTHER]] + [""]
+    # Bachelor admission conditions as their own short section (they were crowded out by the
+    # long per-stream lists, which also mention "الثانوية العامة" and "البكالوريوس").
+    adm = (general_dir / "admissions-regulations.md").read_text(encoding="utf-8")
+    m = re.search(r"شروط القبول لبرامج البكالوريوس.*?(?=\*\*شروط القبول لبرامج الدبلوم|\n\|)", adm, re.S)
+    if m:
+        bullets = [b.strip(" *") for b in m.group(0).splitlines() if b.strip().startswith("*") and len(b.strip()) > 3]
+        lines += ["## شروط القبول في برامج البكالوريوس (معدل الثانوية العامة الأدنى وامتحان القبول)", ""]
+        lines += [f"- {b}" for b in bullets]
+        lines += ["", "المصدر: https://www.hebron.edu/index.php/academic/aca02/admission-req.html", ""]
     # Programs open to each high-school (Tawjihi) stream: "شو بقدر أدرس إذا أنا أدبي؟"
     streams = ["العلمي", "الأدبي", "الصناعي", "الزراعي", "الفندقي", "الريادة والأعمال", "تكنولوجيا المعلومات", "الشرعي"]
     norm = lambda t: t.replace("الادبي", "الأدبي")  # noqa: E731

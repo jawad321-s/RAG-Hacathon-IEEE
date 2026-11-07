@@ -25,15 +25,18 @@
  },
  {
   "id": "q03",
-  "type": "dialect",
+  "type": "conflict",
   "question": "قديش ساعة لازم اخلص عشان اتخرج من الامن السيبراني؟",
-  "reference_answer": "خطة بكالوريوس الأمن السيبراني 2022: 133 ساعة معتمدة (ومسار الجرائم الإلكترونية 134).",
+  "reference_answer": "خطة بكالوريوس الأمن السيبراني 2022 تذكر 133 ساعة، بينما صفحة برامج البكالوريوس الرسمية تذكر 134 ساعة (ومسار الجرائم الإلكترونية 134). الإجابة الجيدة تذكر الرقمين أو تعتمد الصفحة الرسمية مع التنبيه.",
   "relevant_sources": [
    "Academic-Plan-2022-CyberSecurity.md",
-   "Academic-Plan-2022-Cyber_Security-Cybercrimes-Investigation.md"
+   "Academic-Plan-2022-Cyber_Security-Cybercrimes-Investigation.md",
+   "colleges-and-majors.md",
+   "undergraduate-programs.md"
   ],
   "relevant_keywords": [
-   "133"
+   "133",
+   "الامن السيبراني | 134"
   ]
  },
  {
@@ -54,7 +57,8 @@
   "question": "ما هو الحد الأدنى لمعدل الثانوية العامة للقبول في برامج البكالوريوس؟",
   "reference_answer": "ألا يقل معدل الطالب في الثانوية العامة عن 65%، مع اجتياز امتحان القبول.",
   "relevant_sources": [
-   "admissions-regulations.md"
+   "admissions-regulations.md",
+   "colleges-and-majors.md"
   ],
   "relevant_keywords": [
    "65%"
