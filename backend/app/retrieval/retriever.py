@@ -74,7 +74,7 @@ def rewrite_query(question: str, history: list[dict] | None = None) -> tuple[str
         question=question,
     )
     try:
-        res = llm.complete([{"role": "user", "content": prompt}], model=s.llm_utility_model, temperature=0, max_tokens=300, json_mode=True)
+        res = llm.complete([{"role": "user", "content": prompt}], model=s.llm_utility_model, temperature=0, max_tokens=300, json_mode=True, utility=True)
         raw = re.search(r"\{.*\}", res.text, re.S)
         data = json.loads(raw.group(0) if raw else res.text)
         return (

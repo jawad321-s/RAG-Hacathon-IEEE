@@ -54,7 +54,7 @@ def retrieval_metrics(flags: list[bool], k: int, n_relevant_expected: int = 1) -
 
 def _judge(prompt: str) -> dict:
     s = get_settings()
-    res = get_llm().complete([{"role": "user", "content": prompt}], model=s.llm_utility_model, temperature=0, max_tokens=400, json_mode=True)
+    res = get_llm().complete([{"role": "user", "content": prompt}], model=s.llm_utility_model, temperature=0, max_tokens=400, json_mode=True, utility=True)
     m = re.search(r"\{.*\}", res.text, re.S)
     return json.loads(m.group(0) if m else res.text)
 

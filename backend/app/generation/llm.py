@@ -41,6 +41,18 @@ class LLM:
             timeout=60,
             max_retries=1,
         )
+        self.separate_utility = bool(s.utility_base_url or s.utility_api_key)
+        self.utility_client = (
+            OpenAI(
+                api_key=s.utility_api_key or s.openrouter_api_key or "missing-key",
+                base_url=s.utility_base_url or s.openrouter_base_url,
+                default_headers={"HTTP-Referer": s.app_public_url, "X-Title": s.app_title},
+                timeout=60,
+                max_retries=1,
+            )
+            if self.separate_utility
+            else self.client
+        )
 
     @property
     def configured(self) -> bool:
@@ -76,13 +88,17 @@ class LLM:
         temperature: float | None = None,
         max_tokens: int | None = None,
         json_mode: bool = False,
+        utility: bool = False,
     ) -> LLMResult:
+        """utility=True routes helper calls (rewrite/translate/judge) to the utility provider."""
         if not self.configured:
             raise LLMError("OPENROUTER_API_KEY is not set. Copy .env.example to .env and add your key.")
         if self.settings.llm_mock:
             return LLMResult(text=self._mock_answer(messages), model="offline-extractive")
+        client = self.utility_client if utility else self.client
+        models = [model or self.settings.llm_utility_model] if (utility and self.separate_utility) else self._models(model)
         last_exc: Exception | None = None
-        for m in self._models(model):
+        for m in models:
             t0 = time.perf_counter()
             try:
                 kwargs = {}
@@ -92,11 +108,11 @@ class LLM:
                             temperature=self.settings.llm_temperature if temperature is None else temperature,
                             max_tokens=max_tokens or self.settings.llm_max_tokens)
                 try:
-                    resp = self.client.chat.completions.create(**base, **kwargs)
+                    resp = client.chat.completions.create(**base, **kwargs)
                 except Exception:
                     if not kwargs:
                         raise
-                    resp = self.client.chat.completions.create(**base)  # provider without JSON mode
+                    resp = client.chat.completions.create(**base)  # provider without JSON mode
                 usage = resp.usage
                 return LLMResult(
                     text=(resp.choices[0].message.content or "").strip(),

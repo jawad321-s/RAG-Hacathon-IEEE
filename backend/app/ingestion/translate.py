@@ -55,7 +55,8 @@ def _translate_text(text: str, target: str, model: str) -> str:
         [{"role": "user", "content": TRANSLATE_PROMPT.format(text=text)}],
         model=model,
         temperature=0,
-        max_tokens=min(8000, 300 + len(text)),  # Arabic output ~ same char count as English input
+        max_tokens=min(8000, 300 + len(text)),
+        utility=True,  # Arabic output ~ same char count as English input
     )
     out = clean_text(res.text)
     path.write_text(json.dumps({"text": out, "model": res.model}, ensure_ascii=False), encoding="utf-8")

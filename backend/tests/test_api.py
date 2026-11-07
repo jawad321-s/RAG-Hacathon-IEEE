@@ -79,3 +79,30 @@ def test_answer_language_rule():
         assert "أجب بلغة السؤال" in system_prompt()
     finally:
         d.answer_language = old
+
+
+def test_utility_calls_use_separate_provider(monkeypatch):
+    """Answers go to the main provider; rewrite/translate/judge go to the utility provider."""
+    from types import SimpleNamespace
+
+    from app.config import get_settings
+    from app.generation.llm import LLM
+
+    s = get_settings()
+    monkeypatch.setattr(s, "utility_base_url", "https://utility.example/v1")
+    monkeypatch.setattr(s, "llm_mock", False)
+    llm = LLM()
+    seen = []
+
+    def fake_client(name):
+        def create(**kw):
+            seen.append((name, kw["model"]))
+            msg = SimpleNamespace(content="ok")
+            return SimpleNamespace(choices=[SimpleNamespace(message=msg)], model=kw["model"], usage=None)
+
+        return SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=create)))
+
+    llm.client, llm.utility_client = fake_client("main"), fake_client("utility")
+    llm.complete([{"role": "user", "content": "x"}])
+    llm.complete([{"role": "user", "content": "x"}], utility=True, model="cheap-model")
+    assert seen == [("main", s.llm_model), ("utility", "cheap-model")]

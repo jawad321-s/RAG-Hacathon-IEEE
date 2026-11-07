@@ -48,6 +48,11 @@ class Settings(BaseSettings):
     llm_model: str = "openai/gpt-4.1-mini"
     # Comma separated fallbacks, tried in order if the main model fails.
     llm_fallback_models: str = "google/gemini-2.5-flash,meta-llama/llama-3.3-70b-instruct"
+    # Optional separate provider for the *utility* calls (query rewrite, translation, eval judge).
+    # Lets the answering model run on a free API while helper calls use a paid one (or vice versa).
+    # Empty = same provider as the answering model.
+    utility_base_url: str = ""
+    utility_api_key: str = ""
     # Cheap/fast model for query rewriting & LLM-as-judge evaluation.
     llm_utility_model: str = "openai/gpt-4.1-mini"
     llm_temperature: float = 0.1
