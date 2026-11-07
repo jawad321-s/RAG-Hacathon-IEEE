@@ -38,5 +38,15 @@ if __name__ == "__main__":
     print(f"✅ answer model via {r.model}: {r.text} ({r.latency_ms} ms)")
     if llm.separate_utility:
         print(f"Utility provider: {s.utility_base_url or s.openrouter_base_url}")
-    r = llm.complete([{"role": "user", "content": "قل: جاهز"}], max_tokens=300, utility=True, model=s.llm_utility_model)
-    print(f"✅ utility model via {r.model}: {r.text} ({r.latency_ms} ms)")
+    try:
+        r = llm.complete([{"role": "user", "content": "قل: جاهز"}], max_tokens=300, utility=True, model=s.llm_utility_model)
+        print(f"✅ utility model via {r.model}: {r.text} ({r.latency_ms} ms)")
+    except Exception as exc:
+        print("❌ utility model:", str(exc)[:200])
+        try:
+            avail = sorted(m.id.removeprefix("models/") for m in llm.utility_client.models.list().data)
+            print("Models the UTILITY key can use (put a small/fast one in LLM_UTILITY_MODEL):")
+            print("  " + "\n  ".join(a for a in avail if not any(k in a for k in ("whisper", "tts", "embed", "guard", "image")))[:3000])
+        except Exception:
+            pass
+        sys.exit(1)
