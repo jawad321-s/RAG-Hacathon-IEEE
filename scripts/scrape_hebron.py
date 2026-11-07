@@ -54,7 +54,7 @@ session.headers["User-Agent"] = "RAG-Hackathon-IEEE academic-advisor crawler (ed
 _last = [0.0]
 
 
-def get(url, binary=False):
+def get(url, binary=False, want_response=False):
     for attempt in range(6):
         wait = DELAY - (time.time() - _last[0])
         if wait > 0:
@@ -67,8 +67,11 @@ def get(url, binary=False):
             time.sleep(15 * (attempt + 1))
             continue
         if r.status_code == 200 and (binary or "403: Access Forbidden" not in r.text[:500]):
+            if want_response:
+                return r
             return r.content if binary else r.content.decode("utf-8", "replace")
-        if r.status_code == 404:
+        if r.status_code == 404 or (r.status_code >= 500 and attempt >= 1):
+            print(f"  ! HTTP {r.status_code} for {url}; skipping", file=sys.stderr)
             return None
         backoff = 60 * (2 ** attempt)
         print(f"  ! HTTP {r.status_code} for {url}; waiting {backoff}s", file=sys.stderr)
@@ -120,6 +123,67 @@ def collect_pdfs(el, page_url):
     return out
 
 
+LINK_RE = re.compile(r"\]\((/[^)\s]*(?:\.pdf|download=[^)\s]*))\)", re.I)
+RESUME = os.environ.get("RESUME", "1") == "1"
+
+
+def filename_from(resp, url, label):
+    cd = resp.headers.get("Content-Disposition", "")
+    m = re.search(r"filename\*=UTF-8''([^;]+)", cd) or re.search(r'filename="?([^";]+)"?', cd)
+    if m:
+        name = unquote(m.group(1))
+    elif urlparse(url).path.lower().endswith(".pdf"):
+        name = unquote(os.path.basename(urlparse(url).path))
+    else:
+        name = (label or urlparse(url).query.split(":")[-1]) + ".pdf"
+    name = re.sub(r"[^\w.\-]+", "_", name).strip("_")
+    return name if name.lower().endswith(".pdf") else name + ".pdf"
+
+
+def download_pdfs(items, pdir, seen_hash):
+    import hashlib
+    os.makedirs(pdir, exist_ok=True)
+    for p in items:
+        path = urlparse(p["url"]).path
+        if path.lower().endswith(".pdf"):
+            existing = os.path.join(pdir, re.sub(r"[^\w.\-]+", "_", unquote(os.path.basename(path))).strip("_"))
+            if os.path.exists(existing):
+                h = hashlib.sha1(open(existing, "rb").read()).hexdigest()
+                p["file"] = seen_hash.setdefault(h, os.path.relpath(existing, ROOT))
+                continue
+        resp = get(requests.utils.requote_uri(p["url"]), binary=True, want_response=True)
+        if resp is None or resp.content[:5] != b"%PDF-":
+            print(f"   ! not a pdf: {p['url']}")
+            continue
+        h = hashlib.sha1(resp.content).hexdigest()
+        if h in seen_hash:
+            p["file"] = seen_hash[h]
+            continue
+        fname = filename_from(resp, p["url"], p.get("label"))
+        dest = os.path.join(pdir, fname)
+        k = 2
+        while os.path.exists(dest) and hashlib.sha1(open(dest, "rb").read()).hexdigest() != h:
+            dest = os.path.join(pdir, f"{fname[:-4]}_{k}.pdf"); k += 1
+        with open(dest, "wb") as f:
+            f.write(resp.content)
+        p["file"] = seen_hash[h] = os.path.relpath(dest, ROOT)
+        print(f"   pdf  {p['file']}")
+
+
+def pdf_links_from_md(md_text, page_url):
+    out = {}
+    for m in re.finditer(r"\[([^\]]*)\]\((/[^)\s]*?(?:\.pdf|download=[^)\s]*))\)|\[([^\]]*)\]\((/[^)]*?\.pdf)\)", md_text, re.I):
+        label = (m.group(1) or m.group(3) or "").strip("* ")
+        href = m.group(2) or m.group(4)
+        if "HU-Fund-Flyer" in href:
+            continue
+        full = urljoin(page_url, href)
+        if label.lower() in ("download", "preview", "") and full in out:
+            continue
+        out[full] = label if label.lower() not in ("download", "preview") else out.get(full, "")
+    return out
+
+
 def main():
     os.makedirs(ROOT, exist_ok=True)
     html = get(START)
@@ -131,7 +195,9 @@ def main():
         name = a.get_text(" ", strip=True)
         href = urljoin(START, a["href"])
         p = urlparse(href)
-        if "hebron.edu" not in p.netloc or not name or "بكالوريوس" not in name and "تخصص" not in name and "تكنولوجيا" not in name:
+        if "hebron.edu" not in p.netloc or not name:
+            continue
+        if not any(k in name for k in ("بكالوريوس", "تخصص", "تكنولوجيا")):
             continue
         majors.append({"major": name, "url": href})
     print(f"{len(majors)} majors")
@@ -140,83 +206,82 @@ def main():
     for m in majors:
         path = urlparse(m["url"]).path
         pre = dept_prefix(path)
-        d = depts.setdefault(pre, {"slug": slug_of(pre), "seed": m["url"], "majors": [], "pages": {}, "pdfs": []})
+        if pre == "/index.php/":  # e.g. /index.php/med-col.html (college landing page)
+            pre = None
+            slug = os.path.basename(path)[:-5]
+        else:
+            slug = slug_of(pre)
+        d = depts.setdefault(slug, {"slug": slug, "prefix": pre, "seed": m["url"], "majors": [], "pages": {}, "pdfs": []})
         d["majors"].append(m["major"])
-        m["department"] = d["slug"]
+        m["department"] = slug
 
-    seen_pdf = set()
-    for pre, d in depts.items():
+    seen_hash = {}
+    for d in depts.values():
+        pre = d["prefix"]
         print(f"== {d['slug']}  ({', '.join(d['majors'])[:80]})")
-        html = get(d["seed"])
-        if not html:
-            continue
-        soup = BeautifulSoup(html, "lxml")
-        subpages = {d["seed"]}
-        for a in soup.select("a[href]"):
-            full = urljoin(d["seed"], a["href"]).split("#")[0]
-            pp = urlparse(full)
-            if pp.netloc.endswith("hebron.edu") and pp.path.startswith(pre) and pp.path.endswith(".html") and not pp.query:
-                subpages.add(full)
         outdir = os.path.join(ROOT, "pages", d["slug"])
-        os.makedirs(outdir, exist_ok=True)
-        for url in sorted(subpages):
-            h = html if url == d["seed"] else get(url)
-            if not h:
+        cached = RESUME and os.path.isdir(outdir) and os.listdir(outdir)
+        pdf_links = {}
+        if cached:
+            for fn in sorted(os.listdir(outdir)):
+                txt = open(os.path.join(outdir, fn), encoding="utf-8").read()
+                url = re.search(r"^source: (\S+)", txt, re.M).group(1)
+                name = fn[:-3]
+                d["pages"][name] = {"url": url, "file": f"pages/{d['slug']}/{fn}"}
+                for k, v in pdf_links_from_md(txt, url).items():
+                    pdf_links.setdefault(k, (v, name))
+        else:
+            html = get(d["seed"])
+            if not html:
                 continue
-            text, s2, el = page_markdown(h, url)
-            name = os.path.basename(urlparse(url).path)[:-5]
-            with open(os.path.join(outdir, name + ".md"), "w", encoding="utf-8") as f:
-                f.write(text)
-            d["pages"][name] = {"url": url, "file": os.path.relpath(os.path.join(outdir, name + ".md"), ROOT)}
-            print(f"   page {name}")
-            for purl, label in collect_pdfs(el, url).items():
-                if purl in seen_pdf:
+            soup = BeautifulSoup(html, "lxml")
+            scope = soup if pre else content_el(soup)
+            subpages = {d["seed"]}
+            for a in scope.select("a[href]"):
+                full = urljoin(d["seed"], a["href"]).split("#")[0]
+                pp = urlparse(full)
+                if not (pp.netloc.endswith("hebron.edu") and pp.path.endswith(".html") and not pp.query):
                     continue
-                seen_pdf.add(purl)
-                d["pdfs"].append({"url": purl, "label": label, "found_on": name})
-
-        # prefer direct .pdf links; download only "?download=" ones when no direct pdf exists
-        direct = [p for p in d["pdfs"] if urlparse(p["url"]).path.lower().endswith(".pdf")]
-        todo = direct if direct else d["pdfs"]
-        pdir = os.path.join(ROOT, "pdfs", d["slug"])
-        os.makedirs(pdir, exist_ok=True)
-        for p in todo:
-            pth = urlparse(p["url"])
-            fname = unquote(os.path.basename(pth.path)) if pth.path.lower().endswith(".pdf") else (pth.query.split(":")[-1] + ".pdf")
-            fname = re.sub(r"[^\w.\-]+", "_", fname)
-            dest = os.path.join(pdir, fname)
-            if not os.path.exists(dest):
-                data = get(requests.utils.requote_uri(p["url"]), binary=True)
-                if not data or not data[:5] == b"%PDF-":
-                    print(f"   ! not a pdf: {p['url']}")
+                if pre and pp.path.startswith(pre):
+                    subpages.add(full)
+                elif not pre and pp.path.startswith("/index.php/med-"):
+                    subpages.add(full)
+            os.makedirs(outdir, exist_ok=True)
+            for url in sorted(subpages):
+                h = html if url == d["seed"] else get(url)
+                if not h:
                     continue
-                with open(dest, "wb") as f:
-                    f.write(data)
-            p["file"] = os.path.relpath(dest, ROOT)
-            print(f"   pdf  {fname}")
+                text, _, el = page_markdown(h, url)
+                name = os.path.basename(urlparse(url).path)[:-5]
+                with open(os.path.join(outdir, name + ".md"), "w", encoding="utf-8") as f:
+                    f.write(text)
+                d["pages"][name] = {"url": url, "file": f"pages/{d['slug']}/{name}.md"}
+                print(f"   page {name}")
+                for k, v in pdf_links_from_md(text, url).items():
+                    pdf_links.setdefault(k, (v, name))
+        d["pdfs"] = [{"url": u, "label": l, "found_on": n} for u, (l, n) in pdf_links.items()]
+        download_pdfs(d["pdfs"], os.path.join(ROOT, "pdfs", d["slug"]), seen_hash)
 
     gdir = os.path.join(ROOT, "general")
     os.makedirs(gdir, exist_ok=True)
-    general = {}
+    general = {"pages": {}, "pdfs": []}
     for name, path in GENERAL_PAGES.items():
         url = BASE + path
-        h = get(url)
-        if not h:
-            continue
-        text, _, el = page_markdown(h, url)
-        with open(os.path.join(gdir, name + ".md"), "w", encoding="utf-8") as f:
-            f.write(text)
-        general[name] = {"url": url, "file": f"general/{name}.md"}
-        for purl, label in collect_pdfs(el, url).items():
-            if purl.lower().split("?")[0].endswith(".pdf") and purl not in seen_pdf:
-                seen_pdf.add(purl)
-                fname = re.sub(r"[^\w.\-]+", "_", unquote(os.path.basename(urlparse(purl).path)))
-                data = get(requests.utils.requote_uri(purl), binary=True)
-                if data and data[:5] == b"%PDF-":
-                    with open(os.path.join(gdir, fname), "wb") as f:
-                        f.write(data)
-                    general.setdefault("_pdfs", []).append({"url": purl, "label": label, "file": f"general/{fname}"})
+        fpath = os.path.join(gdir, name + ".md")
+        if RESUME and os.path.exists(fpath):
+            text = open(fpath, encoding="utf-8").read()
+        else:
+            h = get(url)
+            if not h:
+                continue
+            text, _, _ = page_markdown(h, url)
+            with open(fpath, "w", encoding="utf-8") as f:
+                f.write(text)
+        general["pages"][name] = {"url": url, "file": f"general/{name}.md"}
+        for k, v in pdf_links_from_md(text, url).items():
+            general["pdfs"].append({"url": k, "label": v, "found_on": name})
         print(f"general {name}")
+    download_pdfs(general["pdfs"], os.path.join(gdir, "pdfs"), seen_hash)
 
     with open(os.path.join(ROOT, "catalog.json"), "w", encoding="utf-8") as f:
         json.dump({"source": START, "scraped_at": time.strftime("%Y-%m-%d"),
