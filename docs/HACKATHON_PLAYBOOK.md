@@ -9,7 +9,7 @@
 
 ```bash
 make setup
-# ضع OPENROUTER_API_KEY في .env (واشحن الرصيد بـ 5$ على الأقل)
+# ضع LLM_API_KEY في .env — مفتاح Gemini المجاني (قاعدة المسابقة: واجهات مجانية فقط!)
 make check          # يتأكد أن الموديلات موجودة على OpenRouter
 make models         # ~3GB — لا تتركه لشبكة الهاكاثون!
 make reset && make eval-fast && make dev   # تأكد أن كل شي يشتغل على لابتوبك

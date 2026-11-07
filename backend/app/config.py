@@ -14,7 +14,7 @@ from pathlib import Path
 from typing import Literal
 
 import yaml
-from pydantic import BaseModel, Field
+from pydantic import AliasChoices, BaseModel, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BACKEND_DIR = Path(__file__).resolve().parent.parent
@@ -42,24 +42,34 @@ class Settings(BaseSettings):
     collection_name: str = "knowledge_base"
     max_upload_mb: int = 25
 
-    # --- LLM (OpenRouter, OpenAI-compatible) -------------------------------
-    openrouter_api_key: str = ""
-    openrouter_base_url: str = "https://openrouter.ai/api/v1"
-    llm_model: str = "openai/gpt-4.1-mini"
-    # Comma separated fallbacks, tried in order if the main model fails.
-    llm_fallback_models: str = "google/gemini-2.5-flash,meta-llama/llama-3.3-70b-instruct"
+    # --- LLM (any OpenAI-compatible API) ------------------------------------
+    # COMPETITION RULE: only FREE APIs are allowed. Default = Google Gemini free tier
+    # (aistudio.google.com/apikey, OpenAI-compatible endpoint). Env names LLM_* or the
+    # older OPENROUTER_* both work.
+    openrouter_api_key: str = Field("", validation_alias=AliasChoices("LLM_API_KEY", "OPENROUTER_API_KEY"))
+    openrouter_base_url: str = Field(
+        "https://generativelanguage.googleapis.com/v1beta/openai/",
+        validation_alias=AliasChoices("LLM_BASE_URL", "OPENROUTER_BASE_URL"),
+    )
+    llm_model: str = "gemini-2.5-flash"
+    # Comma separated fallbacks on the SAME provider, tried in order if the main model fails
+    # (on Gemini's free tier each model has its own rate limit, so this also spreads the load).
+    llm_fallback_models: str = "gemini-2.5-flash-lite"
+    # Refuse any model that is not free (e.g. OpenRouter models without the ":free" suffix).
+    free_only: bool = True
     # Optional separate provider for the *utility* calls (query rewrite, translation, eval judge).
     # Lets the answering model run on a free API while helper calls use a paid one (or vice versa).
     # Empty = same provider as the answering model.
     utility_base_url: str = ""
     utility_api_key: str = ""
-    # Cheap/fast model for query rewriting & LLM-as-judge evaluation.
-    llm_utility_model: str = "openai/gpt-4.1-mini"
+    # Fast model for query rewriting, translation & LLM-as-judge evaluation.
+    llm_utility_model: str = "gemini-2.5-flash-lite"
     llm_temperature: float = 0.1
     llm_max_tokens: int = 1024
-    # USD per 1M tokens for cost tracking (check the model page on openrouter.ai)
-    llm_price_input_per_m: float = 0.40
-    llm_price_output_per_m: float = 1.60
+    # USD per 1M tokens for cost tracking. 0 on free tiers; put the PAID list price here
+    # only when modelling costs for the business plan (make cost).
+    llm_price_input_per_m: float = 0.0
+    llm_price_output_per_m: float = 0.0
     # Offline safety net: extractive answers (no LLM) if the internet dies during the demo.
     llm_mock: bool = False
     app_public_url: str = "http://localhost:3000"
@@ -112,6 +122,14 @@ class Settings(BaseSettings):
 
     def cost_usd(self, prompt_tokens: int, completion_tokens: int) -> float:
         return (prompt_tokens * self.llm_price_input_per_m + completion_tokens * self.llm_price_output_per_m) / 1_000_000
+
+    def paid_model_reason(self, model: str, base_url: str) -> str | None:
+        """Returns why a model is NOT allowed under free_only, or None if it is allowed."""
+        if not self.free_only:
+            return None
+        if "openrouter.ai" in base_url and not model.endswith(":free"):
+            return f"'{model}' is a paid OpenRouter model (free ones end with ':free')"
+        return None
 
     @property
     def fallback_models(self) -> list[str]:

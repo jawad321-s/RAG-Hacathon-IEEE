@@ -1,4 +1,4 @@
-"""OpenRouter LLM client (OpenAI-compatible) with model fallback + usage tracking."""
+"""LLM client for any OpenAI-compatible API (default: Gemini free tier) with fallback, usage tracking and a FREE_ONLY guard."""
 
 from __future__ import annotations
 
@@ -92,13 +92,18 @@ class LLM:
     ) -> LLMResult:
         """utility=True routes helper calls (rewrite/translate/judge) to the utility provider."""
         if not self.configured:
-            raise LLMError("OPENROUTER_API_KEY is not set. Copy .env.example to .env and add your key.")
+            raise LLMError("LLM_API_KEY is not set. Copy .env.example to .env and add your free Gemini key.")
         if self.settings.llm_mock:
             return LLMResult(text=self._mock_answer(messages), model="offline-extractive")
         client = self.utility_client if utility else self.client
         models = [model or self.settings.llm_utility_model] if (utility and self.separate_utility) else self._models(model)
+        base_url = str(getattr(client, "base_url", ""))
         last_exc: Exception | None = None
         for m in models:
+            if reason := self.settings.paid_model_reason(m, base_url):
+                log.error("FREE_ONLY: blocked %s", reason)
+                last_exc = LLMError(f"Blocked by FREE_ONLY: {reason}")
+                continue
             t0 = time.perf_counter()
             try:
                 kwargs = {}
@@ -129,7 +134,7 @@ class LLM:
     def stream(self, messages: list[dict], model: str | None = None) -> Iterator[tuple[str, dict | None]]:
         """Yields (token, None) ... and finally ("", usage_dict)."""
         if not self.configured:
-            raise LLMError("OPENROUTER_API_KEY is not set. Copy .env.example to .env and add your key.")
+            raise LLMError("LLM_API_KEY is not set. Copy .env.example to .env and add your free Gemini key.")
         if self.settings.llm_mock:
             for word in self._mock_answer(messages).split(" "):
                 yield word + " ", None
@@ -137,6 +142,10 @@ class LLM:
             return
         last_exc: Exception | None = None
         for m in self._models(model):
+            if reason := self.settings.paid_model_reason(m, str(self.client.base_url)):
+                log.error("FREE_ONLY: blocked %s", reason)
+                last_exc = LLMError(f"Blocked by FREE_ONLY: {reason}")
+                continue
             t0 = time.perf_counter()
             emitted = False
             try:

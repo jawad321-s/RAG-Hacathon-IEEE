@@ -57,6 +57,8 @@ class OpenRouterEmbedder:
         from openai import OpenAI
 
         s = get_settings()
+        if reason := s.paid_model_reason(model, s.openrouter_base_url):
+            raise RuntimeError(f"FREE_ONLY: {reason}. Use EMBEDDING_PROVIDER=fastembed (local, free).")
         self.name = model
         self.batch_size = batch_size
         self._client = OpenAI(api_key=s.openrouter_api_key, base_url=s.openrouter_base_url)

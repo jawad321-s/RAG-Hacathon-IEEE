@@ -51,7 +51,7 @@ async def lifespan(_: FastAPI):
 
         get_reranker()
     if not get_llm().configured:
-        log.warning("OPENROUTER_API_KEY missing — chat will fail until you set it in .env")
+        log.warning("LLM_API_KEY missing — chat will fail until you set it in .env")
     yield
 
 

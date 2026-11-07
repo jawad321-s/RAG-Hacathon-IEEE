@@ -20,7 +20,7 @@
 | **قاعدة المتجهات** | **ChromaDB** دائمة (cosine) + metadata (source, page, section, category) | فلترة حسب التصنيف/السنة/الإصدار |
 | **الاسترجاع** | **Hybrid**: Dense + BM25 (مع تطبيع عربي) → **RRF** → **Reranker** متعدد اللغات (`jina-reranker-v2-base-multilingual`) | BM25 يلتقط أرقام المواد والرموز، الـ embeddings تلتقط المعنى واللهجة، الـ reranker يرفع Precision@k |
 | **إعادة صياغة السؤال** | LLM يحوّل سؤال اللهجة/المحادثة إلى سؤال فصيح مستقل + كلمات مفتاحية + كشف خارج النطاق | «ليش ورق الزيتون بصفر؟» ← مصطلحات المستندات الفصحى |
-| **التوليد** | OpenRouter (مع نماذج احتياطية تلقائياً)، Prompt مؤرَّض صارم، استشهادات `[1]`، رفض صريح، معالجة التعارض (الأحدث أولاً)، حماية من prompt injection داخل المستندات | لا هلوسة، كل معلومة لها مصدر |
+| **التوليد** | Gemini (الطبقة المجانية) عبر واجهة متوافقة مع OpenAI، مع نموذج احتياطي تلقائي وحارس `FREE_ONLY`، Prompt مؤرَّض صارم، استشهادات `[1]`، رفض صريح، معالجة التعارض (الأحدث أولاً)، حماية من prompt injection داخل المستندات | لا هلوسة، كل معلومة لها مصدر |
 | **بوابة الثقة** | إذا كانت أعلى درجة صلة < العتبة → رفض بدون استدعاء الـ LLM | رفض موثوق للأسئلة خارج النطاق + توفير تكلفة |
 | **التقييم** | Hit@k، Precision@k، Recall@k، MRR، Faithfulness و Correctness (LLM-as-judge)، Citation rate، Refusal accuracy + تقرير Markdown | معيار التقييم + كسر التعادل |
 | **المنتج** | Next.js 16 + shadcn/ui + RTL كامل + وضع ليلي، دردشة متدفقة (SSE) مع لوحة مصادر تفاعلية، تسجيل دخول (JWT)، سجل محادثات، تقييم 👍👎 | بونص المنتج المتكامل + UX |
@@ -80,12 +80,12 @@ flowchart LR
 
 ## 🚀 التشغيل (للمحكّم — بدون مساعدة الفريق)
 
-المتطلبات: Python 3.11+، Node 20+، مفتاح [OpenRouter](https://openrouter.ai/keys).
+المتطلبات: Python 3.11+، Node 20+، مفتاح **مجاني** لـ [Google Gemini](https://aistudio.google.com/apikey). المشروع يستخدم **واجهات مجانية فقط** (`FREE_ONLY=true` يمنع أي موديل مدفوع).
 
 ```bash
 git clone <repo> && cd RAG-Hacathon-IEEE
 make setup                 # venv + npm install + ينسخ .env.example إلى .env
-# عدّل .env وضع OPENROUTER_API_KEY
+# عدّل .env وضع LLM_API_KEY (مفتاح Gemini المجاني من aistudio.google.com/apikey)
 make models                # تنزيل نموذج الـ embeddings والـ reranker (مرة واحدة)
 make reset                 # فهرسة المستندات في backend/data/raw
 make dev                   # API على :8000 والواجهة على :3000
@@ -141,7 +141,7 @@ make eval TAG=final        # + Faithfulness, Correctness, Citation rate, Refusal
 <!-- عدّلها لتكون صادقة ودقيقة -->
 استخدمنا Claude (Claude Code) للمساعدة في بناء الهيكل الأساسي للمشروع (الـ boilerplate، مكونات الواجهة، والاختبارات) قبل الهاكاثون. خلال الهاكاثون استخدمنا الذكاء الاصطناعي في: _(…)_.
 القرارات التصميمية (استراتيجية التقطيع، اختيار النماذج، عتبة الرفض، مجموعة التقييم) اتخذها الفريق وقاسها بالأرقام، وكل عضو قادر على شرح أي جزء من الكود.
-النظام نفسه يستخدم نماذج عبر OpenRouter (`LLM_MODEL` في `.env`) و`multilingual-e5-large` و`jina-reranker-v2-base-multilingual`.
+النظام نفسه يستخدم Gemini المجاني (`LLM_MODEL` في `.env`) و`multilingual-e5-large` و`jina-reranker-v2-base-multilingual`.
 
 ## 👥 الفريق
 

@@ -106,3 +106,14 @@ def test_utility_calls_use_separate_provider(monkeypatch):
     llm.complete([{"role": "user", "content": "x"}])
     llm.complete([{"role": "user", "content": "x"}], utility=True, model="cheap-model")
     assert seen == [("main", s.llm_model), ("utility", "cheap-model")]
+
+
+def test_free_only_blocks_paid_openrouter_models():
+    from app.config import get_settings
+
+    s = get_settings()
+    url = "https://openrouter.ai/api/v1"
+    assert s.free_only is True
+    assert s.paid_model_reason("openai/gpt-4.1-mini", url)
+    assert s.paid_model_reason("meta-llama/llama-3.3-70b-instruct:free", url) is None
+    assert s.paid_model_reason("gemini-2.5-flash", "https://generativelanguage.googleapis.com/v1beta/openai/") is None

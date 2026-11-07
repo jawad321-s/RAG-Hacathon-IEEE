@@ -9,8 +9,14 @@ if __name__ == "__main__":
     s = get_settings()
     llm = get_llm()
     if not llm.configured:
-        sys.exit("❌ OPENROUTER_API_KEY missing in .env")
+        sys.exit("❌ LLM_API_KEY missing in .env (free key: https://aistudio.google.com/apikey)")
     print(f"Answering provider: {s.openrouter_base_url}")
+    print(f"FREE_ONLY guard: {'ON' if s.free_only else 'OFF'}")
+    for m in [s.llm_model, *s.fallback_models]:
+        if r := s.paid_model_reason(m, s.openrouter_base_url):
+            print("⛔", r)
+    if r := s.paid_model_reason(s.llm_utility_model, s.utility_base_url or s.openrouter_base_url):
+        print("⛔", r)
     try:
         ids = {m.id for m in llm.client.models.list().data}
         for m in [s.llm_model, *s.fallback_models]:
