@@ -4,7 +4,7 @@ PIP := backend/.venv/bin/pip
 # Override if your default python3 is too old:  make setup PYTHON=python3.12
 PYTHON ?= python3
 
-.PHONY: help setup models check ingest reset eval eval-fast api web dev test lint cost docker
+.PHONY: help setup models check bench ingest reset eval eval-fast api web dev test lint cost docker
 
 help:
 	@grep -E '^[a-z-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
@@ -24,6 +24,9 @@ models: ## Pre-download embedding + reranker models (~3GB, do it at home!)
 
 check: ## Verify OpenRouter key + model ids
 	cd backend && ../$(PY) -m scripts.check_setup
+
+bench: ## Compare speed of free LLM models (MODELS="a b" to choose)
+	cd backend && ../$(PY) -m scripts.bench_models $(MODELS)
 
 ingest: ## Ingest backend/data/raw into ChromaDB
 	cd backend && ../$(PY) -m scripts.ingest
