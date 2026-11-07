@@ -343,6 +343,8 @@ def main():
         e = courses.setdefault(code, {"code": code, "name_ar": v["name_ar"], "name_en": "", "credit_hours": None,
                                       "prerequisites": [], "description": "", "in_plans": []})
         e["description"] = v["description"]
+        if v["name_ar"] and len(v["name_ar"]) <= 80:
+            e["name_ar"] = v["name_ar"]  # department pages have the cleanest names
         e.setdefault("description_departments", sorted(desc_depts[code]))
     for e in courses.values():
         e["in_plans"] = sorted(set(e["in_plans"]))
@@ -363,16 +365,16 @@ def main():
              f"- القسم: {plan['department']}",
              f"- المصدر الرسمي: {plan['source_url']}", "",
              "## ملخص المتطلبات", "", "| نوع المتطلب | الساعات المطلوبة |", "|---|---|"]
-        L += [f"| {r['category']} | {r['required_hours']} |" for r in plan["requirements"]]
+        L += [f"| {r['category']} | {r['required_hours'] if r['required_hours'] is not None else 'غير محدد'} |" for r in plan["requirements"]]
         for r in plan["requirements"]:
-            L += ["", f"## {r['category']} ({r['required_hours']} ساعة)"]
+            L += ["", f"## {r['category']}" + (f" ({r['required_hours']} ساعة)" if r["required_hours"] else "")]
             for g in r["groups"]:
                 if len(r["groups"]) > 1 or g["group_hours"] != r["required_hours"]:
                     L += ["", f"### مجموعة {g['group']} — يدرس الطالب {g['group_hours']} ساعة"]
                 L += ["", "| رقم المساق | اسم المساق | Course Name | الساعات | المتطلب السابق |", "|---|---|---|---|---|"]
                 for c in g["courses"]:
                     pre = "، ".join(f"{p} {courses.get(p, {}).get('name_ar', '')}".strip() for p in c["prerequisites"]) or "—"
-                    L.append(f"| {c['code']} | {c['name_ar']} | {c['name_en']} | {c['credit_hours']} | {pre} |")
+                    L.append(f"| {c['code']} | {courses[c['code']]['name_ar'] or c['name_ar']} | {courses[c['code']]['name_en'] or c['name_en']} | {c['credit_hours']} | {pre} |")
         L += ["", "## وصف المساقات", ""]
         seen = set()
         for r in plan["requirements"]:
