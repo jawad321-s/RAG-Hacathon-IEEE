@@ -41,6 +41,7 @@ class LLM:
             timeout=s.llm_timeout,
             max_retries=1,
         )
+        self._cooldown: dict[str, float] = {}  # model -> time until which it is skipped (rate-limited)
         self.separate_utility = bool(s.utility_base_url or s.utility_api_key)
         self.utility_client = (
             OpenAI(
@@ -81,6 +82,15 @@ class LLM:
         primary = model or self.settings.llm_model
         return [primary] + [m for m in self.settings.fallback_models if m != primary]
 
+    def _cooling(self, m: str) -> bool:
+        return self._cooldown.get(m, 0) > time.time()
+
+    def _note_failure(self, m: str, exc: Exception) -> None:
+        """Rate-limited / overloaded models are skipped for a minute instead of being retried
+        (and waited on) on every request — keeps the demo fast when a free quota runs out."""
+        if getattr(exc, "status_code", None) in (429, 503):
+            self._cooldown[m] = time.time() + 60
+
     def _extras(self) -> dict:
         """Optional request params. reasoning_effort keeps "thinking" models (Gemini 3.x, etc.)
         from spending the whole token budget and a minute of latency on hidden reasoning."""
@@ -119,6 +129,8 @@ class LLM:
         models = [model or self.settings.llm_utility_model] if (utility and self.separate_utility) else self._models(model)
         base_url = str(getattr(client, "base_url", ""))
         last_exc: Exception | None = None
+        if len(models) > 1:  # keep at least one model even if all are cooling down
+            models = [m for m in models if not self._cooling(m)] or models[-1:]
         for m in models:
             if reason := self.settings.paid_model_reason(m, base_url):
                 log.error("FREE_ONLY: blocked %s", reason)
@@ -143,7 +155,13 @@ class LLM:
                 )
             except Exception as exc:
                 log.warning("LLM call failed on %s: %s %s — trying fallback", m, exc, str(getattr(exc, "body", "") or "")[:300])
+                self._note_failure(m, exc)
                 last_exc = exc
+        if not utility and self.separate_utility:
+            # Last resort: the second FREE provider (UTILITY_BASE_URL, e.g. Groq) answers instead.
+            log.warning("All answer models failed; falling back to the utility provider")
+            return self.complete(messages, model=self.settings.llm_utility_model, temperature=temperature,
+                                 max_tokens=max_tokens, json_mode=json_mode, utility=True)
         raise LLMError(f"All models failed: {last_exc}")
 
     def stream(self, messages: list[dict], model: str | None = None) -> Iterator[tuple[str, dict | None]]:
@@ -156,7 +174,8 @@ class LLM:
             yield "", {"model": "offline-extractive", "prompt_tokens": 0, "completion_tokens": 0, "latency_ms": 0}
             return
         last_exc: Exception | None = None
-        for m in self._models(model):
+        models = [m for m in self._models(model) if not self._cooling(m)] or self._models(model)[-1:]
+        for m in models:
             if reason := self.settings.paid_model_reason(m, str(self.client.base_url)):
                 log.error("FREE_ONLY: blocked %s", reason)
                 last_exc = LLMError(f"Blocked by FREE_ONLY: {reason}")
@@ -184,7 +203,14 @@ class LLM:
                 if emitted:  # can't silently switch models mid-answer
                     raise LLMError(f"Stream interrupted: {exc}") from exc
                 log.warning("LLM stream failed on %s: %s — trying fallback", m, exc)
+                self._note_failure(m, exc)
                 last_exc = exc
+        if self.separate_utility:
+            res = self.complete(messages, model=self.settings.llm_utility_model, utility=True)
+            yield res.text, None
+            yield "", {"model": res.model, "prompt_tokens": res.prompt_tokens, "completion_tokens": res.completion_tokens,
+                       "latency_ms": res.latency_ms}
+            return
         raise LLMError(f"All models failed: {last_exc}")
 
 

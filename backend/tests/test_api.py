@@ -147,3 +147,36 @@ def test_create_drops_rejected_optional_params():
     client = SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=create)))
     assert LLM._create(client, {"model": "m", "messages": []}, {"reasoning_effort": "low"}) == "ok"
     assert calls == [["reasoning_effort"], []]
+
+
+def test_rate_limited_model_cools_down_and_second_provider_answers(monkeypatch):
+    from types import SimpleNamespace
+
+    from app.config import get_settings
+    from app.generation.llm import LLM
+
+    s = get_settings()
+    monkeypatch.setattr(s, "llm_mock", False)
+    monkeypatch.setattr(s, "utility_base_url", "https://api.groq.com/openai/v1")
+    llm = LLM()
+    calls = []
+
+    class Quota(Exception):
+        status_code = 429
+
+    def client(name, fail):
+        def create(**kw):
+            calls.append((name, kw["model"]))
+            if fail:
+                raise Quota("quota")
+            return SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content="ok"))], model=kw["model"], usage=None)
+
+        return SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=create)))
+
+    llm.client, llm.utility_client = client("gemini", True), client("groq", False)
+    assert llm.complete([{"role": "user", "content": "x"}]).text == "ok"
+    assert calls[-1][0] == "groq"
+    n = len(calls)
+    llm.complete([{"role": "user", "content": "x"}])
+    gemini_retries = [c for c in calls[n:] if c[0] == "gemini"]
+    assert len(gemini_retries) == 1  # cooling models skipped, only the last one is still tried
