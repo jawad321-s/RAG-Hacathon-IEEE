@@ -51,10 +51,10 @@ class Settings(BaseSettings):
         "https://generativelanguage.googleapis.com/v1beta/openai/",
         validation_alias=AliasChoices("LLM_BASE_URL", "OPENROUTER_BASE_URL"),
     )
-    llm_model: str = "gemini-2.5-flash"
+    llm_model: str = "gemini-3.8-flash"
     # Comma separated fallbacks on the SAME provider, tried in order if the main model fails
     # (on Gemini's free tier each model has its own rate limit, so this also spreads the load).
-    llm_fallback_models: str = "gemini-2.5-flash-lite"
+    llm_fallback_models: str = "gemini-3.5-flash-lite,gemini-flash-latest"
     # Refuse any model that is not free (e.g. OpenRouter models without the ":free" suffix).
     free_only: bool = True
     # Optional separate provider for the *utility* calls (query rewrite, translation, eval judge).
@@ -63,7 +63,7 @@ class Settings(BaseSettings):
     utility_base_url: str = ""
     utility_api_key: str = ""
     # Fast model for query rewriting, translation & LLM-as-judge evaluation.
-    llm_utility_model: str = "gemini-2.5-flash-lite"
+    llm_utility_model: str = "gemini-3.5-flash-lite"
     llm_temperature: float = 0.1
     llm_max_tokens: int = 1024
     # USD per 1M tokens for cost tracking. 0 on free tiers; put the PAID list price here
