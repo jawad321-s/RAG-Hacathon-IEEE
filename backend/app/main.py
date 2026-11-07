@@ -12,7 +12,7 @@ from sqlalchemy import select
 from app.api import routes_admin, routes_auth, routes_chat, routes_docs
 from app.config import get_domain, get_settings
 from app.core.db import User, init_db, new_session
-from app.core.security import hash_password
+from app.core.security import hash_password, verify_password
 from app.generation.llm import get_llm
 from app.retrieval.vectorstore import get_store
 
@@ -24,10 +24,15 @@ def _ensure_admin() -> None:
     s = get_settings()
     db = new_session()
     try:
-        if not db.scalar(select(User).where(User.email == s.admin_email.lower())):
+        # .env is the source of truth: create the admin, or re-sync its password/role if .env changed.
+        u = db.scalar(select(User).where(User.email == s.admin_email.lower()))
+        if not u:
             db.add(User(email=s.admin_email.lower(), name="Admin", password_hash=hash_password(s.admin_password), role="admin"))
-            db.commit()
             log.info("Created admin user %s", s.admin_email)
+        elif not verify_password(s.admin_password, u.password_hash) or u.role != "admin":
+            u.password_hash, u.role = hash_password(s.admin_password), "admin"
+            log.info("Admin %s updated from .env", s.admin_email)
+        db.commit()
     finally:
         db.close()
 
