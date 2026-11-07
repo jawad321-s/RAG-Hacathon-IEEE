@@ -23,7 +23,18 @@ if __name__ == "__main__":
             print(("✅" if m in ids or f"models/{m}" in ids else "❌ NOT FOUND"), m)
     except Exception as exc:
         print("⚠️ could not list models:", exc)
-    r = llm.complete([{"role": "user", "content": "قل: النظام يعمل"}], max_tokens=20)
+    try:
+        r = llm.complete([{"role": "user", "content": "قل: النظام يعمل"}], max_tokens=20)
+    except Exception as exc:
+        print("❌", exc)
+        try:
+            avail = sorted(m.id.removeprefix("models/") for m in llm.client.models.list().data)
+            chat = [m for m in avail if any(k in m for k in ("flash", "pro", "llama", "qwen", "gemma")) and "embed" not in m]
+            print("Models this key can see (put one in LLM_MODEL / LLM_FALLBACK_MODELS / LLM_UTILITY_MODEL):")
+            print("  " + "\n  ".join(chat[:40]))
+        except Exception:
+            pass
+        sys.exit(1)
     print(f"✅ answer model via {r.model}: {r.text} ({r.latency_ms} ms)")
     if llm.separate_utility:
         print(f"Utility provider: {s.utility_base_url or s.openrouter_base_url}")

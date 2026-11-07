@@ -127,7 +127,7 @@ class LLM:
                     latency_ms=int((time.perf_counter() - t0) * 1000),
                 )
             except Exception as exc:
-                log.warning("LLM call failed on %s: %s — trying fallback", m, exc)
+                log.warning("LLM call failed on %s: %s %s — trying fallback", m, exc, str(getattr(exc, "body", "") or "")[:300])
                 last_exc = exc
         raise LLMError(f"All models failed: {last_exc}")
 
