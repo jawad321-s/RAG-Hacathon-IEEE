@@ -100,11 +100,50 @@ class HashEmbedder:
         return self._vec(text)
 
 
+class CachedEmbedder:
+    """Disk cache (SQLite) in front of any embedder: a chunk with the same text and model
+    is embedded once, ever. `make reset` and chunking experiments become near-instant for
+    unchanged text — important on laptop CPUs with thousands of chunks."""
+
+    def __init__(self, inner: Embedder, path):
+        import sqlite3
+
+        self.inner = inner
+        self.name = inner.name
+        self._db = sqlite3.connect(str(path), check_same_thread=False)
+        self._db.execute("CREATE TABLE IF NOT EXISTS emb (k TEXT PRIMARY KEY, v BLOB)")
+
+    def _key(self, text: str) -> str:
+        return hashlib.sha1(f"{self.name}|passage|{text}".encode()).hexdigest()
+
+    def embed_documents(self, texts: list[str]) -> list[list[float]]:
+        keys = [self._key(t) for t in texts]
+        found: dict[str, list[float]] = {}
+        for i in range(0, len(keys), 500):
+            part = keys[i : i + 500]
+            q = f"SELECT k, v FROM emb WHERE k IN ({','.join('?' * len(part))})"
+            for k, v in self._db.execute(q, part):
+                found[k] = np.frombuffer(v, dtype=np.float32).tolist()
+        missing = [(k, t) for k, t in zip(keys, texts) if k not in found]
+        if missing:
+            vecs = self.inner.embed_documents([t for _, t in missing])
+            with self._db:
+                self._db.executemany(
+                    "INSERT OR REPLACE INTO emb VALUES (?, ?)",
+                    [(k, np.asarray(v, dtype=np.float32).tobytes()) for (k, _), v in zip(missing, vecs)],
+                )
+            found.update({k: v for (k, _), v in zip(missing, vecs)})
+        return [found[k] for k in keys]
+
+    def embed_query(self, text: str) -> list[float]:
+        return self.inner.embed_query(text)
+
+
 @lru_cache
 def get_embedder() -> Embedder:
     s = get_settings()
     if s.embedding_provider == "openrouter":
-        return OpenRouterEmbedder(s.embedding_model)
+        return CachedEmbedder(OpenRouterEmbedder(s.embedding_model), s.data_dir / "embeddings_cache.sqlite")
     if s.embedding_provider == "hash":
         return HashEmbedder()
-    return FastEmbedEmbedder(s.embedding_model, s.embedding_batch_size)
+    return CachedEmbedder(FastEmbedEmbedder(s.embedding_model, s.embedding_batch_size), s.data_dir / "embeddings_cache.sqlite")

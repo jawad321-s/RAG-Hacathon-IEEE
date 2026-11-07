@@ -81,7 +81,7 @@ class VectorStore:
         self.rebuild_bm25()
 
     # ---------------------------------------------------------------- write
-    def add_chunks(self, chunks: list[Chunk]) -> int:
+    def add_chunks(self, chunks: list[Chunk], rebuild: bool = True) -> int:
         if not chunks:
             return 0
         # de-duplicate ids inside the batch
@@ -89,6 +89,8 @@ class VectorStore:
         chunks = list(uniq.values())
         bs = 128
         for i in range(0, len(chunks), bs):
+            if len(chunks) > bs:
+                log.info("Embedding %d/%d chunks ...", min(i + bs, len(chunks)), len(chunks))
             batch = chunks[i : i + bs]
             self.collection.upsert(
                 ids=[c.id for c in batch],
@@ -96,12 +98,14 @@ class VectorStore:
                 metadatas=[c.metadata for c in batch],
                 embeddings=self.embedder.embed_documents([c.text for c in batch]),
             )
-        self.rebuild_bm25()
+        if rebuild:
+            self.rebuild_bm25()
         return len(chunks)
 
-    def delete_source(self, source: str) -> None:
+    def delete_source(self, source: str, rebuild: bool = True) -> None:
         self.collection.delete(where={"source": source})
-        self.rebuild_bm25()
+        if rebuild:
+            self.rebuild_bm25()
 
     def reset(self) -> None:
         s = get_settings()

@@ -22,7 +22,7 @@ os.environ.update(
     }
 )
 
-SAMPLE_DIR = Path(__file__).resolve().parent.parent / "data" / "raw" / "sample"
+SAMPLE_DIR = Path(__file__).resolve().parent / "fixtures" / "sample"
 
 
 @pytest.fixture(scope="session")

@@ -67,3 +67,16 @@ def test_translate_pages_to_arabic_with_cache(monkeypatch, tmp_path):
 
     chunks = chunk_pages(out, size=900)
     assert chunks[0].metadata["translated"] is True and "Drip" in chunks[0].metadata["original_text"]
+
+
+def test_long_plan_table_keeps_title_and_header():
+    rows = "\n".join(f"| {10100 + i} | مساق رقم {i} | 3 | — |" for i in range(80))
+    text = (
+        "# الخطة الدراسية: علم الحاسوب 2022\n\n## متطلب تخصص اجباري (70 ساعة)\n\n"
+        "| رقم المساق | اسم المساق | الساعات | المتطلب السابق |\n|---|---|---|---|\n" + rows
+    )
+    chunks = chunk_pages([PageContent(text=text, source="cs.md")], size=600)
+    assert len(chunks) > 3
+    last = chunks[-1].text
+    assert "علم الحاسوب 2022" in last and "متطلب تخصص اجباري" in last
+    assert "| رقم المساق | اسم المساق |" in last

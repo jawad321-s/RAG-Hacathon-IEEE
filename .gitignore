@@ -16,6 +16,7 @@ backend/data/uploads/
 backend/data/app.db
 backend/data/models/
 backend/data/translations/
+backend/data/embeddings_cache.sqlite
 backend/data/eval/results/
 
 # node

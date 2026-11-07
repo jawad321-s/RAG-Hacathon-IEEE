@@ -16,7 +16,7 @@ from .translate import translate_pages
 log = logging.getLogger(__name__)
 
 
-def ingest_file(path: Path, extra_metadata: dict | None = None, replace: bool = True) -> dict:
+def ingest_file(path: Path, extra_metadata: dict | None = None, replace: bool = True, rebuild_index: bool = True) -> dict:
     s = get_settings()
     store = get_store()
     t0 = time.perf_counter()
@@ -25,8 +25,8 @@ def ingest_file(path: Path, extra_metadata: dict | None = None, replace: bool = 
         pages = translate_pages(pages, s.translate_docs_to)
     chunks = chunk_pages(pages, s.chunk_size, s.chunk_overlap, extra_metadata)
     if replace:
-        store.delete_source(path.name)
-    n = store.add_chunks(chunks)
+        store.delete_source(path.name, rebuild=False)
+    n = store.add_chunks(chunks, rebuild=rebuild_index)
     stats = {
         "source": path.name,
         "pages": len(pages),
@@ -53,8 +53,9 @@ def ingest_directory(root: Path | None = None) -> list[dict]:
         if p.is_file() and p.suffix.lower() in SUPPORTED_EXTENSIONS and not p.name.startswith("."):
             cat = _category_from_path(p, root)
             try:
-                results.append(ingest_file(p, {"category": cat} if cat else None))
+                results.append(ingest_file(p, {"category": cat} if cat else None, rebuild_index=False))
             except Exception as exc:
                 log.exception("Failed to ingest %s", p)
                 results.append({"source": p.name, "error": str(exc)})
+    get_store().rebuild_bm25()  # once, after all files
     return results

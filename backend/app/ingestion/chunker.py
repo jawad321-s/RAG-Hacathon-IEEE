@@ -126,10 +126,30 @@ def _split_sections(text: str) -> list[str]:
     return merged
 
 
+_MD_TABLE_HEADER = re.compile(r"^(\|[^\n]*\|)\n(\|\s*:?-{3,}[^\n]*\|)\s*$", re.M)
+_H1 = re.compile(r"^#\s+(.+)$", re.M)
+
+
+def _repeat_table_header(section: str, parts: list[str]) -> list[str]:
+    """A long Markdown table split across chunks keeps its header row in every chunk,
+    so "| 10100 | الثقافة الاسلامية | 3 |" is still readable as code / name / hours."""
+    m = _MD_TABLE_HEADER.search(section)
+    if not m:
+        return parts
+    header = f"{m.group(1)}\n{m.group(2)}"
+    return [p if (not p.lstrip().startswith("|") or header in p) else f"{header}\n{p.lstrip()}" for p in parts]
+
+
 def chunk_pages(pages: list[PageContent], size: int = 900, overlap: int = 150, extra_metadata: dict | None = None) -> list[Chunk]:
     chunks: list[Chunk] = []
     section: str | None = None
+    doc_title: str | None = None
     for page in pages:
+        # Document title (first "# " heading): prefixed to every chunk so a chunk from the middle
+        # of a study plan still says which plan/major it belongs to.
+        m = _H1.search(page.text)
+        if m:
+            doc_title = m.group(1).strip()[:120]
         # Separate tables from prose so tables stay whole.
         blocks = re.split(r"(\[جدول / Table\]\n(?:\|.*\|\n?)+)", page.text)
         pieces: list[tuple[str, str | None]] = []  # (text, section heading in effect)
@@ -145,7 +165,12 @@ def chunk_pages(pages: list[PageContent], size: int = 900, overlap: int = 150, e
                 heading = _first_heading(sec)
                 if heading:
                     section = heading
-                for part in _add_overlap(_recursive_split(sec, size, SEPARATORS), overlap):
+                parts = _recursive_split(sec, size, SEPARATORS)
+                if len(parts) > 1 and _MD_TABLE_HEADER.search(sec):
+                    parts = _repeat_table_header(sec, parts)  # table rows: header instead of text overlap
+                else:
+                    parts = _add_overlap(parts, overlap)
+                for part in parts:
                     pieces.append((part, section))
 
         for idx, (piece, sec_name) in enumerate(pieces):
@@ -159,8 +184,13 @@ def chunk_pages(pages: list[PageContent], size: int = 900, overlap: int = 150, e
                 **{k: v for k, v in page.metadata.items() if isinstance(v, (str, int, float, bool))},
                 **(extra_metadata or {}),
             }
-            # Prefix the section title so the chunk is self-contained for embeddings/LLM.
-            text = piece if (not sec_name or sec_name in piece[:200]) else f"[{sec_name}]\n{piece}"
+            # Prefix document title + section so the chunk is self-contained for embeddings/LLM.
+            labels = [x for x in (doc_title, sec_name) if x and x not in piece[:300]]
+            if doc_title and sec_name == doc_title:
+                labels = [doc_title] if doc_title not in piece[:300] else []
+            text = f"[{' — '.join(labels)}]\n{piece}" if labels else piece
+            if doc_title:
+                meta["title"] = doc_title
             digest = hashlib.sha1(f"{page.source}|{page.page}|{idx}|{text}".encode()).hexdigest()[:16]
             chunks.append(Chunk(id=digest, text=text, metadata=meta))
     return chunks

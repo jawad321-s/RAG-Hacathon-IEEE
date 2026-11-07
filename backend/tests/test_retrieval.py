@@ -28,3 +28,19 @@ def test_metadata_filter(indexed_store):
 def test_rbac_category_list_filter(indexed_store):
     r = retrieve("المكتبة", filters={"source": ["faq.csv", "student_guide.md"]}, use_rewrite=False)
     assert r.hits and all(h.metadata["source"] in ("faq.csv", "student_guide.md") for h in r.hits)
+
+
+def test_embedding_cache_embeds_each_text_once(tmp_path):
+    from app.retrieval.embeddings import CachedEmbedder, HashEmbedder
+
+    class Counting(HashEmbedder):
+        calls = 0
+
+        def embed_documents(self, texts):
+            Counting.calls += len(texts)
+            return super().embed_documents(texts)
+
+    e = CachedEmbedder(Counting(), tmp_path / "c.sqlite")
+    a = e.embed_documents(["نص أول", "نص ثاني"])
+    b = e.embed_documents(["نص ثاني", "نص ثالث"])
+    assert Counting.calls == 3 and a[1] == b[0]

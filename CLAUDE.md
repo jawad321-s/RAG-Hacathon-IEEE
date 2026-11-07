@@ -7,6 +7,8 @@ code quality 15, business 15, marketing 10, pitch 10, innovation 5, +10 bonus fo
 ## Layout
 - `backend/` FastAPI + ChromaDB + BM25 hybrid + fastembed (multilingual-e5-large, jina reranker v2) + Gemini free tier.
   - **Competition rule: only FREE APIs.** Paid usage disqualifies the team. `FREE_ONLY=true` blocks paid models; never add paid defaults.
+  - Problem chosen: **Academic advisor for Hebron University**. Knowledge base in `backend/data/raw/{plans,courses,departments,general}`
+    built by `scripts/prepare_hebron.py` from branch `claude/magical-cerf-dpnkye` (scraped hebron.edu data).
   - Problem-specific config: `backend/config/domain.yaml` (persona, prompt extras, refusal, samples, RBAC).
   - Tunables: `.env` (see `.env.example`). Docs to index: `backend/data/raw/<category>/`.
   - Eval set: `backend/data/eval/eval_set.json`; run `make eval-fast` / `make eval TAG=x`.
