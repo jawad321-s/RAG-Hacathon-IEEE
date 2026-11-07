@@ -156,6 +156,24 @@ class DomainConfig(BaseModel):
     system_prompt_extra: str = ""
     refusal_message: str = "لا تتوفر لدي معلومات كافية في المصادر للإجابة عن هذا السؤال."
     disclaimer: str = ""
+    # English versions, used when answer_language is "auto" and the question is in English.
+    refusal_message_en: str = "Sorry, I couldn't find enough information in the available sources to answer this question."
+    disclaimer_en: str = ""
+
+    def answer_lang(self, question: str) -> str:
+        """'ar' or 'en' for this question (answer_language 'ar' forces Arabic)."""
+        from app.ingestion.arabic import is_arabic
+
+        if self.answer_language == "ar":
+            return "ar"
+        letters = [c for c in question if c.isalpha()]
+        return "ar" if not letters or is_arabic(question, threshold=0.3) else "en"
+
+    def refusal_for(self, lang: str) -> str:
+        return self.refusal_message_en if lang == "en" else self.refusal_message
+
+    def disclaimer_for(self, lang: str) -> str:
+        return self.disclaimer_en if lang == "en" else self.disclaimer
     escalation_message: str = ""
     sample_questions: list[str] = Field(default_factory=list)
     out_of_scope_examples: list[str] = Field(default_factory=list)

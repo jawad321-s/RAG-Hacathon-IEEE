@@ -6,7 +6,7 @@
 product_name: "مُرشد الخليل"            # اسم المنتج (يظهر في الواجهة والـ prompt)
 tagline: "مرشدك الأكاديمي في جامعة الخليل: الخطط والمساقات والقبول، مع ذكر المصدر"
 language: "ar"                     # ar | en  (لغة الواجهة الافتراضية)
-answer_language: "ar"              # ar = الرد دائماً بالعربية حتى لو المصادر إنجليزية | auto = بلغة السؤال
+answer_language: "auto"            # auto = بلغة السؤال (عربي ← عربي، English ← English) | ar = دائماً بالعربية
 audience: "طلبة جامعة الخليل والطلبة الجدد والمرشدون الأكاديميون"
 
 # فقرة المشكلة في صفحة الهبوط (جملتان أو ثلاث، مع الرقم ومصدره إن وجد)
@@ -31,6 +31,10 @@ refusal_message: "عذراً، لم أجد معلومات كافية في الم
 
 # تنبيه يظهر أسفل كل إجابة (اتركه فارغاً إن لم يلزم)
 disclaimer: "المعلومات مستخرجة من موقع جامعة الخليل الرسمي؛ للقرارات المهمة راجع مرشدك الأكاديمي أو دائرة القبول والتسجيل."
+
+# النسخ الإنجليزية (تُستخدم عندما يسأل المستخدم بالإنجليزية)
+refusal_message_en: "Sorry, I couldn't find enough information in Hebron University's published sources to answer this. Try rephrasing, or contact the Admission and Registration Department."
+disclaimer_en: "Information is extracted from Hebron University's official website; for important decisions, check with your academic advisor or the Admission and Registration Department."
 
 # رسالة التصعيد لموظف بشري عند عدم اليقين
 escalation_message: ""

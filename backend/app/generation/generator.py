@@ -80,13 +80,21 @@ def build_context(sources: list[Source]) -> str:
     return "\n\n---\n\n".join(blocks)
 
 
-def build_messages(question: str, sources: list[Source], history: list[dict] | None = None) -> list[dict]:
-    msgs = [{"role": "system", "content": system_prompt()}]
+def build_messages(question: str, sources: list[Source], history: list[dict] | None = None, lang: str = "ar") -> list[dict]:
+    msgs = [{"role": "system", "content": system_prompt(lang)}]
     for m in (history or [])[-6:]:
         if m.get("role") in ("user", "assistant"):
             msgs.append({"role": m["role"], "content": m["content"][:1500]})
-    msgs.append({"role": "user", "content": USER_TEMPLATE.format(context=build_context(sources), question=question)})
+    content = USER_TEMPLATE.format(context=build_context(sources), question=question)
+    if lang == "en":
+        content += "\n\nAnswer in English."  # explicit, last thing the model reads: sources are Arabic
+    msgs.append({"role": "user", "content": content})
     return msgs
+
+
+def _is_refusal(text: str) -> bool:
+    d = get_domain()
+    return d.refusal_message[:25] in text or d.refusal_message_en[:25] in text
 
 
 def extract_citations(text: str, n_sources: int) -> list[int]:
@@ -102,18 +110,19 @@ def answer(question: str, history: list[dict] | None = None, filters: dict | Non
     r = retrieve(question, history, filters, use_rewrite=use_rewrite)
     sources = _to_sources(r.hits)
     d = get_domain()
+    lang = d.answer_lang(question)
     if _should_refuse(r):
         return Answer(
-            answer=d.refusal_message,
+            answer=d.refusal_for(lang),
             sources=sources,
             cited=[],
             refused=True,
             rewritten_query=r.rewritten,
             timings_ms={**r.timings_ms, "total": int((time.perf_counter() - t0) * 1000)},
         )
-    res = get_llm().complete(build_messages(question, sources, history))
+    res = get_llm().complete(build_messages(question, sources, history, lang))
     cited = extract_citations(res.text, len(sources))
-    refused = d.refusal_message[:25] in res.text or not cited
+    refused = _is_refusal(res.text) or not cited
     return Answer(
         answer=res.text,
         sources=sources,
@@ -132,13 +141,14 @@ def answer_stream(question: str, history: list[dict] | None = None, filters: dic
     r = retrieve(question, history, filters)
     sources = _to_sources(r.hits)
     d = get_domain()
+    lang = d.answer_lang(question)
     yield {"type": "sources", "sources": [asdict(s) for s in sources], "rewritten_query": r.rewritten}
 
     if _should_refuse(r):
-        yield {"type": "token", "text": d.refusal_message}
+        yield {"type": "token", "text": d.refusal_for(lang)}
         yield {
             "type": "done",
-            "answer": d.refusal_message,
+            "answer": d.refusal_for(lang),
             "cited": [],
             "refused": True,
             "model": "",
@@ -150,7 +160,7 @@ def answer_stream(question: str, history: list[dict] | None = None, filters: dic
 
     full = []
     usage: dict = {}
-    for tok, u in get_llm().stream(build_messages(question, sources, history)):
+    for tok, u in get_llm().stream(build_messages(question, sources, history, lang)):
         if tok:
             full.append(tok)
             yield {"type": "token", "text": tok}
@@ -158,13 +168,13 @@ def answer_stream(question: str, history: list[dict] | None = None, filters: dic
             usage = u
     text = "".join(full)
     cited = extract_citations(text, len(sources))
-    if d.disclaimer:
-        yield {"type": "token", "text": f"\n\n> {d.disclaimer}"}
+    if d.disclaimer_for(lang):
+        yield {"type": "token", "text": f"\n\n> {d.disclaimer_for(lang)}"}
     yield {
         "type": "done",
         "answer": text,
         "cited": cited,
-        "refused": not cited and d.refusal_message[:25] in text,
+        "refused": not cited and _is_refusal(text),
         "model": usage.get("model", get_settings().llm_model),
         "prompt_tokens": usage.get("prompt_tokens", 0),
         "completion_tokens": usage.get("completion_tokens", 0),

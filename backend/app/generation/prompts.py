@@ -60,7 +60,8 @@ REFERENCE: {reference}
 ANSWER: {answer}"""
 
 
-def system_prompt() -> str:
+def system_prompt(lang: str = "ar") -> str:
+    """lang = language of THIS answer ('ar' or 'en'), decided from the question."""
     d = get_domain()
     persona = d.persona.strip() or f"أنت {d.product_name}، مساعد يعتمد على المصادر."
     extra = f"\n## تعليمات خاصة بالمجال\n{d.system_prompt_extra.strip()}" if d.system_prompt_extra.strip() else ""
@@ -69,6 +70,11 @@ def system_prompt() -> str:
             "أجب دائماً باللغة العربية الفصحى المبسّطة، حتى لو كان السؤال أو المصادر بالإنجليزية: "
             "ترجم المعلومة بدقة ولا تنسخ جملاً إنجليزية، واكتب المصطلح التقني الأصلي بين قوسين عند الحاجة، مثل: الري بالتنقيط (drip irrigation)."
         )
+    elif lang == "en":
+        rule = (
+            "السؤال بالإنجليزية: اكتب الإجابة كاملة باللغة الإنجليزية (English only) حتى لو كانت المصادر بالعربية. "
+            "ترجم المعلومة بدقة، وأبقِ أرقام المساقات والساعات كما هي، واكتب اسم المساق العربي بين قوسين عند الحاجة."
+        )
     else:
-        rule = "أجب بلغة السؤال (عربي فصيح مبسّط إذا كان السؤال بالعامية أو الفصحى، وإنجليزي إذا كان بالإنجليزية)، حتى لو كانت المصادر بلغة أخرى."
-    return GROUNDED_SYSTEM.format(persona=persona, refusal=d.refusal_message, extra=extra, language_rule=rule)
+        rule = "السؤال بالعربية (فصحى أو عامية): أجب بالعربية الفصحى المبسّطة، حتى لو كانت المصادر بلغة أخرى."
+    return GROUNDED_SYSTEM.format(persona=persona, refusal=d.refusal_for(lang), extra=extra, language_rule=rule)

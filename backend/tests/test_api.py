@@ -66,17 +66,26 @@ def test_pii_redaction():
     assert "0599123456" not in out and "gmail" not in out
 
 
-def test_answer_language_rule():
+def test_answer_language_follows_question():
+    """auto: Arabic (incl. dialect) -> Arabic, English -> English; 'ar' forces Arabic."""
     from app.config import get_domain
+    from app.generation.generator import build_messages
     from app.generation.prompts import system_prompt
 
     d = get_domain()
     old = d.answer_language
     try:
-        d.answer_language = "ar"
-        assert "أجب دائماً باللغة العربية" in system_prompt()
         d.answer_language = "auto"
-        assert "أجب بلغة السؤال" in system_prompt()
+        assert d.answer_lang("How many credit hours is Computer Science?") == "en"
+        assert d.answer_lang("قديش ساعة لازم اخلص؟") == "ar"
+        assert d.answer_lang("كم ساعة مساق T1111؟") == "ar"
+        assert "English only" in system_prompt("en") and d.refusal_message_en in system_prompt("en")
+        assert "أجب بالعربية" in system_prompt("ar")
+        assert build_messages("How many hours?", [], lang="en")[-1]["content"].endswith("Answer in English.")
+        assert d.refusal_for("en") == d.refusal_message_en
+        d.answer_language = "ar"
+        assert d.answer_lang("How many hours?") == "ar"
+        assert "أجب دائماً باللغة العربية" in system_prompt("ar")
     finally:
         d.answer_language = old
 
