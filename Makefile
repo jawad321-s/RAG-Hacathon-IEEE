@@ -22,10 +22,10 @@ setup: ## Install backend (venv) + frontend deps, create .env
 models: ## Pre-download embedding + reranker models (~3GB, do it at home!)
 	cd backend && ../$(PY) -m scripts.download_models
 
-check: ## Verify OpenRouter key + model ids
+check: ## Verify the LLM key + models work (both providers)
 	cd backend && ../$(PY) -m scripts.check_setup
 
-bench: ## Compare speed of free LLM models (MODELS="a b" to choose)
+bench: ## Compare speed of free LLM models (MODELS="a b" to pick the fastest)
 	cd backend && ../$(PY) -m scripts.bench_models $(MODELS)
 
 calibrate: ## Suggest MIN_RELEVANCE_SCORE from the eval set (uses rewrite LLM calls)
