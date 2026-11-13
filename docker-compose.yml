@@ -1,0 +1,17 @@
+services:
+  api:
+    build: ./backend
+    env_file: .env
+    ports: ["8000:8000"]
+    volumes:
+      - ./backend/data:/app/data          # Chroma + SQLite + docs persist on the host
+
+  web:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: ""
+    environment:
+      API_PROXY_TARGET: http://api:8000
+    ports: ["3000:3000"]
+    depends_on: [api]

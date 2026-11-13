@@ -1,0 +1,6 @@
+.venv
+data/chroma
+data/uploads
+data/app.db
+__pycache__
+data/models

@@ -1,0 +1,32 @@
+# secrets
+.env
+.env.local
+!.env.example
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# data generated at runtime (raw sample docs + eval set ARE committed)
+backend/data/chroma/
+backend/data/uploads/
+backend/data/app.db
+backend/data/models/
+backend/data/translations/
+backend/data/embeddings_cache.sqlite
+backend/data/eval/results/
+
+# node
+node_modules/
+.next/
+out/
+
+# misc
+.DS_Store
+*.log
+
+# local screenshots
+shots/

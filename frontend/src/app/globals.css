@@ -1,0 +1,135 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-400.css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-500.css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-600.css";
+@import "@fontsource/ibm-plex-sans-arabic/arabic-700.css";
+@import "@fontsource/ibm-plex-sans-arabic/400.css";
+@import "@fontsource/ibm-plex-sans-arabic/500.css";
+@import "@fontsource/ibm-plex-sans-arabic/600.css";
+@import "@fontsource/ibm-plex-sans-arabic/700.css";
+
+/* Light only: the Swiss anchor is defined on a white surface. `dark:` utilities never fire. */
+@custom-variant dark (&:is(.dark *));
+
+/*
+  Design anchor: SWISS (see .claude/skills/frontend-design/SKILL.md)
+  - Surface: pure white #FFFFFF, neutral rails #F7F7F8
+  - One family: IBM Plex Sans Arabic (a neo-grotesque; Helvetica/Söhne have no Arabic glyphs)
+  - One accent: Yves Klein Blue #002FA7, used only for evidence (citations, sources) and primary actions
+  - Structure: 1px hairline rules, square corners, no shadows, start-aligned type
+  - Differentiator: "folio citations" — sources are set like a book's margin, oversized blue
+    numerals with the page as a folio marker; answer citations are the same numerals.
+*/
+:root {
+  --radius: 0px;
+  --background: #ffffff;
+  --foreground: #111111;
+  --card: #ffffff;
+  --card-foreground: #111111;
+  --popover: #ffffff;
+  --popover-foreground: #111111;
+  --primary: #002fa7;
+  --primary-foreground: #ffffff;
+  --secondary: #f7f7f8;
+  --secondary-foreground: #111111;
+  --muted: #f7f7f8;
+  --muted-foreground: #5c5c63;
+  --accent: #f7f7f8;
+  --accent-foreground: #111111;
+  --destructive: #111111;
+  --border: #e3e3e6;
+  --rule: #111111;
+  --input: #d4d4d8;
+  --ring: #002fa7;
+}
+
+@theme inline {
+  --font-sans: "IBM Plex Sans Arabic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-rule: var(--rule);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "kern", "liga", "calt";
+    font-variant-numeric: tabular-nums;
+  }
+  :lang(ar) body {
+    line-height: 1.75;
+  }
+}
+
+/* Folio numeral — the differentiator. Used for citations and source markers. */
+.folio {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums lining-nums;
+  letter-spacing: -0.04em;
+  line-height: 0.85;
+  color: var(--primary);
+}
+
+/* Visible 12-column hairline grid behind the empty state */
+.swiss-grid {
+  background-image: linear-gradient(to right, var(--border) 1px, transparent 1px);
+  background-size: calc(100% / 12) 100%;
+}
+
+/* Markdown answers */
+.prose-answer {
+  @apply text-[16px] leading-8;
+}
+.prose-answer p { @apply my-2; }
+.prose-answer ul { @apply my-2 list-disc ps-6; }
+.prose-answer ol { @apply my-2 list-decimal ps-6; }
+.prose-answer li { @apply my-1; }
+.prose-answer strong { @apply font-semibold; }
+.prose-answer h1, .prose-answer h2, .prose-answer h3 { @apply mt-4 mb-2 font-bold; }
+.prose-answer table { @apply my-3 w-full border-collapse text-sm; }
+.prose-answer th { @apply border-b border-rule px-2 py-1 text-start font-semibold; }
+.prose-answer td { @apply border-b px-2 py-1 text-start; }
+.prose-answer blockquote { @apply border-s-2 border-rule ps-3 text-muted-foreground text-sm; }
+.prose-answer code { @apply bg-muted px-1 text-[14px]; }
+
+/* Streaming cursor: a solid block, not a glyph */
+.caret::after {
+  content: "";
+  display: inline-block;
+  width: 0.45em;
+  height: 1.1em;
+  margin-inline-start: 2px;
+  vertical-align: -0.2em;
+  background: var(--primary);
+  animation: caret-blink 1s steps(1) infinite;
+}
+@keyframes caret-blink {
+  50% { opacity: 0; }
+}

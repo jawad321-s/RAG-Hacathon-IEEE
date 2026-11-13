@@ -1,0 +1,227 @@
+[
+ {
+  "id": "q01",
+  "type": "factual",
+  "question": "كم عدد الساعات المعتمدة لتخصص بكالوريوس علم الحاسوب خطة 2022 في جامعة الخليل؟",
+  "reference_answer": "135 ساعة معتمدة.",
+  "relevant_sources": [
+   "Academic-Plan-2022-Computer-Science.md"
+  ],
+  "relevant_keywords": [
+   "135"
+  ]
+ },
+ {
+  "id": "q02",
+  "type": "factual",
+  "question": "كم ساعة معتمدة في خطة بكالوريوس الصيدلة 2022؟",
+  "reference_answer": "155 ساعة معتمدة.",
+  "relevant_sources": [
+   "Academic-Plan-2022-Pharmacy.md"
+  ],
+  "relevant_keywords": [
+   "155"
+  ]
+ },
+ {
+  "id": "q03",
+  "type": "conflict",
+  "question": "قديش ساعة لازم اخلص عشان اتخرج من الامن السيبراني؟",
+  "reference_answer": "خطة بكالوريوس الأمن السيبراني 2022 تذكر 133 ساعة، بينما صفحة برامج البكالوريوس الرسمية تذكر 134 ساعة (ومسار الجرائم الإلكترونية 134). الإجابة الجيدة تذكر الرقمين أو تعتمد الصفحة الرسمية مع التنبيه.",
+  "relevant_sources": [
+   "Academic-Plan-2022-CyberSecurity.md",
+   "Academic-Plan-2022-Cyber_Security-Cybercrimes-Investigation.md",
+   "colleges-and-majors.md",
+   "undergraduate-programs.md"
+  ],
+  "relevant_keywords": [
+   "133",
+   "الامن السيبراني | 134"
+  ]
+ },
+ {
+  "id": "q04",
+  "type": "factual",
+  "question": "كم ساعة متطلبات الجامعة الإجبارية في تخصص الأحياء 2022 وما هي مساقاتها؟",
+  "reference_answer": "19 ساعة: الثقافة الإسلامية، اللغة العربية، اللغة الإنجليزية، فلسطين الأرض والإنسان، تطبيقات في الحاسوب، الريادة والإبداع، الاستعداد الوظيفي والتوظيف.",
+  "relevant_sources": [
+   "Academic-Plan-2022-biology.md"
+  ],
+  "relevant_keywords": [
+   "متطلبات الجامعة الإجبارية (19 ساعة)"
+  ]
+ },
+ {
+  "id": "q05",
+  "type": "factual",
+  "question": "ما هو الحد الأدنى لمعدل الثانوية العامة للقبول في برامج البكالوريوس؟",
+  "reference_answer": "ألا يقل معدل الطالب في الثانوية العامة عن 65%، مع اجتياز امتحان القبول.",
+  "relevant_sources": [
+   "admissions-regulations.md",
+   "colleges-and-majors.md"
+  ],
+  "relevant_keywords": [
+   "65%"
+  ]
+ },
+ {
+  "id": "q06",
+  "type": "table",
+  "question": "كم ساعة ومدة دراسة دبلوم تكنولوجيا الهواتف النقالة وما المعدل المطلوب؟",
+  "reference_answer": "72 ساعة، سنتان، معدل 50 في الثانوية، لجميع الفروع (مع مساقين استدراكيين لبعض الفروع).",
+  "relevant_sources": [
+   "admissions-regulations.md"
+  ],
+  "relevant_keywords": [
+   "تكنولوجيا الهواتف النقالة"
+  ]
+ },
+ {
+  "id": "q07",
+  "type": "dialect",
+  "question": "شو ممكن اشتغل بعد ما اتخرج من علم الحاسوب؟",
+  "reference_answer": "البرمجة وتحليل البرمجيات، تصميم وبرمجة مواقع الإنترنت، التعليم، التعليم العالي، خدمات التكنولوجيا في المؤسسات والشركات، أو مشروع خاص في تكنولوجيا المعلومات.",
+  "relevant_sources": [
+   "it-dep__it-dep1.md"
+  ],
+  "relevant_keywords": [
+   "مجالات عمل الخريجين"
+  ]
+ },
+ {
+  "id": "q08",
+  "type": "factual",
+  "question": "ما وصف مساق الثقافة الإسلامية وكم ساعة هو؟",
+  "reference_answer": "3 ساعات؛ يعرّف الثقافة والثقافة الإسلامية، الفرق بين الثقافة والحضارة والعلم، مصادرها وخصائصها، والعقيدة والأخلاق الإسلامية.",
+  "relevant_sources": [
+   "courses.json"
+  ],
+  "relevant_keywords": [
+   "Islamic Culture"
+  ]
+ },
+ {
+  "id": "q09",
+  "type": "factual",
+  "question": "ما هو المتطلب السابق لمساق برمجة كيانات موجهة في علم الحاسوب؟",
+  "reference_answer": "مقدمة في برمجة الحاسوب (T1111).",
+  "relevant_sources": [
+   "Academic-Plan-2022-Computer-Science.md",
+   "courses.json"
+  ],
+  "relevant_keywords": [
+   "برمجة كيانات موجهة"
+  ]
+ },
+ {
+  "id": "q10",
+  "type": "factual",
+  "question": "How many credit hours is the Medical Imaging bachelor plan 2022?",
+  "reference_answer": "137 credit hours.",
+  "relevant_sources": [
+   "Academic-Plan-2022-Medical-Imaging.md"
+  ],
+  "relevant_keywords": [
+   "137"
+  ]
+ },
+ {
+  "id": "q11",
+  "type": "factual",
+  "question": "هل يوجد في جامعة الخليل منح أو قروض للطلبة المحتاجين؟",
+  "reference_answer": "نعم، دائرة المنح والقروض توفر مساعدة مالية للطلبة بعد تقييم وضعهم الاقتصادي والاجتماعي.",
+  "relevant_sources": [
+   "scholarships.md"
+  ],
+  "relevant_keywords": [
+   "دائرة المنح والقروض"
+  ]
+ },
+ {
+  "id": "q12",
+  "type": "multi_hop",
+  "question": "كم ساعة الفرق بين خطة الصيدلة 2022 وخطة علم الحاسوب 2022؟",
+  "reference_answer": "الصيدلة 155 وعلم الحاسوب 135، الفرق 20 ساعة.",
+  "relevant_sources": [
+   "Academic-Plan-2022-Pharmacy.md",
+   "Academic-Plan-2022-Computer-Science.md"
+  ],
+  "relevant_keywords": [
+   "155",
+   "135"
+  ]
+ },
+ {
+  "id": "q13",
+  "type": "factual",
+  "question": "على ماذا تُدفع الرسوم الجامعية في جامعة الخليل؟",
+  "reference_answer": "طلب الالتحاق، حجز مقعد، الساعات المعتمدة كل فصل، الخدمات والتأمينات، رسوم التسجيل، مراجعة الامتحان، تصديق الشهادات وغيرها.",
+  "relevant_sources": [
+   "fees.md"
+  ],
+  "relevant_keywords": [
+   "حجز مقعد"
+  ]
+ },
+ {
+  "id": "q16",
+  "type": "dialect",
+  "question": "شو في تخصصات شريعة؟",
+  "reference_answer": "كلية الشريعة: أصول الدين، الفقه وأصوله، الشريعة الإسلامية/فرعي تربية، الشريعة الإسلامية/فرعي إعلام، الشريعة/مسار البنوك الإسلامية، الفقه وأصوله/مسار التحكيم والمحاماة الشرعية، رئيسي أصول دين/فرعي لغة عربية.",
+  "relevant_sources": [
+   "colleges-and-majors.md"
+  ],
+  "relevant_keywords": [
+   "بكالوريوس الفقه واصوله"
+  ]
+ },
+ {
+  "id": "q17",
+  "type": "factual",
+  "question": "ما هي الكليات الموجودة في جامعة الخليل؟",
+  "reference_answer": "الشريعة، العلوم والتكنولوجيا، الزراعة، التمويل والإدارة، التمريض، العلوم الإنسانية والتربوية، الصيدلة، الحقوق والعلوم السياسية، تكنولوجيا المعلومات، الدراسات العليا، الطب البشري، العلوم الصحية التطبيقية.",
+  "relevant_sources": [
+   "colleges-and-majors.md",
+   "colleges.md"
+  ],
+  "relevant_keywords": [
+   "قائمة كليات جامعة الخليل"
+  ]
+ },
+ {
+  "id": "q18",
+  "type": "factual",
+  "question": "ما هي تخصصات كلية تكنولوجيا المعلومات وكم ساعة كل تخصص؟",
+  "reference_answer": "علم الحاسوب 135، رئيسي حاسوب/فرعي علم البيانات والذكاء الاصطناعي، رئيسي حاسوب/فرعي إدارة أعمال 138، رئيسي حاسوب/فرعي هندسة برمجيات 138، تكنولوجيا الويب والوسائط المتعددة 135، الأمن السيبراني 134، الأمن السيبراني/مسار جرائم إلكترونية 134.",
+  "relevant_sources": [
+   "colleges-and-majors.md"
+  ],
+  "relevant_keywords": [
+   "بكالوريوس تكنولوجيا الويب والوسائط المتعددة"
+  ]
+ },
+ {
+  "id": "q19",
+  "type": "factual",
+  "question": "ما هي برامج الدبلوم المتوسط في جامعة الخليل؟",
+  "reference_answer": "برامج سنتان (72 ساعة): الزراعة المحمية والمشاتل، الإنتاج الحيواني، التدريب الرياضي، تكنولوجيا الهواتف النقالة، هندسة التركيبات الكهربائية، التصميم والإنتاج الرقمي، الحضانة ورياض الأطفال، الكيمياء الصناعية، صيانة وترميم المباني، الإدارة وأتمتة المكاتب، تكنولوجيا الصوت، اللغة العبرية.",
+  "relevant_sources": [
+   "colleges-and-majors.md",
+   "admissions-regulations.md",
+   "colleges.md"
+  ],
+  "relevant_keywords": [
+   "برامج الدبلوم المتوسط"
+  ]
+ },
+ {
+  "id": "q20",
+  "type": "out_of_scope",
+  "question": "من فاز بكأس العالم 2022؟"
+ },
+ {
+  "id": "q21",
+  "type": "out_of_scope",
+  "question": "ما هي عاصمة أستراليا؟"
+ }
+]
